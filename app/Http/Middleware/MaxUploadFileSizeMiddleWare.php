@@ -21,7 +21,7 @@ class MaxUploadFileSizeMiddleWare
             return $next($request); 
         }
         // Get the max upload size (in Mb, so convert it to bytes)
-        $maxUploadSize = intval(1024 * 1024 * ini_get('post_max_size'));
+        $maxUploadSize = 1024 * 1024 * 8;
         $contentSize = 0;
         if (isset($_SERVER['HTTP_CONTENT_LENGTH']))
         {
