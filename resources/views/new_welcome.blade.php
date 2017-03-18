@@ -13,6 +13,7 @@
 </div> -->
 
 <div class="container-fluid homepage-container">
+	{{phpinfo()}}
 	<div class="row img-contain">
 		<div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="4700" data-pause="true">
 			<!-- Wrapper for slides -->

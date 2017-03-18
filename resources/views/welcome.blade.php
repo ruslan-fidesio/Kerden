@@ -2,7 +2,7 @@
 
 @section('headers')
 <link rel="stylesheet" href="{{ URL::asset('css/datepicker3.css') }}">
-<link href='http://fonts.googleapis.com/css?family=Dancing+Script:400,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Dancing+Script:400,700' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="{{asset('css/homepage.css')}}">
 @endsection
  
@@ -10,6 +10,7 @@
 @section('content')
 <div class="container">
     <div id='page1' >
+       {{ php_info() }} 
         <!-- <div class='container center-main-logo'>
             <span class='sr-only'>LOGO</span>
         </div> -->
