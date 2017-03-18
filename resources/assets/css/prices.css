@@ -1,0 +1,30 @@
+
+.ui-slider-handle:before{
+    content:attr(data-hour);
+    position: absolute;
+    top: -19px;
+    width:32px;
+    left:-4px;
+    color:black;
+    font-size: 14px;
+}
+
+.brace{
+	position: absolute;
+	right: -35%;
+	font-weight: 100;
+}
+
+#weekDaysBrace{
+	font-size: 16em;
+	top:-68px;
+}
+
+#weekEndBrace{
+	font-size: 12em;
+	top: 187px;
+}
+
+.droite hr{
+	border: 2px solid #ddd;
+}

@@ -1,0 +1,150 @@
+.fc-other-month{
+	background-color: lightgray;
+   opacity: 0;
+   border: none;
+}
+.fc-other-month.fc-day-number{
+	visibility: hidden;
+}
+
+.selecting::after{
+	content: '';
+   display: inline-block;
+   width: 30px;
+   height: 30px;
+   -moz-border-radius: 30px;
+   -webkit-border-radius: 30px;
+   border-radius: 30px;
+   background-color: white;
+   border:1px solid black;
+
+   position: relative;
+   left:50%;
+   transform:translate(-50%,0%);
+}
+
+#selectionErrors{
+   display: none;
+   position:fixed;
+   top:33%;
+   left:50%;
+	background-color: red;
+	z-index: 11;
+   padding:15px;
+   transform:translateX(-50%);
+}
+
+.affix-top{
+	position: absolute;
+}
+
+.affix{
+	top:50px;
+}
+
+.autoDispo{
+   background-color: green;
+}
+
+.manualDispo{
+   background-color: orange;  
+}
+
+.noneDispo{
+   background-color: red;
+}
+
+.unavaibleDispo{
+   background-color: red;
+}
+
+.greyCase{
+   background-color: #EFEFEF;
+}
+.fc-title{
+   font-size:0.8em;
+}
+
+.fc-past{
+   opacity:0.5;
+}
+.resaconfirmed{
+   background-color: blue!important;
+   color: white;
+}
+
+.resawaiting_confirm{
+   background-color: lightblue!important;
+}
+
+.resadone{
+   background-color: yellow!important;
+}
+
+.rond{
+   display: inline-block;
+   width: 20px;
+   height: 20px;
+   border-radius: 50%;
+   position: absolute;
+   left: 30px;
+}
+
+.rouge{
+   background-color: red;
+}
+.orange{
+   background-color: orange;
+}
+.vert{
+   background-color: green;
+}
+.blanc{
+   background-color: white;
+   border: 1px solid black;
+   width: 22px;
+   height: 22px;
+}
+.gris{
+   background-color: lightgrey;
+}
+.bleuClair{
+   background-color: lightblue;
+}
+.bleuFonce{
+   background-color: blue;
+}
+.jaune{
+   background-color: yellow;
+   border: 1px solid black;
+   width: 22px;
+   height: 22px;
+}
+
+.calendarModes li{
+   margin-top: 20px;
+}
+
+.reservation{
+   font-size:0.75em;
+   text-indent:3px;
+   border: 1px solid black;
+   border-radius: 10px;
+   cursor: pointer;
+}
+
+
+.fc-day-number{
+   text-align: center!important;
+   padding-top: 5px!important;
+   cursor:default!important;
+}
+
+.btn-calendar{
+   color: black;
+   background-color: white;
+   border-color: black;
+}
+.btn-calendar:active{
+   background-color: #eee;
+}

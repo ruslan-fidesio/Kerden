@@ -1,0 +1,44 @@
+.resumeBloc{
+	margin:10px;
+}
+
+.resumeBloc .caption{
+	font-weight: bold;
+	font-size:1.1em;
+}
+
+.hours{
+	margin-left: 25px;
+}
+
+.hours span{
+	margin-left: 20px;
+}
+
+.nbStaff{
+	margin-left: 40px;
+}
+
+.price table .info{
+	font-size: 1.5em;
+}
+
+.link .main{
+	font-size: 1.3em;
+}
+
+.link .helper{
+	font-size: 0.8em;
+	display: block;
+}
+
+.helperTwo{
+	font-size: 0.8em;
+	display: block;
+	
+}
+
+.picto{
+	width: 23px!important;
+	height: 23px!important;
+}
