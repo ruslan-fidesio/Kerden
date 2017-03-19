@@ -110,7 +110,7 @@
         <hr>
           <div class="col-xs-12">
             <ul class='tripleList'>
-              @foreach($garden->activities->getAttributes() as $k=>$v)
+              @forelse($garden->activities->getAttributes() as $k=>$v)
                 @if($k != 'id')
                   @if($v==1)
                     <li>{{trans('garden.activities_.'.$k.'.title')}} <i class="fa fa-check" style="color:#abfbc6"></i></li>
@@ -118,7 +118,8 @@
                     <li style="color:#888">{{trans('garden.activities_.'.$k.'.title')}}</li>
                   @endif
                 @endif
-              @endforeach
+              @empty
+              @endforelse
             </ul>
           </div>
         <hr>
@@ -199,7 +200,7 @@
 
 
 
-        @if($garden->staff->requiredStaff || $garden->staff->requiredStaffNight)
+        @if($garden->staff && ($garden->staff->requiredStaff || $garden->staff->requiredStaffNight))
             <h3>Oscardiens</h3>
             <hr>
             {{trans('search.requiredStaff')}}
@@ -215,6 +216,7 @@
             @endif
             <br><a style="font-weight:normal;color:black;margin-top: 35px;"href="#" data-toggle="modal" data-target="#OscarModal">Qu'est-ce qu'un Oscardien?</a>
         @endif
+
 
         @if($garden->notReportedCommentaires->count() > 0)
           <h3>Commentaires</h3>
