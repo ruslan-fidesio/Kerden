@@ -84,6 +84,24 @@ class GardenController extends Controller
 
     public function menu($id, Request $req){
         $garden = Garden::find($id);
+        switch($garden->state){
+            case 'new':
+                return redirect('/garden/details/'.$id);
+                break;
+            case 'details_ok':
+                return redirect('/garden/prices/'.$id);
+                break;
+            case 'dispo_ok':
+                if (!$garden->staff){
+                    return redirect('/garden/staff/'.$id);
+                }
+                break;
+            case 'prices_ok':
+                return redirect('/garden/dispo/'.$id);
+                break;
+            default: 
+                break;
+        }
         $cat = 'Le jardin';
         foreach (Garden::$CATEGORIES as $key => $value) {
             if($value == 'Le Jardin') continue;
