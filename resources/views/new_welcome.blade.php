@@ -139,10 +139,10 @@
 <div class="container">
 	
 	<div class="row partnairsLogoLine" style='box-shadow:none'>
-	        <a target="_blank" href="http://www.lepanierdezoe.com"><div class="logoLine col-xs-6 col-sm-2 col-sm-offset-1" style='background-color:#2f1f29; text-align:center'>
+	        <!-- <a target="_blank" href="http://www.lepanierdezoe.com"><div class="logoLine col-xs-6 col-sm-2 col-sm-offset-1" style='background-color:#2f1f29; text-align:center'>
 	                    <img src="http://www.lepanierdezoe.com/wp-content/themes/barletter/img/logo-header-1.png" class="img-responsive" alt="Logo le panier de Zoé, traiteur 9ème arrondissement" style="margin:auto">
 	                    <span style="font-family:'Dancing Script';color:white; font-size:1.8em">Le Panier de Zoé</span>
-	            </div></a>
+	            </div></a> -->
 	        <a target="_blank" href="http://www.oscar.fr"><div class="logoLine col-xs-6 col-sm-2">
 	                <img src="http://www.oscar.fr/wp-content/uploads/2015/10/logo_OSCAR_300.png" class="img-responsive" alt="Oscar" >
 	            </div></a>

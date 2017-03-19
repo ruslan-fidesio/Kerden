@@ -13,7 +13,11 @@ trait MangoPayTrait{
                         self::$mangoPayApi->Config->ClientId = env('MANGO_CLIENT_ID');
                         self::$mangoPayApi->Config->ClientPassword = env('MANGO_KEY');
                         self::$mangoPayApi->Config->TemporaryFolder = storage_path().'/mangopay/'.env('MANGO_ENV');
-                        self::$mangoPayApi->Config->BaseUrl = 'https://api.mangopay.com';
+                        if (env('MANGO_ENV') == 'sandbox') {
+                                self::$mangoPayApi->Config->BaseUrl = 'https://api.sandbox.mangopay.com';
+                        }else {
+                               self::$mangoPayApi->Config->BaseUrl = 'https://api.mangopay.com'; 
+                        }
                 }
 		return self::$mangoPayApi;
 	}
@@ -55,6 +59,7 @@ trait MangoPayTrait{
                 $mangoUser->LegalRepresentativeBirthday = strtotime($details->birthday);
                 $mangoUser->LegalRepresentativeNationality = $details->nationality;
                 $mangoUser->LegalRepresentativeCountryOfResidence = 'FR';
+                $mangoUser->LegalRepresentativeEmail = $user->email;
                 return $mangoUser;
         } 
 
@@ -181,6 +186,10 @@ trait MangoPayTrait{
                 $kycDocument->Id = $KYCDocumentId;
                 $kycDocument->Status = $state;
                 return $this->getApi()->Users->UpdateKycDocument($userId,$kycDocument);
+        }
+
+        private function getKYCDocumentsByUser($userId){
+                return $this->getApi()->Users->GetKycDocuments($userId);
         }
 
         private function makeTransfert($tag, $debitedUserId, $debitedWalletId, $creditedUserId ,$creditedWalletId,$amount,$fees){

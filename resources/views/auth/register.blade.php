@@ -104,13 +104,13 @@
                             </div>
                         </div>
 
-                        <!-- <div class="form-group">
+                        <div class="form-group">
                             <label class="col-md-6 control-label">{{trans('userdetails.iamlegal')}}</label>
 
                             <div class="col-md-1">
                                 <input type="checkbox" class="form-control" name="iamlegal">
                             </div>
-                        </div> -->
+                        </div>
 
                         <div class="col-md-6 col-md-offset-4">
                             {!! Recaptcha::render() !!}
