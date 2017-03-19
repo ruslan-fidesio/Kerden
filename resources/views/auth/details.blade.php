@@ -169,10 +169,10 @@
                     ['class'=>'col-md-6 control-label']) !!}
 
                 <div class="col-md-1">
-                    {!! Form::checkbox('iamlegal', null,($details->type === 'legal'),
-                      ['class'=>'form-control','id'=>'iamlegal','disabled'=>''] ) !!}
+                    {!! Form::checkbox('type', null,($details->type === 'legal'),
+                      ['class'=>'form-control','id'=>'type','disabled'=>''] ) !!}
                 </div>
-                <input type="hidden" name="iamlegal" value="true" />
+                <input type="hidden" name="type" value="legal" />
             </div>
 
 
@@ -197,6 +197,23 @@
                             @endif
                         </div>
                     </div>
+
+                    <div class="form-group{{ $errors->has('orgaType') ? ' has-error' : '' }}">
+                        <label class="col-md-4 control-label">{{trans('validation.attributes.type')}}</label>
+
+                        <div class="col-md-6">
+                            <select size="1" class="form-control" name="orgaType" id="orgaType">
+                                <option value="BUSINESS" @if ($orga->type=="BUSINESS") selected  @endif>Entreprise</option>
+                                <option value="ORGANIZATION" @if ($orga->type=="ORGANIZATION") selected  @endif>Association</option>
+                            </select>
+
+                            @if ($errors->has('orgaType'))
+                                <span class="help-block">
+                                    <strong>{{ $errors->first('orgaType') }}</strong>
+                                </span>
+                            @endif
+                        </div>
+                    </div>                    
 
                     <div class="form-group{{ $errors->has('headQuartersAddressLine1') ? ' has-error' : '' }}">
                         <label class="col-md-4 control-label">{{trans('validation.attributes.address')}}</label>

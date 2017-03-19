@@ -152,6 +152,7 @@ return [
         'organizationCity'      => 'Ville',
         'firstName'             => 'Prénom',
         'lastName'              => 'Nom',
+        'type'                  => 'Type',
     ],
 
 ];

@@ -91,7 +91,7 @@
 							</td>
 						</tr>
 						<tr>
-							<td>Extrait KBIS</td>
+							<td>Extrait Registre Officiel (KBIS/SIRET/RNA)</td>
 							<td>
 								@if ($kbisFile)
 									{{$kbisFile->Status}}
@@ -107,6 +107,8 @@
 								@endif
 							</td>
 						</tr>
+						@if ($organization->type == 'BUSINESS')
+						<tr>
 							<td>Déclaration des propriétaires</td>
 							<td>
 								@if ($shareHoldFile)
@@ -123,6 +125,8 @@
 									<a href="#" data-toggle="modal" data-target="#sendSharehold" class="btn btn-primary">Envoyer</a>
 								@endif
 							</td>
+						</tr>
+						@endif
 					</table>
 				</div>
 			@endif

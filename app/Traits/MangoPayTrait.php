@@ -43,7 +43,7 @@ trait MangoPayTrait{
                 $mangoUser = new \MangoPay\UserLegal();
                 $mangoUser->Email = $user->email;
                 $mangoUser->Name = $orga->name;
-                $mangoUser->LegalPersonType = "ORGANIZATION";
+                $mangoUser->LegalPersonType = $orga->type;
                 $mangoUser->HeadquartersAddress = ['AddressLine1' => $orga->headQuartersAddressLine1,
                                                 'AddressLine2' => $orga->headQuartersAddressLine2,
                                                 'PostalCode' => $orga->headQuartersAddressPostalCode,
@@ -121,6 +121,10 @@ trait MangoPayTrait{
                 $mangoUser->IncomeRange = $adDetails->income_range;
 
                 return $this->getApi()->Users->Update($mangoUser);
+        }
+
+        private function checkUserKYCLevel ($userId) {
+            return $this->getApi()->Users->get($userId)->KYCLevel;
         }
 
         private function checkPayInStatus($payInId){

@@ -177,7 +177,7 @@ class AdminController extends Controller
     public function setOwner($id,Request $req){
         $user = User::find($id);
         if($user->role->role != 'regular'){
-            return redirect()->back()->withErrors(['listUser'=>'pas de preuve d\'identité valide']);
+            return redirect()->back()->withErrors(['listUser'=>'Il manque au moins un document concernant l\'identité de l\'utilisateur']);
         }
         if(empty($user->mangoBankAccount)){
             return redirect()->back()->withErrors(['listUser'=>'pas de compte en banque actif']);

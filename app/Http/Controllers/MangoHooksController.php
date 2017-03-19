@@ -8,9 +8,13 @@ use App\Http\Requests;
 use App\KYCDocument;
 use App\KerdenMailer;
 use App\UserRole;
+use App\User;
+use App\Traits\MangoPayTrait;
+
 
 class MangoHooksController extends Controller
 {
+    use MangoPayTrait;
     public function start(Request $req){
     	if( !$req->has('EventType') || !$req->has('RessourceId')){
     		abort(400);
@@ -27,14 +31,15 @@ class MangoHooksController extends Controller
 
     private function kyc_succeeded(Request $req){
     	$kycDoc = KYCDocument::where('ressource_id',$req->RessourceId)->first();
-    	if(count($kycDoc)==0) abort(400);
+    	if(count($kycDoc)==0) abort(404);
 
     	$kycDoc->state = 'valid';
     	$kycDoc->save();
 
-    	$role = UserRole::find($kycDoc->user_id);
-    	$role->role = 'regular';
-    	$role->save();
+    	// $role = UserRole::find($kycDoc->user_id);
+    	// $role->role = 'regular';
+    	// $role->save();
+        $this->checkMangoKYCLevel($kycDoc->user_id);
 
         $this->mailUser($kycDoc->user,true);
         $this->mailAdmin($kycDoc->user,true);
@@ -44,7 +49,7 @@ class MangoHooksController extends Controller
 
     private function kyc_failed(Request $req){
     	$kycDoc = KYCDocument::where('ressource_id',$req->RessourceId)->first();
-    	if(count($kycDoc)==0) abort(400);
+    	if(count($kycDoc)==0) abort(404);
 
     	$kycDoc->state = 'refused';
     	$kycDoc->save();
@@ -53,7 +58,14 @@ class MangoHooksController extends Controller
         $this->mailAdmin($kycDoc->user,false);
 
     	return response();
+    }
 
+    private function checkMangoKYCLevel($userId){
+        $user = User::find($userId);
+        $newLevel = $this->checkUserKYCLevel($user->mangoUser->mangoUserId);
+        $role = $user->role;
+        $role->role = strtolower($newLevel);
+        $role->save();
     }
 
     private function mailAdmin($user, $success){

@@ -8,6 +8,7 @@ use App\Http\Requests;
 use App\Traits\MangoPayTrait;
 use App\KYCDocument;
 use App\User;
+use App\Organization;
 
 class ProofOfIdController extends Controller
 {
@@ -45,8 +46,14 @@ class ProofOfIdController extends Controller
     }
 
     public function create(Request $req){
-        if ($req->user()->details->type == 'legal') {
-            $kycDocuments = $this->getKYCDocumentsByUser($req->user()->mangoUser->mangoUserId);
+        if (isset($req->userFromAdmin)){
+            $user = $userFromAdmin = $req->userFromAdmin;
+        } else {
+            $user = $req->user();
+            $userFromAdmin=null;
+        }
+        if ($user->details->type == 'legal') {
+            $kycDocuments = $this->getKYCDocumentsByUser($user->mangoUser->mangoUserId);
 
             $statusFile = array_filter($kycDocuments, function ($item) {
                 return $item->Type == "ARTICLES_OF_ASSOCIATION";
@@ -62,10 +69,14 @@ class ProofOfIdController extends Controller
             $kbisFile = $this->getDocumentByStatusOrder($kbisFile);
             $shareHoldFile = $this->getDocumentByStatusOrder($shareHoldFile);
 
+            $orga = Organization::findOrFail($user->details->organization);
+
             return view('auth.proofOfId', [
                 'statusFile'=>$statusFile,
                 'kbisFile'=>$kbisFile,
-                'shareHoldFile'=>$shareHoldFile
+                'shareHoldFile'=>$shareHoldFile,
+                'organization'=>$orga,
+                'userFromAdmin'=>$userFromAdmin
             ]);
         }
         else {
@@ -133,8 +144,10 @@ class ProofOfIdController extends Controller
 
     public function adminCreate($id, Request $req){
     	$user = User::find($id);
-    	$docs = KYCDocument::where('user_id',$id)->get();
-    	return view('auth.proofOfId',['userFromAdmin'=>$user,'docs'=>$docs]);
+        $req->userFromAdmin = $user;
+        return $this->create($req);
+    	//$docs = KYCDocument::where('user_id',$id)->get();
+    	//return view('auth.proofOfId',['userFromAdmin'=>$user,'docs'=>$docs]);
     }
 
 

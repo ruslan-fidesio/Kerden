@@ -90,6 +90,7 @@ class UserDetailController extends Controller
                     $orga->save();
                 }
                 $orga->update($input);
+                $orga->type = $input['orgaType'];
                 $orga->email = $req->user()->email;
                 $orga->save();
                 $details->organization = $orga->id;
