@@ -1,7 +1,11 @@
 @extends('layouts.app')
 
 @section('headers')
-<link href='http://fonts.googleapis.com/css?family=Dancing+Script:400,700' rel='stylesheet' type='text/css'>
+
+  <link href="{{ asset('css/slideshow-home.css') }}" rel="stylesheet">
+  <link href="{{ asset('slick/slick.css') }}" rel="stylesheet">
+  <link href="{{ asset('slick/slick-theme.css') }}" rel="stylesheet">
+
 @endsection
 
 @section('content')
@@ -9,159 +13,229 @@
 <!-- <div class="alert alert-black">
 	<a href="#" class="close" data-dismiss="alert" aria-label="close" style="color:beige">&times;</a>
 	En naviguant sur Kerden.fr, vous acceptez l'utilisation de cookies. Ces derniers sont la pour vous assurer une expérience interactive fluide.
-	<a href="#" data-dismiss="alert"><span class="text-right" > J'ai compris</span></a>
+	<a href="#" data-dismiss="alert"><h3 class="text-right" > J'ai compris</h3></a>
 </div> -->
 
-<div class="container-fluid homepage-container">
-	<div class="row img-contain">
-		<div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="4700" data-pause="true">
-			<!-- Wrapper for slides -->
-			<div class="carousel-inner" role="listbox">
-				<div class='item active'><img src="{{ asset('images/homepage/jardin.jpg') }}"></div>
-				<div class='item'><img src="{{ asset('images/homepage/lac.jpg') }}"></div>
-				<div class='item itemTerrasse'><img src="{{ asset('images/homepage/terrasse.jpg') }}"></div>
-			</div>
-		</div>
+<nav class="navbar navbar-default home-navbar" data-spy="affix" data-offset-top="150">
+    <div class="container">
+        <div class="navbar-header">
 
-		<div class="row text-center homepage-caption">
-			<h1>Louez <span class="vTick" style='display:inline-block;width:226px'><ul><li>un Jardin</li><li>un Domaine</li><li>une Terrasse</li></ul></span> adapté<span style='display:none' id="accordTrick">e</span> à votre évènement</h1>
+            <!-- Collapsed Hamburger -->
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
+                <span class="sr-only">Toggle Navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
 
-			<h2 class='hidden-xs'>Faites de votre évènement un moment unique</h2>
-			
-		</div>
-
-		 <div class="row homepage-searchRow">
-		 	<div class='row'>
-			 	{!! Form::open(['url'=>'/search','id'=>'homeSearchForm']) !!}
-	            <div class='col-sm-2 col-sm-offset-0-et-demi col-xs-4 col-xs-offset-1'>
-	                {!! Form::text('date',null,['placeholder'=>'Date','class'=>'form-control','id'=>'datePicker']) !!}
-	            </div>
-	            <div class='col-sm-2 col-xs-4 col-xs-offset-2 col-sm-offset-0'>
-	                {!! Form::select('activity',
-	                ['lunch'=>'Repas','relax'=>'Détente','barbecue'=>'Barbecue','reception'=>'Réception','children'=>'Enfants','party'=>'Fête','nightEvent'=>'Soirée','pro'=>'Pro'],
-	                null,['placeholder'=>'Activité','class'=>'form-control','id'=>'homeactivitySelect']) !!}
-	            </div>
-	            <div class='col-sm-2 col-xs-4 col-xs-offset-1 col-sm-offset-0'>
-	                {!! Form::select('category',
-	                ['Jardin'=>'Jardin','Terrasse'=>'Terrasse','Domaine'=>'Domaine','Jardin d\'hiver'=>'Jardin d\'hiver','Jardin restaurant'=>'Jardin restaurant','Château'=>'Château'],
-	                null,['placeholder'=>'Catégorie','class'=>'form-control','id'=>'categorySelect']) !!}
-	            </div>
-	            <div class='col-sm-3 col-xs-4 col-xs-offset-2 col-sm-offset-0'>
-	                {!! Form::text('place','',['placeholder'=>'Où','class'=>'form-control place-form-control']) !!}
-	                {!! Form::hidden('geolocPosition',null) !!}
-	            </div>
-	            <div class="col-sm-2 col-xs-8 col-xs-offset-2 col-sm-offset-0">
-	            	{!! Form::submit('Rechercher',['class'=>'btn btn-search-inline btn-welcome','style'=>'width:100%']) !!}
-	            </div>
-	            {!! Form::close() !!}
-            </div>
-            <div class="row text-center" style='color:white;font-size:1.3em;margin:10px'>
-	        	OU
-	        </div>
-        	<div class="row text-center">
-        		<div id="geoloc" class="btn btn-welcome btn-geoloc text-center">Rechercher autour de moi</div>
-        	</div>
+            <!-- Branding Image -->
+            <a class="navbar-brand navbar-brand-top" href="{{ url('/') }}">
+                <img class="logo" src="{{asset('images/kerden-logo.svg')}}">
+                <img class="logo-homepage" src="{{asset('images/kerden-logo-homepage.svg')}}">
+                <div class="logo-text">erden</div>
+            </a>
         </div>
 
-   	</div>
+        <div class="collapse navbar-collapse" id="app-navbar-collapse">
+            <!-- Left Side Of Navbar -->
+            @if(Auth::user())
+             <ul class="nav navbar-nav HomeLeftLink">
+                <li><a href="{{ url('/home') }}">Espace Membre
+                    @if(Auth::user()->unreadMessages > 0)
+                        <i class="fa fa-envelope-o"></i><sup class="unreadNumber">{{ Auth::user()->unreadMessages }}</sup>
+                    @endif
+                </a></li>
+            </ul> 
+            @endif
+
+            <!-- Right Side Of Navbar -->
+            <ul class="nav navbar-nav navbar-right">
+                @if (Auth::guest())
+                    <li><a class="blue-menu" href="#" data-toggle="modal" data-target="#inscriptionModal">{{trans('auth.register')}}</a></li>
+                    <li><a class="green-menu" href="#" data-toggle="modal" data-target="#connexionModal">{{trans('auth.login')}}</a></li>
+                @else
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                            {{ Auth::user()->firstName.' '.Auth::user()->lastName }} <span class="caret"></span>
+                        </a>
+
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="{{ url('/home') }}"><i class='fa fa-btn fa-user'></i>Espace membre</a> </li>
+                            <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Déconnexion</a></li>
+                        </ul>
+                    </li>
+                @endif                
+                <!-- Authentication Links -->
+                <li><a class="rentCTA" 
+                    @if(Auth::guest())
+                        href="/rent"
+                    @else
+                        @if(count(Auth::user()->ownedGardens)>0)
+                            href="{{url('/garden/update/'. Auth::user()->ownedGardens[0]->id )}}" 
+                        @else
+                            href="/rent"
+                        @endif
+                    @endif
+                >{{trans('base.rent')}}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="homepage-container">
+  <div class="slideshow-home">
+    <div class="page-view">
+      <div class="project">
+        <div class="text">
+          <h2>Louer une terrasse pour une soirée...</h2>
+        </div>
+      </div>
+      <div class="project">
+        <div class="text">
+          <h2>Louer un domaine pour un mariage...</h2>
+        </div>
+      </div>
+      <div class="project">
+        <div class="text">
+          <h2>Louer un parc pour un anniversaire...</h2>
+        </div>
+      </div>
+      <div class="project">
+        <div class="text">
+          <h2>Louer un jardin pour un barbecue...</h2>
+        </div>
+      </div>
+
+      <nav class="arrows">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="arrow previous">
+                <i class="fa fa-angle-left"></i>
+              </div>
+              <div class="arrow next">
+                <i class="fa fa-angle-right"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="homepage-searchRow">
+      
+        {!! Form::open(['url'=>'/search','id'=>'homeSearchForm']) !!}
+          <div class='col-sm-5 col-sm-offset-0 col-xs-10 col-xs-offset-1'>
+              {!! Form::text('place','',['placeholder'=>'Lieu','class'=>'form-control place-form-control']) !!}
+              {!! Form::hidden('geolocPosition',null) !!}
+          </div>
+          <div class='col-sm-3 col-sm-offset-0 col-xs-10 col-xs-offset-1'>
+              {!! Form::text('date',null,['placeholder'=>'Date','class'=>'form-control','id'=>'datePicker']) !!}
+          </div>
+          <div class="col-sm-4 col-xs-10 col-xs-offset-1 col-sm-offset-0">
+            {!! Form::submit('Rechercher',['class'=>'btn-search-inline','style'=>'width:100%']) !!}
+          </div>
+        {!! Form::close() !!}
+        <div class='col-sm-5 col-sm-offset-0 col-xs-10 col-xs-offset-1'>
+          <div id="geoloc" class="btn-geoloc">Rechercher autour de moi ></div>
+        </div>      
+      </div>      
+    </div> 
+  </div>
+</div>
+<div class="advantages cloud-border">
+  <div class="container">		
+    <h2 class="big-title">Vous aussi, proposez votre jardin à la location !</h2>
+    <div class="row">
+      <div class="col-md-3 col-sm-6">
+        <div class="advantage">
+          <div class="icon">
+            <img src="{{asset('images/advantages/bank.png')}}" alt="votre jardin vous rapporte des revenus complementaires">
+          </div>
+          Bénéficiez de revenus complémentaires
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="advantage">
+          <div class="icon blue">
+            <img src="{{asset('images/advantages/watch.png')}}" alt="jardins surveillés pendant les locations">
+          </div>
+          Sécurisez vos locations avec du personnel surveillant
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="advantage">
+          <div class="icon green">
+            <img src="{{asset('images/advantages/coupon.png')}}" alt="réduction partenaires jardins">
+          </div>
+          Profitez de 15% de réduction chez nos partenaires
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="advantage">
+          <div class="icon lightblue">
+            <img src="{{asset('images/advantages/choose.png')}}" alt="conditions de location jardin">
+          </div>
+          Choisissez vos conditions (horaires, niveau sonore...)
+        </div>
+      </div>    
+      <div class="col-md-12 text-center">
+        <a href="{{url('/rent')}}" class="bigRentCTA">{{trans('base.rent')}}</a>
+      </div>                          
+    </div>  			
+  </div>
 </div>
 
-<div class="container homepage-grid-container">
-	<h3 class="text-center" style='margin-bottom:20px'>Organiser un évènement pour</h3>
-
-	<div class="homepage-scroller" >
-		<div class='homepage-scroller-inner'>
-		
-			<div class="homepage-subRow" style="margin-bottom:25px" >
-				<a href="{{url('/search?activity=party')}}">
-					<div class="col-xs-1 col-xs-1-et-demi col-sm-4 col-sm-offset-1  unloaded unloaded-left">
-						<img src="{{asset('images/homepage/anniversaire.jpg')}}" alt="" class="img-responsive" id="baseResizeOne">
-						<span>Un anniversaire</span>
-					</div>
-				</a>
-				<a href="{{url('/search?activity=barbecue')}}">
-					<div class="col-xs-2 col-sm-6 unloaded unloaded-right" >
-						<img src="{{asset('images/homepage/barbecue.jpg')}}" alt="" class="img-responsive" id="toResizeOne">
-						<span>Un barbecue</span>
-					</div>
-				</a>
-			</div>
-		
-			<div class="homepage-subRow" style="margin-bottom:25px">
-				<a href="{{url('/search?activity=pro')}}">
-					<div class="col-xs-2 col-sm-5 col-sm-offset-1 unloaded unloaded-left">
-						<img src="{{asset('images/homepage/reunion.jpg')}}" alt="" class="img-responsive">
-						<span>Une réunion professionnelle</span>
-					</div>
-				</a>
-				<a href="{{url('/search?activity=nightEvent')}}">
-					<div class="col-xs-2 col-sm-5 unloaded unloaded-right">
-						<img src="{{asset('images/homepage/soiree.jpg')}}" alt="" class="img-responsive">
-						<span>Une soirée</span>
-					</div>
-				</a>
-			</div>
-		
-			<div class="homepage-subRow" style="margin-bottom:25px" >
-				<a href="{{url('/search?activity=reception')}}">
-					<div class="col-xs-2 col-sm-5 col-sm-offset-1 unloaded unloaded-left">
-						<img src="{{asset('images/homepage/afterwork.jpg')}}" alt="" class="img-responsive" id="toResizeTwo">
-						<span>Un after work</span>
-					</div>
-				</a>
-				<a href="{{url('/search?activity=party')}}">
-					<div class="col-xs-2 col-sm-5 unloaded unloaded-right">
-						<img src="{{asset('images/homepage/mariage.jpg')}}" alt="" class="img-responsive" id='baseResizeTwo'>
-						<span>Un mariage</span>
-					</div>
-				</a>
-			</div>
-			
-		</div>
-	</div>
-
-	<div class="row">
-		<h3 class="text-center" style="margin-bottom:20px">Faîtes de votre évènement un moment unique</h3>
-		<div class="col-xs-12 col-sm-10 col-sm-offset-1">
-			<video id="introVideo" width="100%" poster="{{asset('images/placeholder.png')}}">
-			        <source src="{{asset('kerden.mp4')}}" type="video/mp4"/>
-			        -Video not supported-
-			    </video>
-			    <img class='playerPlay' src="{{asset('images/motif_play.png')}}">
-			    <span class="volume-icon glyphicon glyphicon-volume-off" style='display:none'></span>
-			    <span class="volume-icon glyphicon glyphicon-volume-up"></span>
-		</div>
-	</div>
+<div class="wood-bg-home">
+  <div class="container">
+    <h2 class="big-title">Des locations d’espaces pour toutes vos envies...</h2>
+    <div class="row homepage-subRow">
+      <div class="garden-idea-slideshow">
+        <div class="garden-idea">
+          <a href="{{url('/search?category=Jardin')}}">
+            <div class="unloaded">
+              <img src="{{asset('images/homepage/idea-jardin.jpg')}}" alt="">
+              <h3>Jardins</h3>
+            </div>
+          </a>
+        </div>
+        <div class="garden-idea">
+          <a href="{{url('/search?category=Jardin')}}">
+            <div class="unloaded">
+              <img src="{{asset('images/homepage/idea-terrasse.jpg')}}" alt="location de terrasse">
+              <h3>Terrasses</h3>
+            </div>
+          </a>
+        </div>        
+        <div class="garden-idea">
+          <a href="{{url('/search?category=Jardin')}}">
+            <div class="unloaded">
+              <img src="{{asset('images/homepage/idea-chateau.jpg')}}" alt="location de châteaux">
+              <h3>Châteaux</h3>
+            </div>
+          </a>
+        </div>
+        <div class="garden-idea">
+          <a href="{{url('/search?category=Jardin')}}">
+            <div class="unloaded">
+              <img src="{{asset('images/homepage/idea-parc.jpg')}}" alt="location de parcs et domaines">
+              <h3>Parcs & domaines</h3>
+            </div>
+          </a>
+        </div>     
+        <div class="garden-idea">
+          <a href="{{url('/search?category=Jardin')}}">
+            <div class="unloaded">
+              <img src="{{asset('images/homepage/idea-piscine.jpg')}}" alt="location de piscine">
+              <h3>Piscines</h3>
+            </div>
+          </a>
+        </div>                                         
+      </div>
+    </div>
+  </div>
 </div>
-<div class="container">
-	<h3 class="text-center col-xs-12" style="margin-bottom:20px;font-family:'kerdenRegular'">Nos partenaires</h3>
-</div>
-<div class="container">
-	
-	<div class="row partnairsLogoLine" style='box-shadow:none'>
-	        <!-- <a target="_blank" href="http://www.lepanierdezoe.com"><div class="logoLine col-xs-6 col-sm-2 col-sm-offset-1" style='background-color:#2f1f29; text-align:center'>
-	                    <img src="http://www.lepanierdezoe.com/wp-content/themes/barletter/img/logo-header-1.png" class="img-responsive" alt="Logo le panier de Zoé, traiteur 9ème arrondissement" style="margin:auto">
-	                    <span style="font-family:'Dancing Script';color:white; font-size:1.8em">Le Panier de Zoé</span>
-	            </div></a> -->
-	        <a target="_blank" href="http://www.oscar.fr"><div class="logoLine col-xs-6 col-sm-2">
-	                <img src="http://www.oscar.fr/wp-content/uploads/2015/10/logo_OSCAR_300.png" class="img-responsive" alt="Oscar" >
-	            </div></a>
 
 
-	        <a href="http://www.enviedeconfort.com" target="_blank"><div class="logoLine col-xs-6 col-sm-2">
-	                <img class="img-responsive" src="http://www.enviedeconfort.com/skin/frontend/edc/default/images/logo.gif" alt="Bienvenue sur enviedeconfort.com">
-	            </div></a>
-	        <a target="_blank" href="http://www.favex.fr"><div class="logoLine col-xs-6 col-sm-2">
-	                <img src="http://myfavex.fr/2016/wp-content/uploads/2016/08/logo_favex_1.png" alt="Favex" title="Favex" class="img-responsive">
-	            </div></a>
-	        <!-- <a href="http://www.mangopay.com" target="_blank"><div class="logoLine col-xs-4 col-md-2">
-	                <img src="https://www.mangopay.com/wp-content/themes/underscores/img/mangopay.png" alt="MANGOPAY" class="img-responsive">
-	            </div></a> -->
-	            <a href="http://www.laboutiquedebob.butagaz.fr" target="_blank"><div class="logoLine col-xs-12 col-sm-2">
-	                <img src="{{asset('images/bob.png')}}" alt="La boutique de Bob" class="img-responsive"> 
-	            </div></a>
-	    </div>
-</div>
 
 @include('footer')
 
@@ -169,121 +243,156 @@
 
 
 @section('scripts')
-<script src="{{ URL::asset('js/bootstrap-datepicker.js') }}"></script>
-@if(App::getLocale() == 'fr')
-<script src="{{ URL::asset('js/bootstrap-datepicker.fr.js') }}"></script>
-@endif
-<script type="text/javascript">
-(function($){
-	var ua = navigator.userAgent;
-	var isiPad = /iPad/i.test(ua) || /iPhone OS 3_1_2/i.test(ua) || /iPhone OS 3_2_2/i.test(ua);
+  <script type="text/javascript" src=" {{ asset('js/zepto.min.js') }} "></script>
+  <script type="text/javascript" src=" {{ asset('js/imagesloaded.pkgd.min.js') }} "></script>
+  <script type="text/javascript" src=" {{ asset('js/slideshow-home.js') }} "></script>
 
-    $('#datePicker').datepicker({
-        language:'fr',
-        format:'dd-mm-yyyy',
-        startView:'month',
-        autoclose:true,
-        todayHighlight:true,
-        startDate: new Date()
-    });
+  <script type="text/javascript" src=" {{ asset('slick/slick.js') }} "></script>
+  <script src="{{ URL::asset('js/bootstrap-datepicker.js') }}"></script>
+  @if(App::getLocale() == 'fr')
+  <script src="{{ URL::asset('js/bootstrap-datepicker.fr.js') }}"></script>
+  @endif
+  <script type="text/javascript">
+  (function($){
+  	var ua = navigator.userAgent;
+  	var isiPad = /iPad/i.test(ua) || /iPhone OS 3_1_2/i.test(ua) || /iPhone OS 3_2_2/i.test(ua);
 
-    $('#categorySelect').select2({
-	  minimumResultsForSearch: Infinity,
-	  width:'100%'
-	});
-	$('#homeactivitySelect').select2({
-	  minimumResultsForSearch: Infinity,
-	  width:'100%'
-	});
+      $('#datePicker').datepicker({
+          language:'fr',
+          format:'dd-mm-yyyy',
+          startView:'month',
+          autoclose:true,
+          todayHighlight:true,
+          startDate: new Date()
+      });
 
-	// if(isiPad){
-	// 	$('.vTick').vTicker('init',{
-	// 		mousePause:false,
-	// 		startPaused:true,
-	// 		height:32,
-	// 	});
-	// }else{
-	// 	$('.vTick').vTicker('init',{
-	// 		mousePause:false,
-	// 		startPaused:true,
-	// 		height:31,
-	// 	});
-	// }
+      $('#categorySelect').select2({
+  	  minimumResultsForSearch: Infinity,
+  	  width:'100%'
+  	});
+  	$('#homeactivitySelect').select2({
+  	  minimumResultsForSearch: Infinity,
+  	  width:'100%'
+  	});
 
-	$('.vTick').vTicker('init',{
-		mousePause:false,
-		startPaused:true,
-		height:32
-	});
+  	// if(isiPad){
+  	// 	$('.vTick').vTicker('init',{
+  	// 		mousePause:false,
+  	// 		startPaused:true,
+  	// 		height:32,
+  	// 	});
+  	// }else{
+  	// 	$('.vTick').vTicker('init',{
+  	// 		mousePause:false,
+  	// 		startPaused:true,
+  	// 		height:31,
+  	// 	});
+  	// }
 
-	/***** VIDEO CONTROL *****/
-	var isPlaying = false;
-    $('#introVideo').click(function(){
-        if(!isPlaying){
-            $('#introVideo').get(0).play();
-            $('.playerPlay').hide();
-            isPlaying = true;
+  	$('.vTick').vTicker('init',{
+  		mousePause:false,
+  		startPaused:true,
+  		height:32
+  	});
+
+  	/***** VIDEO CONTROL *****/
+  	var isPlaying = false;
+      $('#introVideo').click(function(){
+          if(!isPlaying){
+              $('#introVideo').get(0).play();
+              $('.playerPlay').hide();
+              isPlaying = true;
+          }
+          else{
+              $('#introVideo').get(0).pause();
+              $('.playerPlay').show();
+              isPlaying = false;
+          }
+      })
+
+      $('.glyphicon-volume-off').click(function(){
+          $('#introVideo').get(0).muted = false;
+          $('.glyphicon-volume-off').hide();
+          $('.glyphicon-volume-up').show();        
+      });
+      $('.glyphicon-volume-up').click(function(){
+          $('#introVideo').get(0).muted = true;
+          $('.glyphicon-volume-up').hide();
+          $('.glyphicon-volume-off').show();        
+      });
+
+      $('#carousel-example-generic').on('slide.bs.carousel',function(event){
+      	$('.vTick').vTicker('next',{animate:true});
+      	if(/Terrasse/.test(event.relatedTarget.className)){
+      		$('#accordTrick').fadeIn();
+      	}else{
+      		$('#accordTrick').fadeOut();
+      	}
+      });
+
+      //trick de mise en page
+      $(window).load(function(){
+  	    $('#toResizeOne').css('height',$('#baseResizeOne').height());
+  	    $('#toResizeTwo').css('height',$('#baseResizeTwo').height());
+  	});
+  	$(window).resize(function(){
+  	    $('#toResizeOne').css('height',$('#baseResizeOne').height());
+  	    $('#toResizeTwo').css('height',$('#baseResizeTwo').height());
+  	});
+
+  	$('#introVideo').on('ended',function(){
+  	  $('#introVideo').autoplay=false;
+  	  $('#introVideo').load();
+  	  $('.playerPlay').show();
+  	});
+
+  	function geoCallback(position){
+  		//console.log(position);
+  		$('input[name="geolocPosition"]').val('{ "lat":'+position.coords.latitude+',"lng":'+position.coords.longitude+' }');
+  		$('#homeSearchForm').submit();
+  	}
+  	function errorGeoCallBack(error){
+  		alert('Une erreur est survenue pendant la geolocalisation : '+error.message);
+  	}
+
+  	$('#geoloc').click(function(){
+  		if(navigator.geolocation){
+  			navigator.geolocation.getCurrentPosition(geoCallback,errorGeoCallBack);
+  		}else{
+  			alert('Votre navigateur ne supporte pas la géolocalisation.');
+  		}
+  	});
+
+    $('.garden-idea-slideshow').slick({
+      slidesToShow: 4,
+      prevArrow: "<a class='slick-nav angle-left'><i class='fa fa-angle-left'></i></a>",
+      nextArrow: "<a class='slick-nav angle-right'><i class='fa fa-angle-right'></i></a>",
+      responsive: [
+        {
+          breakpoint: 1200,
+          settings: {
+            slidesToShow: 3
+          }
+        },      
+        {
+          breakpoint: 992,
+          settings: {
+            slidesToShow: 2
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1
+          }
         }
-        else{
-            $('#introVideo').get(0).pause();
-            $('.playerPlay').show();
-            isPlaying = false;
-        }
-    })
-
-    $('.glyphicon-volume-off').click(function(){
-        $('#introVideo').get(0).muted = false;
-        $('.glyphicon-volume-off').hide();
-        $('.glyphicon-volume-up').show();        
-    });
-    $('.glyphicon-volume-up').click(function(){
-        $('#introVideo').get(0).muted = true;
-        $('.glyphicon-volume-up').hide();
-        $('.glyphicon-volume-off').show();        
+      ]    
     });
 
-    $('#carousel-example-generic').on('slide.bs.carousel',function(event){
-    	$('.vTick').vTicker('next',{animate:true});
-    	if(/Terrasse/.test(event.relatedTarget.className)){
-    		$('#accordTrick').fadeIn();
-    	}else{
-    		$('#accordTrick').fadeOut();
-    	}
-    });
+  }) (jQuery);
+  </script>
 
-    //trick de mise en page
-    $(window).load(function(){
-	    $('#toResizeOne').css('height',$('#baseResizeOne').height());
-	    $('#toResizeTwo').css('height',$('#baseResizeTwo').height());
-	});
-	$(window).resize(function(){
-	    $('#toResizeOne').css('height',$('#baseResizeOne').height());
-	    $('#toResizeTwo').css('height',$('#baseResizeTwo').height());
-	});
 
-	$('#introVideo').on('ended',function(){
-	  $('#introVideo').autoplay=false;
-	  $('#introVideo').load();
-	  $('.playerPlay').show();
-	});
-
-	function geoCallback(position){
-		//console.log(position);
-		$('input[name="geolocPosition"]').val('{ "lat":'+position.coords.latitude+',"lng":'+position.coords.longitude+' }');
-		$('#homeSearchForm').submit();
-	}
-	function errorGeoCallBack(error){
-		alert('Une erreur est survenue pendant la geolocalisation : '+error.message);
-	}
-
-	$('#geoloc').click(function(){
-		if(navigator.geolocation){
-			navigator.geolocation.getCurrentPosition(geoCallback,errorGeoCallBack);
-		}else{
-			alert('Votre navigateur ne supporte pas la géolocalisation.');
-		}
-	});
-
-}) (jQuery);
-</script>
 @endsection
+
+
