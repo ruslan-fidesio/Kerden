@@ -36,7 +36,5 @@ return [
 		'validGardenModified'=>'Jardin modifié',
 		'newMessage'=>'Nouveau Message',
 		'offlineMessage'=>'Message chat hors-ligne',
-		'autoCanceledByTime'=>'Annulation automatique',
-		'oscarCanceledByTime'=>'Annulation automatique'
 	]
 ];

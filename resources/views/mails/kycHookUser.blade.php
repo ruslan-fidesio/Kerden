@@ -14,7 +14,7 @@ refusé
 .</td></tr>
 
 @if($success)
-<tr><td>Si vous souhaitez devenir propriétaire et louer votre jardin, nous vous invitons à remplir vos coordonées bancaires.</td></tr>
+<tr><td>Si vous souhaites devenir propriétaire et louer votre jardin, nous vous invitons à remplir vos coordonées bancaires.</td></tr>
 @else
 <tr><td>Nous vous invitons à envoyer un autre document.</td></tr>
 @endif

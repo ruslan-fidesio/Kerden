@@ -1,69 +1,37 @@
-<div class="row footerRow">
-    <div class="col-xs-12 text-center kerdenLogoRow">
-        <img src="{{asset('images/kerden-logo.png')}}" style="max-width:50px;margin-bottom:10px">
-    </div>
-    <div class="col-xs-4 text-center">
-        <span>Politique</span>
-        <a href="#" data-toggle="modal" data-target="#cguModal" onclick="$('#cguModal').stop().animate({scrollTop:$('#annulationAnchor').offset().top},'slow'); return false;"><p>Politique d'annulation</p></a>
-        <a href="#" data-toggle="modal" data-target="#cguModal"><p>Conditions générales d'utilisation</p></a>
-    </div>
-    <div class="col-xs-4 text-center">
-        <span>&Agrave; propos de</span>
-        <a href="#" data-toggle="modal" data-target="#aboutSiteModal"><p>Kerden.fr</p></a>
-        <a href="#" data-toggle="modal" data-target="#teamModal"><p>L'équipe</p></a>
-        <a href="#" data-toggle="modal" data-target="#faqModal"><p>F.A.Q</p></a>
-    </div>
-    <div class="col-xs-4 text-center">
-        <span>Contact</span>
-        <p><i class="fa fa-phone"></i>+33 1 43 35 00 50</p>
-        <a href="mailto:contact@kerden.fr"><i class="fa fa-envelope"></i>&nbsp;<div id='contactButton'>contact@kerden.fr</div></a>
-    </div>
-    <div class="col-xs-12 text-center logoRow">
-        <a target="_blank" href="https://www.facebook.com/Kerden-1065052246903303/"><img src="{{asset('images/logos/fb.png')}}"></a>
-        <a target="_blank" href="https://www.instagram.com/kerden.fr/"><img src="{{asset('images/logos/instagram.png')}}"></a>
-        <a target="_blank" href="https://fr.pinterest.com/kerden_official"><img src="{{asset('images/logos/pinterest.png')}}"></a>
-        <a target="_blank" href="https://twitter.com/Kerden_fr"><img src="{{asset('images/logos/twitter.png')}}"></a>
-    </div>
-</div>
-
-<div class="modal fade"  id="aboutSiteModal" tabindex="-1" role="dialog">
-    <div class="modal-dialog" style="font-family:'Avenir Next'">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">&Agrave; propos</h4>
+<footer>
+    <div class="container">
+        <div class="row footerRow">
+            <div class="col-sm-4">
+                <h4>A propos</h4>
+                <!-- <a href="#" data-toggle="modal" data-target="#aboutSiteModal">Qui sommes-nous ?</a> -->
+                <a href="{{ url('/about') }}">Qui sommes-nous ?</a>
+                <a href="{{ url('/faq') }}">Comment ça marche</a>
+                <a href="#" data-toggle="modal" data-target="#cguModal" onclick="$('#cguModal').stop().animate({scrollTop:$('#annulationAnchor').offset().top},'slow'); return false;">Politique d'annulation</a>
+                <a href="#" data-toggle="modal" data-target="#cguModal">Conditions générales</a>
+                <div class="clearfix"></div>
             </div>
-            <div class="modal-body">
-                @include('about')
+            <div class="col-sm-4 text-center">
+                <div><img class="logo" src="{{asset('images/kerden-logo.svg')}}"></div>
+                <a class="social-link" target="_blank" href="https://www.facebook.com/Kerden-1065052246903303/"><i class="fa fa-facebook"></i></a>
+                <a class="social-link" target="_blank" href="https://www.instagram.com/kerden.fr/"><i class="fa fa-instagram"></i></a>
+                <a class="social-link" target="_blank" href="https://fr.pinterest.com/kerden_official"><i class="fa fa-pinterest-p"></i></a>
+                <a class="social-link" target="_blank" href="https://twitter.com/Kerden_fr"><i class="fa fa-twitter"></i></a>        
+            </div>
+            <div class="col-sm-4 text-right">
+                <h4>Contact</h4>
+                <p>Kerden.fr</p>
+                <p>25 Bis rue de l’Armorique 75015</p>
+                <p>+33 1 43 35 00 50</p>
+                <a href="mailto:contact@kerden.fr"><div id='contactButton'>contact@kerden.fr</div></a>
+            </div>
+            <div class="col-xs-12 footer-legal">
+                Kerden© 2017
             </div>
         </div>
     </div>
-</div>
+</footer>
 
-<div class="modal fade"  id="faqModal" tabindex="-1" role="dialog">
-    <div class="modal-dialog" style="font-family:'Avenir Next'">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title faqTitle">F.A.Q.</h4>
-            </div>
-            <div class="modal-body" id="faqBody">
-                @include('faq')
-            </div>
-        </div>
-    </div>
-</div>
 
-<div class="modal fade"  id="teamModal" tabindex="-1" role="dialog">
-    <div class="modal-dialog" style="font-family:'Avenir Next'">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h3 class="modal-title">L'Équipe</h3>
-            </div>
-            <div class="modal-body">
-                @include('theTeam')
-            </div>
-        </div>
-    </div>
-</div>
+
+
+
