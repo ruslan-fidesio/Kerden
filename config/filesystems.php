@@ -13,9 +13,11 @@ return [
     |
     | Supported: "local", "ftp", "s3", "rackspace"
     |
+    | @Simon : old value : 'public'
+    |
     */
 
-    'default' => 'public',
+    'default' => 's3',
 
     /*
     |--------------------------------------------------------------------------
@@ -56,10 +58,10 @@ return [
 
         's3' => [
             'driver' => 's3',
-            'key' => 'your-key',
-            'secret' => 'your-secret',
-            'region' => 'your-region',
-            'bucket' => 'your-bucket',
+            'key' => 'AKIAINPE3GVXC3D67KEQ',
+            'secret' => '+R9ukIv6arGHbyFad8kzf7g350lFHfh7CFeitL/4',
+            'region' => 'eu-west-1',
+            'bucket' => 'kerden-img',
         ],
 
     ],

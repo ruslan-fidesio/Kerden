@@ -132,24 +132,28 @@ class Garden extends Model
     }
 
     public function getPhotosUrls(){
-        if($this->defautImg){
-            $array = Storage::files($this->id);
-            usort($array, function ($a, $b) {
-                if (explode('/',$a)[1] == $this->defautImg->file_name) return -1;
-                if (explode('/',$b)[1] == $this->defautImg->file_name) return 1;
+        $files = Storage::files($this->id);
+
+        if ($this->defautImg) {
+            usort($files, function ($a, $b) {
+                if ($a == $this->defautImg->file_name) return -1;
+                if ($b == $this->defautImg->file_name) return 1;
                 return 0;
             });
-            return $array;
         }
-        return Storage::files($this->id);
+
+        foreach ($files as $key => $file) {
+            $files[$key] = Storage::url($file);
+        }
+        return $files;
     }
 
     public function getFirstPhotoURL(){
         if( count(Storage::files($this->id)) == 0 ) return null;
         if($this->defautImg){
-            return $this->id.'/'.$this->defautImg->file_name;
+            return Storage::url($this->id.'/'.$this->defautImg->file_name);
         }
-        return Storage::files($this->id)[0];
+        return Storage::url(Storage::files($this->id)[0]);
     }
 
     public function acceptNight($date){

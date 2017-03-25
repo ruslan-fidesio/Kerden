@@ -16,15 +16,15 @@
     @if(count($garden->getPhotosUrls())>1)
       @foreach($garden->getPhotosUrls() as $i=>$url)
         <div class="garden-slide">
-          <!-- <img src="{{ asset('storage/'.$url) }}"> -->
-          <img src="/images/bg1.jpg">
-          <div class="zoomIcon" data-zoomed-img="{{ asset('storage/'.$url) }}" onclick="zoomPreview(event);"><i class="fa fa-search-plus"></i></div>
+          <img src="{{ $url }}">
+          <!-- <img src="/images/bg1.jpg"> -->
+          <div class="zoomIcon" data-zoomed-img="{{ $url }}" onclick="zoomPreview(event);"><i class="fa fa-search-plus"></i></div>
         </div>
      @endforeach
     
 
     @else
-      <img src="{{ asset('storage/'.$garden->getFirstPhotoURL()) }}" data-zoomed-img="{{ asset('storage/'.$garden->getFirstPhotoURL()) }}" onclick="zoomPreview(event);">
+      <img src="{{ $garden->getFirstPhotoURL() }}" data-zoomed-img="{{ $garden->getFirstPhotoURL() }}" onclick="zoomPreview(event);">
     @endif
   </div>
   <!-- back button -->
@@ -443,7 +443,7 @@
 
 
 <div class="modal fade" id="ZoomModal" tabindex="-1" role="helper" aria-labelledby="ZoomImageLabel">
-  <div class="modal-dialog" role="document">
+  <div class="modal-dialog modal-full-screen" role="document">
     <div class="modal-content">
   		<div class="modal-body kerdenModal">
   			<div id="carousel-kerden-view" class="carousel slide" data-ride="carousel" data-interval="false"> 
@@ -458,7 +458,7 @@
   				<div class="carousel-inner" role="listbox">
 	  				@foreach($garden->getPhotosUrls() as $i=>$url)
 	  					<div class="item @if($i==0) active @endif">
-	  						<img src="{{ asset('storage/'.$url) }}" alt="" class="img-responsive PreviewImageOutput" data-dismiss="modal" style="left:0;right:0;margin:auto;width:100%">
+	  						<img src="{{ $url }}" alt="" class="img-responsive PreviewImageOutput" data-dismiss="modal" style="left:0;right:0;margin:auto;width:100%">
 	  					</div>
 					@endforeach
 				</div>

@@ -70,13 +70,18 @@ class AdminController extends Controller
         $garden = Garden::find($id);
         //check if folder exists (and eventually create it)
         $dirs = Storage::directories();
+
         if( !in_array($id,$dirs) ){
             Storage::makeDirectory($id);
         }
         //get all files
         $photos = Storage::files($id);
+        $photosURL = [];
+        foreach ($photos as $key => $photo) {
+            $photosURL[$key] = Storage::url($photo);
+        }
 
-        return view('admin.photos',['garden'=>$garden, 'photos'=>$photos]);
+        return view('admin.photos',['garden'=>$garden, 'photos'=>$photos, 'photosURL'=>$photosURL ]);
     }
 
     public function addPhoto($id, Request $req){
@@ -113,8 +118,8 @@ class AdminController extends Controller
         if(! isset($req->path)){
             return redirect()->back();
         }
-        $id = explode('/',$req->path)[0];
-        Storage::delete($req->path);
+        $url = urldecode($req->path);
+        $test = Storage::delete(urldecode($req->path));
         return redirect()->back();
     }
 

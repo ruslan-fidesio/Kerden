@@ -37,6 +37,7 @@ a:focus {
 .content {
   margin-top:80px;
   border-bottom: 1px solid #e7e7e7;
+  /*padding-top: 150px;*/
 }
 
 .row.no-gutters {
@@ -598,6 +599,10 @@ textarea:focus{
 
 .modal-backdrop {
   background-image:url('../images/motif_footer.jpg');
+}
+
+.modal-full-screen{
+  width: 90%!important;
 }
 
 
@@ -2088,8 +2093,7 @@ ul#gardenList{
 
 
 .navbar-kerden-home{
-	padding-top:49px;
-	position: fixed;
+	/*position: fixed;*/
 	width: 100%;
 	z-index: 9;
 }

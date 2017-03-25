@@ -15,12 +15,12 @@
                 		Pas de photos...
                 	@else
                 	<div class="row">
-                		@foreach($photos as $ph)
+                		@foreach($photos as $key=>$ph)
                 		<div class='col-md-4'>
                 			<div class="thumbnail">
-                				<img src="{{ asset('storage/'.$ph) }}">
+                				<img src="{{ $photosURL[$key] }}">
                 				<div class="caption">
-                					<a href="{{ url('/admin/delphotos?path='.$ph) }}" class="btn btn-danger">Supprimer</a>
+                					<a href="{{ url('/admin/delphotos?path='.urlencode($ph)) }}" class="btn btn-danger">Supprimer</a>
                                     @if( $garden->defautImg && ($garden->id.'/'.$garden->defautImg->file_name  == $ph))
                                     <div class="btn btn-primary"><i class="fa fa-check"></i>Photo par défaut</div>
                                     @else
