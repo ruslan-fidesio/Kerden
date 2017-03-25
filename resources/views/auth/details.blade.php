@@ -5,18 +5,6 @@
 @endsection
 
 @section('contentPane')
-@if(!empty($error))
-<div class="alert alert-danger">
-    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-{{ $error }}
-</div>
-@endif
-@if(!empty($message))
-<div class="alert alert-success">
-    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-{{ $message }}
-</div>
-@endif
 
 <div class="panel panel-kerden-home">
     <div class="kerden-back-button">Retour</div>

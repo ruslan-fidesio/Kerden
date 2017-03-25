@@ -91,7 +91,7 @@ class AuthController extends Controller
     }
 
     protected function createNewDetails($userid,$islegal){
-        $type = $islegal ? 'legal' : 'natural';
+        $type = $islegal == 'true' ? 'legal' : 'natural';
         return UserDetail::create([
             'id' => $userid,
             'type' => $type,

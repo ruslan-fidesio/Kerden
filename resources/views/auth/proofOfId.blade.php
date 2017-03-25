@@ -66,6 +66,146 @@
                 </table>
 			</div>
 			@endif
+
+			@if (Auth::User()->details->type == 'legal' || (!empty($userFromAdmin) && $userFromAdmin->details->type == 'legal') )
+				<div class="row">
+					<h2>Documents relatifs à l'entreprise</h2>
+					<table class="table">
+						<thead><th>Type de document</th><th>Status</th><th>Actions</th></thead>
+						<tr>
+							<td>Statuts de l'organisation</td>
+							<td>
+								@if ($statusFile)
+									{{$statusFile->Status}}
+								@else
+									-Pas de fichier-
+								@endif
+							</td>
+							<td>
+								@if ($statusFile && ($statusFile->Status == 'VALIDATED' || $statusFile->Status == "VALIDATION_ASKED"))
+									<i class="fa fa-hourglass-half"></i>
+								@else
+									<a href="#" data-toggle="modal" data-target="#sendStatus" class="btn btn-primary">Envoyer</a>
+								@endif
+							</td>
+						</tr>
+						<tr>
+							<td>Extrait Registre Officiel (KBIS/SIRET/RNA)</td>
+							<td>
+								@if ($kbisFile)
+									{{$kbisFile->Status}}
+								@else
+									-Pas de fichier-
+								@endif
+							</td>
+							<td>
+								@if ($kbisFile && ($kbisFile->Status == 'VALIDATED' || $kbisFile->Status == "VALIDATION_ASKED"))
+									<i class="fa fa-hourglass-half"></i>
+								@else
+									<a href="#" data-toggle="modal" data-target="#sendKBIS" class="btn btn-primary">Envoyer</a>
+								@endif
+							</td>
+						</tr>
+						@if ($organization->type == 'BUSINESS')
+						<tr>
+							<td>Déclaration des propriétaires</td>
+							<td>
+								@if ($shareHoldFile)
+									{{$shareHoldFile->Status}}
+								@else
+									-Pas de fichier-
+								@endif
+							</td>
+							<td>
+								@if ($shareHoldFile && ($shareHoldFile->Status == 'VALIDATED' || $shareHoldFile->Status == "VALIDATION_ASKED"))
+									<i class="fa fa-hourglass-half"></i>
+								@else
+									<a class="btn btn-warning" target="_blank" href="https://www.mangopay.com/terms/shareholder-declaration/Shareholder_Declaration-EN.pdf" download>Télécharger</a>
+									<a href="#" data-toggle="modal" data-target="#sendSharehold" class="btn btn-primary">Envoyer</a>
+								@endif
+							</td>
+						</tr>
+						@endif
+					</table>
+				</div>
+			@endif
+
+		</div>
+	</div>
+
+	<div class="modal fade"  id="sendStatus" tabindex="-1" role="dialog">
+	    <div class="modal-dialog" style="font-family:'Avenir Next'">
+	        <div class="modal-content">
+	            <div class="modal-header">
+	                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	                <h4 class="modal-title">Status de l'organisation</h4>
+	            </div>
+	            <div class="modal-body">
+	                {!! Form::open(['files'=>true]) !!}
+
+					@if(!empty($userFromAdmin))
+						{!! Form::hidden('userIdFromAdmin',$userFromAdmin->Id) !!}
+					@endif
+
+
+					{!! Form::file('status',['accept'=>'.pdf,.jpeg,.jpg,.gif,.png', 'id'=>'status']) !!}
+
+					{!! Form::submit('Envoyer',['class'=>'btn btn-kerden-confirm']) !!}
+
+					{!! Form::close() !!}
+	            </div>
+	        </div>
+	    </div>
+	</div>
+	<div class="modal fade"  id="sendKBIS" tabindex="-1" role="dialog">
+	    <div class="modal-dialog" style="font-family:'Avenir Next'">
+	        <div class="modal-content">
+	            <div class="modal-header">
+	                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	                <h4 class="modal-title">Extrait KBIS</h4>
+	            </div>
+	            <div class="modal-body">
+	                {!! Form::open(['files'=>true]) !!}
+
+					@if(!empty($userFromAdmin))
+						{!! Form::hidden('userIdFromAdmin',$userFromAdmin->Id) !!}
+					@endif
+
+
+					{!! Form::file('kbis',['accept'=>'.pdf,.jpeg,.jpg,.gif,.png', 'id'=>'kbis']) !!}
+
+					{!! Form::submit('Envoyer',['class'=>'btn btn-kerden-confirm']) !!}
+
+					{!! Form::close() !!}
+	            </div>
+	        </div>
+	    </div>
+	</div>
+	<div class="modal fade"  id="sendSharehold" tabindex="-1" role="dialog">
+	    <div class="modal-dialog" style="font-family:'Avenir Next'">
+	        <div class="modal-content">
+	            <div class="modal-header">
+	                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	                <h4 class="modal-title">Déclaration des copropriétaires</h4>
+	            </div>
+	            <div class="modal-body">
+	                {!! Form::open(['files'=>true]) !!}
+
+					@if(!empty($userFromAdmin))
+						{!! Form::hidden('userIdFromAdmin',$userFromAdmin->Id) !!}
+					@endif
+
+
+					{!! Form::file('sharehold',['accept'=>'.pdf,.jpeg,.jpg,.gif,.png', 'id'=>'sharehold']) !!}
+
+					{!! Form::submit('Envoyer',['class'=>'btn btn-kerden-confirm']) !!}
+
+					{!! Form::close() !!}
+	            </div>
+	        </div>
+	    </div>
+	</div>
+
 		</div>
 	</div>
 

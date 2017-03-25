@@ -21,7 +21,7 @@
 			<h3>{{$user->fullName}}</h3>
 			<h4>Comptes enregistrés :</h4>
 			@if(!$active)
-				<span style='color:red;font-size:2em'>Pas de compte actif</span>
+				<span>Pas de compte actif</span>
 			@endif
 
 			@if(!empty($accounts) )

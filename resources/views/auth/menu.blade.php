@@ -18,6 +18,18 @@
 	</div>
 
 	<div class="col-sm-9 kerden-page-2">
+		@if(isset($message))
+	        <div class="alert alert-success fade in">
+	          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+	          {{$message}}
+	        </div>
+	    @endif
+	    @if(isset($error))
+	        <div class="alert alert-danger fade in">
+	          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+	          {{$error}}
+	        </div>
+	    @endif
 		@yield('contentPane')
 	</div>
 </div>
