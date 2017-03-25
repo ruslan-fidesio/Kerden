@@ -1,7 +1,9 @@
 @extends('layouts.backend')
 
 @section('content')
-
+<div class="admin-bg">
+  <h1 class="text-center">Messages</h1>
+</div>
 <div class="container" style='max-width:860px'>
 	@forelse($groups as $mess)
 	<a href="{{url('/messages/'.$mess->garden_id)}}">
