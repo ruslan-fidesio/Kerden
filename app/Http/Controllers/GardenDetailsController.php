@@ -21,14 +21,20 @@ class GardenDetailsController extends Controller
 		$this->middleware(['auth','owner','valid']);
 	}
     //
-    public function create($id){
-    	return view('garden.details',['garden'=>Garden::find($id),
+    public function create($id, Request $req){
+        $garden = Garden::find($id);
+        if ($garden->state == 'new') {
+            return redirect('/garden/menu/'.$id)->with('message', "Vous devez d'abord remplir ces informations.");
+        }
+    	return view('garden.details',['garden'=>$garden,
             'activities'=>GardenActivity::firstOrCreate(['id'=>$id]),
             'music_level'=>GardenMusicLevel::firstOrCreate(['id'=>$id]),
             'toilets'=>GardenToilets::firstOrCreate(['id'=>$id]),
             'kitchen'=>GardenKitchen::firstOrCreate(['id'=>$id]),
             'ware'=>GardenWare::where('id',$id)->get(),
-            'animal'=>GardenAnimal::firstOrCreate(['garden_id'=>$id])
+            'animal'=>GardenAnimal::firstOrCreate(['garden_id'=>$id]),
+            'message'=>$req->session()->get('message'),
+            'error'=>$req->session()->get('error')
             ]);
     }
 
@@ -121,11 +127,11 @@ class GardenDetailsController extends Controller
         }
 
         //set the garden state correctly
-        if($garden->state == 'new'){
+        if($garden->state == 'infos_ok'){
             $garden->state = 'details_ok';
             $garden->save();
             return redirect('/garden/prices/'.$garden->id);
         }
-    	return redirect('/home')->with('message', trans('garden.details_ok'));
+    	return redirect()->back()->with('message', trans('garden.details_ok'));
     }
 }

@@ -209,7 +209,7 @@
           </div>
         </div>    
 
-        @if($garden->staff->requiredStaff || $garden->staff->requiredStaffNight)
+        @if($garden->staff && ($garden->staff->requiredStaff || $garden->staff->requiredStaffNight))
 
           <div class="row garden-details">
             <div class="col-md-4">
@@ -226,7 +226,7 @@
               @if($garden->staff->restrictedKitchenAccess)
               <br/>
               {{trans('search.kitchenStaff')}}
-            @endif
+              @endif
             </div>
           </div>
         @endif

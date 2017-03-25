@@ -28,7 +28,7 @@ class ProofOfIdController extends Controller
             }
         }
         else{
-            return redirect('/home')->with('error','Opération impossible : <a href="/userdetails">Renseignez d\'abord vos coordonnées</a>');
+            return redirect()->back()->with('error','Opération impossible : <a href="/userdetails">Renseignez d\'abord vos coordonnées</a>');
         }
     }
 
@@ -109,7 +109,7 @@ class ProofOfIdController extends Controller
             $fileType = "SHAREHOLDER_DECLARATION";
         }
         else {
-            return redirect('/home')->with('error','Erreur envoi fichier');
+            return redirect()->back()->with('error','Erreur envoi fichier');
         }
 
 		//test file size

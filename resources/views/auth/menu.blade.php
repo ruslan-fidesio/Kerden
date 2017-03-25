@@ -8,7 +8,9 @@
 
 		<ul class="" role="menu">
 			<a class="left-menu-link" href="{{url('/userdetails')}}"><li>Modifier mes coordonnées</li></a>
-			<a class="left-menu-link" href="{{url('/user/advancedDetails')}}"><li>Données avancées</li></a>
+			@if (Auth::user() && Auth::user()->details && Auth::user()->details->type == 'natural')
+				<a class="left-menu-link" href="{{url('/user/advancedDetails')}}"><li>Données avancées</li></a>
+			@endif
 			<a class="left-menu-link" href="{{url('/proofOfId')}}"><li>Prouver mon identité</li></a>
 			<a class="left-menu-link" href="{{url('/rib')}}"><li>Coordonnées bancaires</li></a>
 			<a class="left-menu-link" href="{{url('/changePassword')}}"><li>Changer de Mot de Passe</li></a>

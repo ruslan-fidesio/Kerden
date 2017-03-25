@@ -31,7 +31,7 @@
         {!! Form::model($details,['url'=>'/userdetails','autocomplete'=>'off','class'=>'form-horizontal details-form']) !!}
             {!! csrf_field() !!}
             <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                <label for="'email" class="col-md-4 control-label">E-mail</label>
+                <label for="'email" class="col-md-4 control-label">E-mail *</label>
                 <div class="col-md-6">
                     <input type="text" class="form-control" name="email" value="{{$user->email}}">
                     @if ($errors->has('email'))
@@ -51,7 +51,7 @@
             </div>
 
             <div class="form-group{{ $errors->has('firstName') ? ' has-error' : '' }}">
-                <label for="'firstName" class="col-md-4 control-label">Prénom</label>
+                <label for="'firstName" class="col-md-4 control-label">Prénom *</label>
                 <div class="col-md-6">
                     <input type="text" class="form-control" name="firstName" value="{{$user->firstName}}">
                     @if ($errors->has('firstName'))
@@ -62,7 +62,7 @@
                 </div>
             </div>
             <div class="form-group{{ $errors->has('lastName') ? ' has-error' : '' }}">
-                <label for="lastName" class="col-md-4  control-label">Nom</label>
+                <label for="lastName" class="col-md-4  control-label">Nom *</label>
                 <div class="col-md-6">
                     <input type="text" class="form-control" name="lastName" value="{{$user->lastName}}">
                     @if ($errors->has('lastName'))
@@ -73,7 +73,7 @@
                 </div>
             </div>
             <div class="form-group{{ $errors->has('birthday') ? ' has-error' : '' }}">
-                {!! Form::label(trans('validation.attributes.birthday'), null ,
+                {!! Form::label(trans('validation.attributes.birthday').' *', null ,
                     ['class'=>'col-md-4 control-label']) !!}
 
                 <div class="col-md-6">
@@ -90,7 +90,7 @@
             </div>
 
             <div class="form-group{{ $errors->has('nationality') ? ' has-error' : '' }}">
-                {!! Form::label(trans('validation.attributes.nationality'),null,
+                {!! Form::label(trans('validation.attributes.nationality').' *',null,
                     ['class'=>'col-md-4 control-label']) !!}
 
                 <div class="col-md-6">
@@ -109,7 +109,7 @@
                     ['class'=>'col-md-4 control-label']) !!}
 
                 <div class="col-md-6">
-                    <select size="1" class="form-control" name="countryOfResidence" id="countryOfResidence"
+                    <select class="form-control" name="countryOfResidence" id="countryOfResidence"
                      value="{{ old('countryOfResidence') }}" disabled >
                      <option value="FR" selected>France</option>
                     </select>
@@ -117,7 +117,7 @@
             </div>
 
             <div class="form-group{{ $errors->has('addressLine1') ? ' has-error' : '' }}">
-                {!! Form::label(trans('validation.attributes.address'),null,
+                {!! Form::label(trans('validation.attributes.address').' *',null,
                     ['class'=>'col-md-4 control-label']) !!}
                 <div class="col-md-6">
                      {!! Form::text('addressLine1',null,['class'=>'form-control'])  !!}
@@ -140,7 +140,7 @@
             </div>
 
             <div class="form-group{{ $errors->has('addressPostalCode') ? ' has-error' : '' }}">
-                {!! Form::label(trans('validation.attributes.postalCode'),null,
+                {!! Form::label(trans('validation.attributes.postalCode').' *',null,
                     ['class'=>'col-md-4 control-label']) !!}
 
                 <div class="col-md-6">
@@ -155,7 +155,7 @@
             </div>
 
             <div class="form-group{{ $errors->has('addressCity') ? ' has-error' : '' }}">
-                {!! Form::label(trans('validation.attributes.city'),null,
+                {!! Form::label(trans('validation.attributes.city').' *',null,
                     ['class'=>'col-md-4 control-label']) !!}
 
                 <div class="col-md-6">
@@ -171,14 +171,14 @@
 
         @if ($details->type == 'legal')
             <div class="form-group">
-                {!! Form::label('Je suis un représentant légal',null,
+                {!! Form::label(trans('userdetails.iamlegal'),null,
                     ['class'=>'col-md-6 control-label']) !!}
 
                 <div class="col-md-1">
-                    {!! Form::checkbox('iamlegal', null,($details->type === 'legal'),
-                      ['class'=>'form-control','id'=>'iamlegal','disabled'=>''] ) !!}
+                    {!! Form::checkbox('type', null,($details->type === 'legal'),
+                      ['class'=>'form-control','id'=>'type','disabled'=>''] ) !!}
                 </div>
-                <input type="hidden" name="iamlegal" value="true" />
+                <input type="hidden" name="type" value="legal" />
             </div>
 
 
@@ -189,17 +189,8 @@
                 <div class="panel-heading">{{trans( 'userdetails.organizationdetails' )}}</div>
                 <div class="panel-body">
 
-                    //
-                    <div class="form-group{{ $errors->has('orgaType') ? ' has-error' : '' }}">
-                        <label class="col-md-4 control-label">Type d'organisation</label>
-
-                        <div class="col-md-6">
-                            /////insert here
-                        </div>
-                    </div>
-
                     <div class="form-group{{ $errors->has('organizationname') ? ' has-error' : '' }}">
-                        <label class="col-md-4 control-label">{{trans('validation.attributes.name')}}</label>
+                        <label class="col-md-4 control-label">{{trans('validation.attributes.name').' *'}}</label>
 
                         <div class="col-md-6">
                             <input type="text" class="form-control" name="organizationname" id="organizationname"
@@ -213,8 +204,25 @@
                         </div>
                     </div>
 
+                    <div class="form-group{{ $errors->has('orgaType') ? ' has-error' : '' }}">
+                        <label class="col-md-4 control-label">{{trans('validation.attributes.type')}}</label>
+
+                        <div class="col-md-6">
+                            <select class="form-control" name="orgaType" id="orgaType">
+                                <option value="BUSINESS" @if ($orga->type=="BUSINESS") selected  @endif>Entreprise</option>
+                                <option value="ORGANIZATION" @if ($orga->type=="ORGANIZATION") selected  @endif>Association</option>
+                            </select>
+
+                            @if ($errors->has('orgaType'))
+                                <span class="help-block">
+                                    <strong>{{ $errors->first('orgaType') }}</strong>
+                                </span>
+                            @endif
+                        </div>
+                    </div>                    
+
                     <div class="form-group{{ $errors->has('headQuartersAddressLine1') ? ' has-error' : '' }}">
-                        <label class="col-md-4 control-label">{{trans('validation.attributes.address')}}</label>
+                        <label class="col-md-4 control-label">{{trans('validation.attributes.address').' *'}}</label>
 
                         <div class="col-md-6">
                             <input type="text" class="form-control" name="headQuartersAddressLine1" id="headQuartersAddressLine1"
@@ -238,7 +246,7 @@
                     </div>
 
                     <div class="form-group{{ $errors->has('headQuartersAddressPostalCode') ? ' has-error' : '' }}">
-                        <label class="col-md-4 control-label">{{trans('validation.attributes.postalCode')}}</label>
+                        <label class="col-md-4 control-label">{{trans('validation.attributes.postalCode').' *'}}</label>
 
                         <div class="col-md-6">
                             <input type="text" class="form-control" name="headQuartersAddressPostalCode" id="headQuartersAddressPostalCode"
@@ -253,7 +261,7 @@
                     </div>
 
                     <div class="form-group{{ $errors->has('headQuartersAddressCity') ? ' has-error' : '' }}">
-                        <label class="col-md-4 control-label">{{trans('validation.attributes.city')}}</label>
+                        <label class="col-md-4 control-label">{{trans('validation.attributes.city').' *'}}</label>
 
                         <div class="col-md-6">
                             <input type="text" class="form-control" name="headQuartersAddressCity" id="headQuartersAddressCity"
@@ -327,18 +335,6 @@
                 <h3>Comment utilisons-nous votre numéro?</h3>
                     <p>Nous n'utilisons pas directement votre numéro. Nous le transmettons à vos interlocuteurs (locataires ou propriétaires), uniquement dans le cadre d'une réservation approuvée et déjà payée.</p>
                     <p>Kerden.fr s'engage à ne pas divulger votre numéro en dehors du cadre sus-cité.</p>
-                <h3>Je ne veux pas!</h3>
-                    <p>Si vous ne voulez pas renseigner de téléphone, ou que Kerden.fr n'utilise pas votre numéro de téléphone, cochez la case suivante :</p>
-                    <div class='checkbox'>
-                        <label>
-                            @if( $user->phone && $user->phone->phone == 'noPhone')
-                                {!! Form::checkbox('nophone','1', true  ) !!}
-                            @else
-                                {!! Form::checkbox('nophone','1', null  ) !!}
-                            @endif
-                            <strong>Je ne souhaite pas divulger mon numéro de téléphone.</strong>
-                        </label>
-                    </div>
             </div>
         </div>
     </div>

@@ -135,7 +135,7 @@ class UserDetailController extends Controller
             }
             
 
-    		return redirect('/home')->with('message',trans('userdetails.updateOK'));
+    		return redirect()->back()->with('message',trans('userdetails.updateOK'));
     	}
     }
 }

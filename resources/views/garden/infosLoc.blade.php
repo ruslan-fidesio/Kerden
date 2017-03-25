@@ -7,12 +7,6 @@
     <div class="row">
         <div class="col-md-12">
             <div class="panel panel-kerden-home">
-            	@if(isset($message))
-                	<div class="alert alert-success fade in">
-                		<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                		{{$message}}
-                	</div>
-            	@endif
                 <div class="panel-heading">Informations Locataire</div>
                 <div class="panel-body infosLocBody">
                     Ces informations seront communiquées au locataire, uniquement lorsqu'une réservation sera confirmée et payée.

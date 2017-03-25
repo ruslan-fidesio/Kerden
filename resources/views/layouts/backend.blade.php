@@ -91,10 +91,10 @@
 @section('baseHomeScript')
 <script>
 function showPage2(){
-  $('.kerden-page-2').css('left','0');
-  $('.kerden-page-2').show();
-  $('.kerden-page-1').css('left','-100%');
   if($(document).width() < 767){
+    $('.kerden-page-2').css('left','0');
+    $('.kerden-page-2').show();
+    $('.kerden-page-1').css('left','-100%');
     $('.kerden-page-1').hide();
   }
 }
