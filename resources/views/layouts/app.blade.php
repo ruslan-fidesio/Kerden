@@ -357,7 +357,10 @@
         }
 
         (function($){
-            $('#connexionModal').has('.help-block').modal('show');
+            @if (Request::path() != 'register')
+                $('#connexionModal').has('.help-block').modal('show');
+            @endif
+
             $('#switchModal').click(function(e){
                 $('#connexionModal').modal('hide');
                 $('#inscriptionModal').modal('show');
