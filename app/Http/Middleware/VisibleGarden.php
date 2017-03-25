@@ -19,7 +19,7 @@ class VisibleGarden
     {
         if(!empty($request->id)){
             $garden = Garden::find($request->id);
-            if ($garden->state != 'dispo_ok') {
+            if ($garden->state != 'dispo_ok' && $garden->state != 'validated' ) {
                 return redirect()->back()->with('error', 'Il manque des informations pour prévisualiser le Jardin');
             }
             if($garden->state != 'validated' || $garden->owner->blocked){
