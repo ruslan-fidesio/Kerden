@@ -64,7 +64,7 @@ class MailConfirmationController extends Controller
     			$theRole->save();
     		}
     		$confirm->delete();
-    		return redirect('/home')->with('message',trans('auth.successemailconfirm'));
+    		return redirect('/userdetails')->with('message',trans('auth.successemailconfirm'));
     	}
     	else{
     		return redirect('/home')->with('error',trans('auth.failemailconfirm'));

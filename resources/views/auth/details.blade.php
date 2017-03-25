@@ -11,6 +11,12 @@
 {{ $error }}
 </div>
 @endif
+@if(!empty($message))
+<div class="alert alert-success">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+{{ $message }}
+</div>
+@endif
 
 <div class="panel panel-kerden-home">
     <div class="kerden-back-button">Retour</div>
@@ -165,7 +171,7 @@
 
         @if ($details->type == 'legal')
             <div class="form-group">
-                {!! Form::label(trans('userdetails.iamlegal'),null,
+                {!! Form::label('Je suis un représentant légal',null,
                     ['class'=>'col-md-6 control-label']) !!}
 
                 <div class="col-md-1">
@@ -182,6 +188,15 @@
 
                 <div class="panel-heading">{{trans( 'userdetails.organizationdetails' )}}</div>
                 <div class="panel-body">
+
+                    //
+                    <div class="form-group{{ $errors->has('orgaType') ? ' has-error' : '' }}">
+                        <label class="col-md-4 control-label">Type d'organisation</label>
+
+                        <div class="col-md-6">
+                            /////insert here
+                        </div>
+                    </div>
 
                     <div class="form-group{{ $errors->has('organizationname') ? ' has-error' : '' }}">
                         <label class="col-md-4 control-label">{{trans('validation.attributes.name')}}</label>

@@ -54,7 +54,9 @@ class UserDetailController extends Controller
         }
     	$details = UserDetail::findOrCreate($req->user()->id);
         $orga = Organization::findOrCreate( $details->organization );
-    	return view('auth.details',['paysCodes'=>$paysCodes,'user'=>$req->user() ,'details'=>$details, 'orga'=>$orga])->with('error',$req->session()->get('error'));
+    	return view('auth.details',['paysCodes'=>$paysCodes,'user'=>$req->user() ,'details'=>$details, 'orga'=>$orga])
+            ->with('error',$req->session()->get('error'))
+            ->with('message', $req->session()->get('message'));
     }
 
     private function updateRole($userId){
