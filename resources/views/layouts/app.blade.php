@@ -279,20 +279,210 @@
         </div>
     </div>
 
-    <div class="modal fade" id="cguModal" tabindex="-1" role="dialog">
+    <div class="modal fade" id="privacy" tabindex="-1" role="dialog">
         <div class="modal-dialog" >
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4>Conditions Générales d'Utilisation</h4>
+                    <h4>Vie privée</h4>
                 </div>
                 <div class="modal-body">
-                    @include('cgu')
+
+                    <h3>CHARTE DE PROTECTION DES DONNEES PERSONNELLES</h3>
+
+
+                    <p>La société Adenor attache une grande importance à la protection de votre vie privée et des informations vous concernant.</p>
+
+                    <p>Nous nous engageons, dans le cadre de nos activités et conformément à la législation en vigueur en France et en Europe, à assurer l’intégrité, la confidentialité́ et, d’une manière générale, la sécurité des données à caractère personnel des utilisateurs de nos services.</p>
+
+                    <p>Vous êtes invité à lire attentivement la présente charte de protection des données personnelles (ci-après, la « Charte »).</p>
+
+                    <p>L’objectif de notre Charte est de définir les règles applicables aux données à caractère personnel (ci-après les « Données Personnelles ») que nous collectons, traitons et conservons à partir du Service Kerden.</p>
+
+                    <p>La présente Charte fait partie intégrante des Conditions d’utilisation du Service Kerden. La Charte s’applique aux utilisateurs inscrits au Service Kerden, quelle que soit leur catégorie : Locataire, Propriétaire et Ker-House.</p>
+
+
+                    <h3>Table des matières</h3>
+
+                    <ul>
+                    <li>1. Entrée en vigueur et mise à jour de la Charte</li>
+                    <li>2. Loi applicable et responsabilités</li>
+                    <li>3. Données personnelles recueillies par le Service Kerden</li>
+                    <li>4. Utilisation des Données Personnelles </li>
+                    <li>5. Sécurité des Données Personnelles </li>
+                    <li>6. Droits des Utilisateurs</li>
+                    <li>7. Questions</li>
+                    </ul>
+
+                    <h3>Article 1. Entrée en vigueur et mise à jour de la Charte</h3>
+
+                    <p>La présente Charte entre en vigueur à compter du 15 mars 2017.</p>
+
+                    <p>Nous nous réservons le droit de modifier la présente Charte à tout moment en mettant en ligne sur le Site Kerden la nouvelle version. Cette nouvelle version de la Charte entrera en vigueur dès votre inscription si vous êtes un nouvel utilisateur, et 15 jours après sa mise en ligne si vous êtes déjà utilisateur de nos services. Si vous êtes un Utilisateur déjà inscrit, une fenêtre pop-up apparaîtra lors de votre connexion sur le Site Kerden vous notifiant la modification de la Charte. Si vous refusez la nouvelle version de la Charte, vous ne pourrez plus accéder au Service Kerden à l’issue de la période de 15 jours. </p>
+
+                    <p>Nous communiquons la Charte modifiée à l’Utilisateur afin que vous soyez toujours pleinement informé des catégories de Données Personnelles recueillies, de la manière dont elles sont utilisées, et des circonstances dans lesquelles elles peuvent être communiquées. </p>
+
+                    <p>D’une manière générale, la Charte est facilement accessible via les différentes pages du Site Kerden.</p>
+
+                    <h3>Article 2. Loi applicable et responsabilités</h3>
+
+                    <p>Le traitement des Données Personnelles des Utilisateurs inscrits au Service Kerden est soumis à la loi française, notamment à la loi dite Informatique et Libertés n°78-17 du 6 janvier 1978, modifiée.</p>
+
+                    <p>Conformément aux dispositions de ladite Loi, le traitement des Données Personnelles des Utilisateurs du Service Kerden a dûment été déclaré à la Commission Nationale Informatique et Libertés (CNIL), sous le numéro 2012473.</p>
+
+                    <p>Le responsable du traitement des Données Personnelles des Utilisateurs du Service Kerden est :
+                    <ul>
+                        <li>Société ADENOR</li>
+                        <li>RCS Paris n° 820 157 717 </li>
+                        <li>25 bis rue de l’Armorique - 75015 Paris</li>
+                    </ul>
+                    </p>
+
+                    <p>Le prestataire d’hébergement des Données Personnelles des Utilisateurs du Service Kerden, agissant en qualité de sous-traitant, est :</p>
+
+                    <p>Société HEROKU<br>
+                    650 7th St - San Francisco,<br>
+                    CA 94103 - États-Unis
+                    </p>
+                    <p>
+                    Les tiers : le Service Kerden peut intégrer des liens hypertextes en direction de sites internet tiers, y compris des sites de partenaires commerciaux. Si vous vous inscrivez sur des sites tiers, la collecte et l’utilisation de vos Données Personnelles sur ces sites sera soumise à leurs propres conditions d’utilisation. L’application de la présente Charte ne s’étend pas aux sites tiers. Nous ne sommes pas responsables de la façon dont ces sites utilisent vos Données Personnelles.
+                    </p>
+
+                    <h3>Article 3. Données personnelles recueillies par le Service Kerden</h3>
+
+                    <h4>3.1 Conditions de collecte</h4>
+
+                    <p>Vous n’avez pas besoin de vous inscrire sur le Site Kerden pour y accéder et naviguer sur ses différentes pages. </p>
+
+                    <p>Nous collectons uniquement les Données Personnelles des internautes qui :
+                    <ul>
+                        <li>-   Souhaitent obtenir des informations complémentaires sur nos activités et les newsletters de Kerden ; </li>
+                        <li>-   Souhaitent réserver un espace extérieur (jardin, terrasse, domaine, etc.) (« Espace extérieur ») ;</li>
+                        <li>-   Souhaitent louer un Espace extérieur.</li>
+                        <li>-   Reçoivent une invitation à un Evènement par le biais de la plateforme Kerden</li>
+                        <li>-   Exécutent des prestations de services en qualité de Ker-House</li>
+                    </ul>
+                    </p>
+
+                    <p>Dans ces conditions, l’accès et l’utilisation du Service Kerden impliquent un traitement de vos Données Personnelles (nom, prénom, adresse e-mail, mot de passe, numéro de téléphone, etc.).</p>
+
+                    <p>L’inscription au Service Kerden peut se réaliser de deux façons, soit via un formulaire d’inscription, soit via un service tiers (Google ou Facebook).</p>
+
+                    <p>Le formulaire d’inscription comprend une rubrique relative à la possibilité pour la société Adenor d’utiliser vos Données Personnelles à des fins marketing ou commerciales (tel que newsletter, questionnaire et informations sur des services similaires). </p>
+
+                    <h4>3.2 Cookies </h4>
+
+                    <p>Des cookies sont utilisés sur le Site Kerden. Les cookies (ou « traceurs ») sont des programmes (ou petits fichiers textes), stockées sur votre ordinateur, ne permettant pas de vous identifier. Ils servent à enregistrer vos informations de navigation sur le Site Kerden. </p>
+
+                    <p>Lors de vos visites sur le Service Kerden, un cookie peut s’installer automatiquement sur votre logiciel de navigation. Ces cookies permettent une navigation personnalisée de l’Utilisateur et sont également utilisés à des fins statistiques et publicitaires. Ces cookies nous permettent de reconnaître les Utilisateurs lors de leur retour sur le Site Kerden, de mémoriser les données que vous avez saisies lors de votre navigation sur notre Service Kerden (choix de la langue, type de navigateur, etc.) et de ne pas vous demander les mêmes informations plusieurs fois lors de votre visite sur notre Site Kerden. </p>
+
+                    <p>Vous serez averti de leur existence et de leur(s) finalité(s) dès votre connexion sur le Site Kerden par la présence d’un bandeau placé en bas ou en haut de la page d’accueil, indiquant « En poursuivant votre navigation, vous acceptez l’utilisation de cookies pour vous proposer une navigation personnalisée et réaliser des statistiques de visites. ». Le dépôt et la lecture des cookies sur votre terminal nécessitent votre consentement préalable, en cliquant sur « J’accepte ». Vous pouvez toutefois configurer votre navigateur pour refuser les cookies ou personnaliser les paramètres des cookies en cliquant sur un lien « En savoir plus ». En cas de refus des cookies, nous vous informons que le Site Kerden peut ne pas fonctionner dans son intégralité ou être bloqué. Si vous acceptez l’utilisation de cookies, votre accord aura une durée de validité de 13 mois. Il sera alors nécessaire de renouveler votre accord à l’expiration de cette durée. </p>
+
+                    <p>En outre, des cookies peuvent être placés de temps à autres sur certaines pages du Site Kerden par des tiers (annonceurs publicitaires ou autres). Nous vous informons que nous n’exerçons aucun contrôle sur l’utilisation de cookies par les tiers. </p>
+                     
+                    <h3>Article 4. Utilisation des Données Personnelles</h3>
+
+                    <p>Les Données Personnelles concernant l’Utilisateur sont collectées et traitées de manière loyale et licite pour des finalités déterminées, explicites et légitimes, sans être traitées ultérieurement de manière incompatible avec ces finalités, sous une forme permettant l’identification des Utilisateurs pendant une durée qui n’excède pas la durée nécessaire aux finalités pour lesquelles elles sont collectées et traitées.</p>
+
+                    <h4>4.1 Finalités du traitement </h4>
+
+                    <p>Les Données Personnelles des Utilisateurs sont collectées et traitées selon une finalité définie et précise, telle que déclarée à la Commission nationale de l’informatique et des libertés (CNIL). </p>
+
+                    <p>A ce titre, nous collectons vos données pour les finalités générales suivantes :
+                    <ul>
+                        <li>•   Gérer votre inscription et votre compte, notamment pour votre accès à notre Service et son utilisation</li>
+                        <li>•   Communiquer avec vous en général</li>
+                        <li>•   Répondre à vos questions et commentaires éventuels</li>
+                        <li>•   Mesurer votre intérêt pour nos services et notre Site et les améliorer</li>
+                        <li>•   Vous informer des produits et services que nous proposons et qui peuvent vous intéresser d'après vos préférences</li>
+                        <li>•   Collecter des renseignements auprès de vous, notamment à travers des enquêtes de satisfaction par exemple</li>
+                        <li>•   Résoudre des litiges ou des problèmes entre Utilisateurs par exemple</li>
+                        <li>•   Empêcher d'éventuelles activités interdites ou illégales via notre Site Kerden.</li>
+                    </ul>
+                    </p>
+                    <h4>4.2 Durée de conservation</h4>
+
+                    <p>Les Données Personnelles sont conservées pour la durée nécessaire aux finalités du traitement. Les données collectées, la durée de leur conservation ainsi que leurs destinataires sont déterminés en fonction de ces finalités. </p>
+
+                    <p>Nous nous engageons à conserver vos Données Personnelles uniquement pendant la durée strictement nécessaire au(x) traitement(s) envisagé(s) ou pour satisfaire aux obligations légales, et en toute hypothèse dans les limites imposées par la loi. </p>
+
+                    <p>Nous nous engageons à effacer les données de nos bases de données à l’issue de cette durée. Toutefois, nous pouvons conserver certaines informations pour une période postérieure à la clôture de votre compte Utilisateur, par exemple si cela s'avérait nécessaire pour remplir nos obligations légales ou en vue d'exercer, de défendre ou de faire valoir nos droits.</p>
+
+                    <h4>4.3 Campagnes marketing</h4>
+
+                    <p>Nous vous recommandons de nous autoriser à utiliser vos Données Personnelles (adresse e-mail, adresse postale, numéro de téléphone) dans le cadre de nos campagnes marketing et promotionnelles, mais également à des fins purement statistiques sur l’utilisation des services proposés par la société Adenor. Nos actions de marketing et d’études statistiques ont pour objet d’améliorer nos services. Vous pouvez, par ailleurs, modifier vos préférences de notification à tout moment, en acceptant ou en refusant que vos Données Personnelles soient utilisées dans le cadre de nos actions marketing ou promotionnelles en vous rendant sur les paramètres de votre compte Utilisateur. </p>
+
+                    <h4>4.4 Partage d’informations</h4>
+
+                    <p>Vous reconnaissez et acceptez que vos données puissent, le cas échéant, être transmises à des tiers sous-traitants intervenant dans la fourniture du Service Kerden. La société Adenor s’engage à ne communiquer vos Données Personnelles qu’à ses prestataires habilités et s’assure qu’ils respectent des conditions strictes de confidentialité, d’usage et de protection des données. </p>
+
+                    <p>Par ailleurs, les Données Personnelles pourront être divulguées à un tiers si la société Adenor y est contrainte par la loi, une disposition réglementaire, ou une ordonnance judiciaire, ou encore si cette divulgation est rendue nécessaire pour les besoins d’une enquête ou d’une procédure judiciaire, sur le territoire national ou à l’étranger.</p>
+
+                    <h4>4.5 Résolution des litiges</h4>
+
+                    <p>Outre les Données Personnelles collectées à partir du formulaire d’inscription que vous avez rempli, nous pouvons être amenés à utiliser les informations vous concernant à partir de vos activités sur le Site Kerden pour résoudre tout litige éventuel ou régler tout problème dans le cadre de l’utilisation du Service Kerden.</p>
+
+                    <h3>Article 5. Sécurité des données personnelles</h3>
+
+                    <p>Les données de connexions (identifiant et/ou mot de passe) vous permettant de vous connecter au Service Kerden sont personnelles et confidentielles. Pour des raisons de sécurité, vous ne divulguerez pas votre identifiant ni votre mot de passe à quiconque. Vous êtes seul responsable pour toutes les conséquences de nature contractuelle, financière ou autres, qui pourraient résulter de toute utilisation non autorisée de vos données de connexion par des tiers et vous garantissez la société Adenor contre toute demande à ce titre. La société Adenor se réserve le droit de suspendre votre compte au cas où nous aurions des raisons de croire que vos données de connexion ont été diffusées de votre fait, volées ou utilisées sans votre accord. </p>
+
+                    <p>Vos Données Personnelles sont stockées sur des serveurs situés en France et dans l’Union européenne. La société Adenor accorde la plus haute importance à la sécurité de vos informations À cet effet, la société Adenor et ses prestataires d’hébergement ont déployé des mesures appropriées pour assurer la sécurité et la confidentialité de vos Données Personnelles. Nous ne pouvons cependant assurer que vos communications et autres Données Personnelles ne seront pas interceptées ou divulguées par un tiers. </p>
+
+                    <h3>Article 6. Droits des Utilisateurs </h3>
+
+                    <p>Vous disposez d’un droit d’accès, d’un droit de rectification, d’un droit de suppression et de portabilité de vos Informations Personnelles. De même, vous bénéficiez du droit de vous opposer à la collecte et au traitement de tout ou partie de celles-ci à des fins de prospection commerciale, y compris de profilage dans la mesure où il est lié à une telle prospection. </p>
+
+                    <p>Vous pouvez exercer ces droits à tout moment afin de :
+                    <ul>
+                    <li>(1)   Mettre à jour ou corriger les données vous concernant</li>
+                    <li>(2)   Vérifier les données vous concernant que nous conservons</li>
+                    <li>(3)   Modifier vos préférences relativement aux communications et aux autres informations que vous recevez de notre part</li>
+                    <li>(4)  Demander la fermeture de votre compte Utilisateur à tout moment ainsi que la suppression et le transfert (chez vous ou chez un prestataire tiers) de vos Données Personnelles.</li>
+                    </ul>
+                    </p>
+
+                    <p>Si vous exercez ces droits, nous nous efforçons de répondre à vos demandes dans les meilleurs délais. En cas de demande de suppression, nous détruirons les données vous concernant. Nous nous réservons cependant le droit de conserver certaines catégories de données qui pourraient être nécessaires en cas de réclamation ou de litige ultérieur, et ce pendant la durée de conservation légalement autorisée. Ces données seront cependant désactivées et ne seront plus accessibles en ligne.</p>
+
+                    <p>Pour exercer ses droits, vous pouvez (i) soit vous rendre sur les paramètres de votre compte Utilisateur, (ii) soit adresser un courrier postal à l’adresse mentionnée à l’article 2 ci-dessus, (iii), soit envoyer un e-mail à support@kerden.fr.  </p>
+
+                    <h3>Article 7. Questions</h3>
+
+                    <p>Pour toute question, commentaires ou remarques concernant la présente Charte, et d’une manière générale sur la collecte et le traitement de vos Données Personnelles par la société Adenor, veuillez nous envoyer un message à l’adresse e-mail suivante : support@kerden.fr. </p>
+
+
+
+
                 </div>
             </div>
         </div>
     </div>
 
+    <div class="modal fade" id="mentions" tabindex="-1" role="dialog">
+        <div class="modal-dialog" >
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4>Mentions légales</h4>
+                </div>
+                <div class="modal-body">
+
+                    <p>Le service accessible à l’URL http://kerden.fr est proposé par la société ADENOR, SAS au capital social de 15.000 euros, inscrite au RCS de Paris sous le numéro 822 675 963, dont le siège social est situé au 25 bis rue de l’Armorique – 75015 Paris - France (ci-après, le « Site Kerden » ou le « Service Kerden » ou la « Société » ou « Kerden »).</p>
+                    <p>Le responsable du traitement des Données Personnelles des Utilisateurs du Service Kerden est : <br>
+                        Société ADENOR<br>
+                        RCS Paris n° 820 157 717 <br>
+                        25 bis rue de l’Armorique - 75015 Paris<br>
+                    </p>
+                    <p>Le prestataire d’hébergement des Données Personnelles des Utilisateurs du Service Kerden, agissant en qualité de sous-traitant, est :<br>
+                    Société HEROKU<br>
+                    650 7th St - San Francisco,<br>
+                    CA 94103 - États-Unis
+                    </p>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
