@@ -71,7 +71,6 @@ class GardenController extends Controller
         }
         $name = $garden->title;
         $name = preg_replace('/'.$cat.'/i', '', $name);
-        //dd($cat);
         return view('garden.edit',['garden'=>$garden,'categories'=>Garden::$CATEGORIES,'cat'=>$cat,'name'=>$name]);
     }
 

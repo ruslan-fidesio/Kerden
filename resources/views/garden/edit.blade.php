@@ -17,12 +17,12 @@
                             </div>
                             <div class="mySelect" id='titleSelect'>
                                 <ul>
-                                    @foreach($categories as $cat=>$v)
-                                        <li data-myvalue="{{$v}}">{{$cat}}</li>
+                                    @foreach($categories as $tmpcat=>$v)
+                                        <li data-myvalue="{{$v}}">{{$tmpcat}}</li>
                                     @endforeach
                                 </ul>
                             </div>
-                            {!! Form::hidden('cat',old('cat',Request::has('cat')?Request::get('cat'):'Le jardin')) !!}
+                            {!! Form::hidden('cat', $cat  ) !!}
                             {!! Form::text('title',$name,['class'=>'form-control']) !!}
                         @if ($errors->has('title'))
                             <span class="help-block">
