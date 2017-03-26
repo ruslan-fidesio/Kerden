@@ -5050,9 +5050,10 @@ content:"";
 
 
 .martinique {
-  background-image: url('../images/garden-zen.jpg');
+  background-image: url('../images/garden-petale.jpg');
   height: 320px;
-  background-position: top center;
+  background-position: top center;  
+
 }
 
 
@@ -5063,7 +5064,7 @@ content:"";
 }
 
 .petale-garden {
-  background-image: url('../images/garden-petale.jpg');
+  background-image: url('../images/garden-zen.jpg');
   height: 320px;
   background-position: top center;
 }
