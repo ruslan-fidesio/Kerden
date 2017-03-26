@@ -3,19 +3,18 @@
 @section('headers')
 <style type="text/css">
 .bankAcc{
-	border:1px solid grey;
 	padding:7px;
 }
 
 .bankAcc.active{
-	background-color: lightgreen;
+	background-color: #cceebb;
+  color: #7cbc91;
 }
 </style>
 @endsection
 
 @section('contentPane')
 	<div class="panel panel-kerden-home">
-		<div class="kerden-back-button" >Retour</div>
 		<div class="panel-heading">Coordonnées bancaires</div>
 		<div class="panel-body">
 			<h3>{{$user->fullName}}</h3>

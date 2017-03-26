@@ -1,9 +1,7 @@
 @extends ('garden.menu')
 
 @section('contentPane')
-<div class="kerden-back-button">
-</div>
-	<h1>{{$garden->title}}</h1>
+
     <div class="row">
         <div class="col-md-12">
             <div class="panel panel-kerden-home">

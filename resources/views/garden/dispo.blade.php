@@ -5,15 +5,13 @@
 @endsection
 
 @section('contentPane')
-<div class="kerden-back-button">Retour
-</div>
-	<h1 >{{$garden->title}}</h1>
+
         <div class="col-md-12">
             <div class="panel panel-kerden-home">
 
                 <div class="panel-heading"><strong>Calendrier</strong></div>
                 <div class="panel-body">
-                	<div class="col-md-6">
+                	<div class="col-md-4">
                             {{trans('calendar.proposal')}}
                             <ul class="calendarModes" style='list-style:none'>
                                 <li><div class="rond vert"></div>{!! trans('calendar.autoDispoHelper') !!}</li>
@@ -32,7 +30,7 @@
                             </ul>
                             <p style='margin-bottom:50px'>{{trans('calendar.resaClick')}}</p>
                 	</div>
-                	<div class="col-md-6">
+                	<div class="col-md-8">
                         <div class="row calendarsRowBtns" style='position:absolute; width:100%'>
                             <div class="btn btn-calendar" style='float:left' id='prevBtn'>&larr;Précédent</div>
                             <div class="btn btn-calendar" style='float:right' id='nextBtn'>Suivant&rarr;</div>
@@ -53,49 +51,6 @@
 {!! Form::hidden('toDate',null,['id'=>'toDate']) !!}
 {!! Form::hidden('typeDispo',null,['id'=>'typeDispo']) !!}
 {!! Form::close() !!}
-
-<div class="modal fade" tabindex="-1" role="dialog" id="typeModal">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title">{!! trans('calendar.dispoType') !!}</h4>
-      </div>
-      <div class="modal-body">
-        <div class='row'>
-            <div class='col-xs-3'><button type="button" class="btn btn-success" data-dismiss="modal" onclick="addDispo('auto')">Automatique</button></div>
-            <div class='col-xs-9'>{{trans('calendar.autoDispo')}}</div>
-        </div>
-        <hr/>
-        <div class='row'>
-            <div class='col-xs-3'><button type="button" class="btn btn-warning" data-dismiss="modal" onclick="addDispo('manual')">Manuelle</button></div>
-            <div class='col-xs-9'>{{trans('calendar.manualDispo')}}</div>
-        </div>
-        <hr/>
-        <div class='row'>
-            <div class='col-xs-3'><button type="button" class="btn btn-danger" data-dismiss="modal" onclick="invalidDispo()">Non Disponible</button></div>
-            <div class='col-xs-9'>{{trans('calendar.unDispo')}}</div>
-        </div>
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-
-<div class="modal fade" tabindex="-1" role="dialog" id="helperModal">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">{!! trans('calendar.calendarHelper') !!}</h4>
-            </div>
-            <div class="modal-body">
-                <p>{{trans('calendar.helperStep1')}}</p>
-                <p>{{trans('calendar.helperStep2')}}</p>
-                <p>{{trans('calendar.helperStep3')}}</p>
-                <p>{{trans('calendar.helperStep4')}}</p>
-            </div>
-        </div>
-    </div> 
 
 
 @endsection
@@ -182,5 +137,50 @@ function initCals(){
     initCals();
 }) (jQuery);
 </script>
+
+
+<div class="modal fade" tabindex="-1" role="dialog" id="typeModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">{!! trans('calendar.dispoType') !!}</h4>
+      </div>
+      <div class="modal-body">
+        <div class='row'>
+            <div class='col-xs-3'><button type="button" class="btn btn-success" data-dismiss="modal" onclick="addDispo('auto')">Automatique</button></div>
+            <div class='col-xs-9'>{{trans('calendar.autoDispo')}}</div>
+        </div>
+        <hr/>
+        <div class='row'>
+            <div class='col-xs-3'><button type="button" class="btn btn-warning" data-dismiss="modal" onclick="addDispo('manual')">Manuelle</button></div>
+            <div class='col-xs-9'>{{trans('calendar.manualDispo')}}</div>
+        </div>
+        <hr/>
+        <div class='row'>
+            <div class='col-xs-3'><button type="button" class="btn btn-danger" data-dismiss="modal" onclick="invalidDispo()">Non Disponible</button></div>
+            <div class='col-xs-9'>{{trans('calendar.unDispo')}}</div>
+        </div>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="modal fade" tabindex="-1" role="dialog" id="helperModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">{!! trans('calendar.calendarHelper') !!}</h4>
+            </div>
+            <div class="modal-body">
+                <p>{{trans('calendar.helperStep1')}}</p>
+                <p>{{trans('calendar.helperStep2')}}</p>
+                <p>{{trans('calendar.helperStep3')}}</p>
+                <p>{{trans('calendar.helperStep4')}}</p>
+            </div>
+        </div>
+    </div> 
+
 
 @endsection

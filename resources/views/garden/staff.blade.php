@@ -1,9 +1,8 @@
 @extends('garden.menu')
 
 @section('contentPane')
-<div class="kerden-back-button">Retour
-</div>
-    <h1>{{$garden->title}}</h1>
+
+
     <div class='panel panel-kerden-home'>
         <div class='panel-heading'>{{trans('garden.securitystaff')}}</div>
         <div class='panel-body'>

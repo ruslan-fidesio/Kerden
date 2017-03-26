@@ -3,7 +3,6 @@
 
 @section('contentPane')
 	<div class="panel panel-kerden-home">
-		<div class="kerden-back-button">Retour</div>
 		<div class="panel-heading">Preuve d'identité
 			@if(!empty($userFromAdmin))
 				pour l'utilisateur {{$userFromAdmin->fullName}}

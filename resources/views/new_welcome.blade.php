@@ -45,28 +45,10 @@
                     <li><a class="blue-menu" href="#" data-toggle="modal" data-target="#inscriptionModal">{{trans('auth.register')}}</a></li>
                     <li><a class="green-menu" href="#" data-toggle="modal" data-target="#connexionModal">{{trans('auth.login')}}</a></li>
                 @else
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                            Mon Espace <span class="caret"></span>
-                        </a>
-
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="{{ url('/home') }}"><i class='fa fa-btn fa-user'></i>Espace membre</a> </li>
-                            <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Déconnexion</a></li>
-                        </ul>
-                    </li>
+                    <li><a class="blue-menu" href="{{ url('/home') }}">Mon espace</a></li>
+                    <li><a class="green-menu" href="{{ url('/logout') }}">Déconnexion</a></li>
                 @endif  
-                
-                @if(Auth::user())
-                    <li>
-                      <a href="{{ url('/home') }}">Espace Membre
-                        @if(Auth::user()->unreadMessages > 0)
-                            <i class="fa fa-envelope-o"></i><sup class="unreadNumber">{{ Auth::user()->unreadMessages }}</sup>
-                        @endif
-                        <i class="fa fa-envelope-o"></i><sup class="unreadNumber">3</sup>
-                      </a>
-                    </li>
-                @endif                              
+                            
                 <!-- Authentication Links -->
                 <li><a class="rentCTA" 
                     @if(Auth::guest())

@@ -595,6 +595,11 @@ textarea:focus{
   transform: scale(0.9);
 }  
 
+.homepage-header .navbar-nav>li.spe-size>a {
+  font-size: 12px;
+}
+
+
 .modal-backdrop.fade {
   transition: opacity .2s ease;
 }
@@ -1733,18 +1738,16 @@ background-color: #fff!important;
   box-shadow: none;
   -webkit-box-shadow: none;
   border-radius: 0px;
-  border-left: 1px solid #ccc;
 }
 
 .panel-kerden-home .panel-heading{
-  font-size: 2e
-  padding-bottom: 0;
+  padding: 0;
 }
 
 .panel-kerden-home .panel-body{
   font-weight: norma
   font-size: 1.1em;
-  padding-top: 0;
+  padding: 0;
 }
 
 .absoluteBottom{
@@ -2233,9 +2236,6 @@ ul#gardenList{
   background-color: #a1fbbe;
 }
 
-.left-home-sub-menu{
-  border-left: 2px solid #ccc;
-}
 
 .left-home-sub-menu ul li a{
   color: black;
@@ -5284,8 +5284,16 @@ content:"";
 
 .resa-container {margin-bottom: 30px;}
 
+.garden-activities .picto {
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  font-size: 12px;
+}
 
-
+.admin-day-slider {
+  margin-top: 8px;
+}
 
 
 /*CAS PARTICULIER SAFARI => font-weight: 500;*/

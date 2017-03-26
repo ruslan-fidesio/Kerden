@@ -2,7 +2,6 @@
 
 @section('contentPane')
 <div class="panel panel-kerden-home">
-    <div class="kerden-back-button">Retour</div>
     <div class="panel-heading">Détails Avancés</div>
     <div class="panel-body">
 

@@ -4,31 +4,33 @@
     <div class="row">
         <div class="col-md-12">
             <div class="panel panel-kerden-home">
-                <div class="kerden-back-button">Retour</div>
+                
                 <div class="panel-heading"><strong>Informations</strong></div>
                 <div class="panel-body">
                     {!! Form::model($garden,['url'=>'/garden/update/'.$garden->id,'class'=>'form-horizontal']) !!}
                     <div class="form-group{{ $errors->has('title') ? ' has-error' : '' }}">
                         {!! Form::label('title',trans('garden.title'),['class'=>'col-md-4 control-label']) !!}
-                        <div class='col-md-6 input-group'>
-                            <div id='mySelectDropdown' class="input-group-addon" style='background-color:white'>
-                                <span id='titleTrick'>{{old('cat',isset($cat)?$cat:'Le jardin')}}</span>
-                                <i class="fa fa-3 fa-arrow-circle-o-down" style='cursor:pointer'></i>
+                        <div class='col-md-6'>
+                            <div class="input-group">
+                                    <div id='mySelectDropdown' class="input-group-addon" style='background-color:white'>
+                                        <span id='titleTrick'>{{old('cat',isset($cat)?$cat:'Le jardin')}}</span>
+                                        <i class="fa fa-3 fa-arrow-circle-o-down" style='cursor:pointer'></i>
+                                    </div>
+                                    <div class="mySelect" id='titleSelect'>
+                                        <ul>
+                                            @foreach($categories as $tmpcat=>$v)
+                                                <li data-myvalue="{{$v}}">{{$tmpcat}}</li>
+                                            @endforeach
+                                        </ul>
+                                    </div>
+                                    {!! Form::hidden('cat', $cat  ) !!}
+                                    {!! Form::text('title',$name,['class'=>'form-control']) !!}
+                                @if ($errors->has('title'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('title') }}</strong>
+                                    </span>
+                                @endif
                             </div>
-                            <div class="mySelect" id='titleSelect'>
-                                <ul>
-                                    @foreach($categories as $tmpcat=>$v)
-                                        <li data-myvalue="{{$v}}">{{$tmpcat}}</li>
-                                    @endforeach
-                                </ul>
-                            </div>
-                            {!! Form::hidden('cat', $cat  ) !!}
-                            {!! Form::text('title',$name,['class'=>'form-control']) !!}
-                        @if ($errors->has('title'))
-                            <span class="help-block">
-                                <strong>{{ $errors->first('title') }}</strong>
-                            </span>
-                        @endif
                         </div>
                     </div>
 
@@ -124,7 +126,159 @@ function initMap() {
    map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: 48.84, lng: 2.36},
     zoom: 10,
-    scrollwheel: false
+    scrollwheel: false,
+    styles: [
+        {
+            "featureType": "all",
+            "elementType": "labels",
+            "stylers": [
+                {
+                    "visibility": "off"
+                }
+            ]
+        },
+        {
+            "featureType": "administrative.province",
+            "elementType": "all",
+            "stylers": [
+                {
+                    "visibility": "off"
+                }
+            ]
+        },
+        {
+            "featureType": "landscape",
+            "elementType": "all",
+            "stylers": [
+                {
+                    "hue": "#0066ff"
+                },
+                {
+                    "saturation": 74
+                },
+                {
+                    "lightness": 100
+                }
+            ]
+        },
+        {
+            "featureType": "road",
+            "elementType": "all",
+            "stylers": [
+                {
+                    "visibility": "off"
+                }
+            ]
+        },
+        {
+            "featureType": "road",
+            "elementType": "labels.text",
+            "stylers": [
+                {
+                    "visibility": "off"
+                }
+            ]
+        },
+        {
+            "featureType": "road.highway",
+            "elementType": "all",
+            "stylers": [
+                {
+                    "visibility": "simplified"
+                },
+                {
+                    "weight": 0.6
+                },
+                {
+                    "saturation": -85
+                },
+                {
+                    "lightness": 61
+                }
+            ]
+        },
+        {
+            "featureType": "road.highway",
+            "elementType": "geometry",
+            "stylers": [
+                {
+                    "visibility": "on"
+                }
+            ]
+        },
+        {
+            "featureType": "road.highway",
+            "elementType": "labels",
+            "stylers": [
+                {
+                    "visibility": "off"
+                }
+            ]
+        },
+        {
+            "featureType": "road.highway",
+            "elementType": "labels.text",
+            "stylers": [
+                {
+                    "visibility": "off"
+                }
+            ]
+        },
+        {
+            "featureType": "road.arterial",
+            "elementType": "all",
+            "stylers": [
+                {
+                    "visibility": "off"
+                }
+            ]
+        },
+        {
+            "featureType": "road.arterial",
+            "elementType": "labels",
+            "stylers": [
+                {
+                    "visibility": "off"
+                }
+            ]
+        },
+        {
+            "featureType": "road.local",
+            "elementType": "all",
+            "stylers": [
+                {
+                    "visibility": "on"
+                }
+            ]
+        },
+        {
+            "featureType": "road.local",
+            "elementType": "labels",
+            "stylers": [
+                {
+                    "visibility": "off"
+                }
+            ]
+        },
+        {
+            "featureType": "water",
+            "elementType": "all",
+            "stylers": [
+                {
+                    "visibility": "simplified"
+                },
+                {
+                    "color": "#5f94ff"
+                },
+                {
+                    "lightness": 26
+                },
+                {
+                    "gamma": 5.86
+                }
+            ]
+        }
+    ]       
   });
    geocoder = new google.maps.Geocoder();
    marker = new google.maps.Marker({map:map});

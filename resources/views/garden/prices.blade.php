@@ -1,8 +1,7 @@
 @extends ('garden.menu')
 
 @section('contentPane')
-<div class="kerden-back-button">Retour</div>
-<h1>{{$garden->title}}</h1>
+
     <div class="panel panel-kerden-home">
         <div class="panel-heading"><strong>Tarif</strong></div>
         <div class="panel-body">
@@ -37,23 +36,21 @@
                 {{ trans('garden.pricesHelper3.2') }}
 
 
-            <div class="col-md-6 col-sm-12">
-        	@foreach( trans('base.weekDays') as $k=>$day)
-        	<div class="row" style='margin-top:30px;padding-bottom:15px'>
-        		<div class="col-xs-3 text-right" style='white-space:nowrap'>{{$day}} :</div>
-        		<div class="col-xs-9">
-        			<div class="sliderDays" id="{{$day}}">
+            
+            	@foreach( trans('base.weekDays') as $k=>$day)
+                    <div class="row" style='margin-top:30px;padding-bottom:15px'>
+            		  <div class="col-xs-3 text-right" style='white-space:nowrap'>{{$day}} :</div>
+            		  <div class="col-xs-9">
+                        <div class="admin-day-slider">
+                			<div class="sliderDays" id="{{$day}}">
 
-                    {!! Form::hidden('hours'.$k.'[begin_slot]',$garden->getHours($k)? $garden->getHours($k)->begin_slot :9)  !!}
-                    {!! Form::hidden('hours'.$k.'[end_slot]',$garden->getHours($k)? $garden->getHours($k)->end_slot :18)  !!}
+                                {!! Form::hidden('hours'.$k.'[begin_slot]',$garden->getHours($k)? $garden->getHours($k)->begin_slot :9)  !!}
+                                {!! Form::hidden('hours'.$k.'[end_slot]',$garden->getHours($k)? $garden->getHours($k)->end_slot :18)  !!}
+                            </div>
+                        </div>
+            		  </div>
                     </div>
-        		</div>
-        	</div>
-                @if($k==4)
-                 </div><div class="col-md-6 col-sm-12">
-                @endif
-        	@endforeach
-            </div>
+            	@endforeach
 
             <div class="col-xs-12 text-center">
                 {!! Form::submit(trans('base.save'),['class'=>'btn btn-kerden-confirm'])  !!}

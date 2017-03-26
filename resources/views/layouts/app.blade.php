@@ -64,12 +64,11 @@
                     <li><a class="blue-menu" href="#" data-toggle="modal" data-target="#inscriptionModal">{{trans('auth.register')}}</a></li>
                     <li><a class="green-menu" href="#" data-toggle="modal" data-target="#connexionModal">{{trans('auth.login')}}</a></li>
                 @else
-                    <li class="dropdown">
+<!--                     <li class="dropdown">
                         <a href="#" class="blue-menu dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                             @if(Auth::user()->unreadMessages > 0)
-                                <i class="fa fa-envelope-o"></i><sup class="unreadNumber">{{ Auth::user()->unreadMessages }}</sup>
+                                <span class="badge"{{ Auth::user()->unreadMessages }}</span>
                             @endif    
-                            <span class="badge">4</span>                                                    
                             Mon espace
                             <span class="caret"></span>
                         </a>
@@ -79,8 +78,9 @@
                             <li><a href="#"><i class='fa fa-shield'></i> Espace Ker'house</a> </li>
                             <li><a href="{{ url('/logout') }}">Déconnexion</a></li>
                         </ul>
-                    </li>
-                    <li><a class="green-menu" href="{{ url('/logout') }}">Déconnexion</a></li>
+                    </li> -->
+                    <li class="spe-size"><a class="blue-menu" href="{{ url('/home') }}">Mon espace</a></li>
+                    <li class="spe-size"><a class="green-menu" href="{{ url('/logout') }}">Déconnexion</a></li>
                 @endif  
                 <li class="separator-line"></li>
                 @if(Auth::user())

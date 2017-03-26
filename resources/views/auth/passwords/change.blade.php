@@ -2,7 +2,6 @@
 
 @section('contentPane')
 	<div class="panel panel-kerden-home">
-		<div class="kerden-back-button">Retour</div>
 		<div class="panel-heading">Changer de Mot de Passe</div>
 		<div class="panel-body">
 			{!! Form::open(['class'=>'form-horizontal']) !!}
