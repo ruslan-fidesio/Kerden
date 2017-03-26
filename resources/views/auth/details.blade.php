@@ -7,7 +7,6 @@
 @section('contentPane')
 
 <div class="panel panel-kerden-home">
-    <div class="kerden-back-button">Retour</div>
     <div class="panel-heading">{{trans( 'userdetails.details' )}}</div>
     <div class="panel-body">
         @if($errors->has('fromProvider'))
