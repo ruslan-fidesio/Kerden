@@ -309,13 +309,13 @@
           </div>
 
             <div class="row" id="oscarRow">
-              @if($garden->staff->requiredStaff)
+              @if($garden->staff && $garden->staff->requiredStaff)
                 {!! Form::hidden('dayStaff',1,['id'=>'dayStaff']) !!}
               @else
                 {!! Form::hidden('dayStaff',0,['id'=>'dayStaff']) !!}
               @endif
 
-              @if($garden->staff->requiredStaffNight)
+              @if($garden->staff && $garden->staff->requiredStaffNight)
                 {!! Form::hidden('nightStaff',1,['id'=>'nightStaff']) !!}
               @else
                 {!! Form::hidden('nightStaff',0,['id'=>'nightStaff']) !!}
@@ -324,7 +324,7 @@
           <div class="priceRow">
             <div class="price-lines">
               <div class="line">Jardin : <span id='gardenPrice'></span></div>
-              @if($garden->staff->requiredStaff || $garden->staff->requiredStaffNight)
+              @if($garden->staff && ($garden->staff->requiredStaff || $garden->staff->requiredStaffNight))
               <div class="line">  Oscardiens : <span id='staffPrice'></span></div>
               @endif
               </div>
