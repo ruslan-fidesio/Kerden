@@ -192,19 +192,19 @@ input[type="checkbox"]:checked {
 
 /* Aspect des checkboxes */
 /* :before sert à créer la case à cocher */
-input[type="checkbox"]:not(:checked):before,
+/*input[type="checkbox"]:not(:checked):before,
 input[type="checkbox"]:checked:before {
   content: '';
   position: absolute;
   left:0; top: -2px;
-  width: 17px; height: 17px; /* dim. de la case */
+  width: 17px; height: 17px;
   border: 1px solid #aaa;
   background: #f8f8f8;
   visibility:visible;
   display: inline-block;
 }
-/* Aspect général de la coche */
-input[type="checkbox"]:not(:checked):after,
+*//* Aspect général de la coche */
+/*input[type="checkbox"]:not(:checked):after,
 input[type="checkbox"]:checked:after {
   content: "\f00c";
   font:normal normal normal 14px/1 FontAwesome;
@@ -212,20 +212,20 @@ input[type="checkbox"]:checked:after {
   top: 0px; left: 1px;
   font-size: 14px;
   color: #09ad7e;
-  transition: all .2s; /* on prévoit une animation */
+  transition: all .2s;
   visibility: visible;
   display: block;
-}
+}*/
 /* Aspect si "pas cochée" */
-input[type="checkbox"]:not(:checked):after {
-  opacity: 0; /* coche invisible */
-  transform: scale(0); /* mise à l'échelle à 0 */
-}
+/*input[type="checkbox"]:not(:checked):after {
+  opacity: 0;
+  transform: scale(0);
+}*/
 /* Aspect si "cochée" */
-input[type="checkbox"]:checked:after {
-  opacity: 1; /* coche opaque */
-  transform: scale(1); /* mise à l'échelle 1:1 */
-}
+/*input[type="checkbox"]:checked:after {
+  opacity: 1;
+  transform: scale(1);
+}*/
 
 textarea:focus{
   -webkit-box-shadow: inset 0 1px 1px #a1fbbf,0 0 8px #a1fbbf !important;
@@ -370,14 +370,14 @@ textarea:focus{
 }
 
 .navbar-fixed-left .navbar-nav > li.divider{
-	height: 1px;
-	background-color: lightgrey;
-	width: 88%;
-	left:6%;
+  height: 1px;
+  background-color: lightgrey;
+  width: 88%;
+  left:6%;
 }
 
 .navbar-fixed-left .navbar-nav > li > div > a.garden-menu-title{
-	color:red;
+  color:red;
 }
 
 .navbar-brand-top{
@@ -611,6 +611,51 @@ textarea:focus{
   width: 90%!important;
 }
 
+.subscribe-bg {
+  background-image:url('../images/motif_footer.jpg');
+  padding: 50px 0;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.subscribe-bg .panel {
+  border: 1px solid #e6e6e6;
+}
+
+.subscribe-bg .panel-heading {
+    background-color: #7cbc91;
+    color: #fff;
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+    font-weight: 400!important;
+    border-color: #7cbc91;
+}
+
+.form-horizontal .checkbox-form-group .control-label{
+  text-align: left;
+  padding-top: 0;
+}
+
+.form-horizontal .checkbox-form-group .form-control {
+  width: 15px;
+  height: 15px;
+  float: right;
+  margin-right: 0;
+}
+
+.checkbox-form-group .control-label a {
+  color: #7cbc91;
+  font-weight: 600;
+}
+
+
+.panel-footer {
+  text-align: center;
+}
+
+.panel-footer a {
+  color: #7cbc91;
+  font-weight: 600;
+}
 
 /* FOOTER */
 
@@ -2124,113 +2169,113 @@ ul#gardenList{
 
 
 .navbar-kerden-home .navbar-brand{
-	
-	padding-bottom: 0;
-	color: black;
-	font-family: 'kerdenRegular';
-	background-color: #a1fbbe;
-	
+  
+  padding-bottom: 0;
+  color: black;
+  font-family: 'kerdenRegular';
+  background-color: #a1fbbe;
+  
 }
 #home-navbar-collapse{
-	padding-left: 0px;
-	padding-right: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 .navbar-kerden-home .navbar-toggle{
-	border-color:grey;
+  border-color:grey;
 }
 .navbar-kerden-home .navbar-toggle .icon-bar{
-	background-color: grey;
+  background-color: grey;
 }
 
 .navbar-kerden-home + .container{
-	padding-top: 115px!important;
-	min-height: 89vh;
+  padding-top: 115px!important;
+  min-height: 89vh;
 }
 .navbar-kerden-home + .container-fluid{
-	padding-top: 115px!important;
-	min-height: 89vh;
+  padding-top: 115px!important;
+  min-height: 89vh;
 }
 
 .navbar-kerden-home>#home-navbar-collapse>.nav>li>a{
-	display: block;
-	width: 100%;
-	color: black;
-	padding:20px 23px;
-	font-family: 'kerdenRegular';
-	font-weight: bold;
+  display: block;
+  width: 100%;
+  color: black;
+  padding:20px 23px;
+  font-family: 'kerdenRegular';
+  font-weight: bold;
 }
 
 .navbar-kerden-home>#home-navbar-collapse>.nav>li>a:hover,.navbar-kerden-home>#home-navbar-collapse>.nav>li>a.active{
-	background-color: #cbf6d9;
+  background-color: #cbf6d9;
 }
 
 .left-home-menu ul{
-	list-style: none;
-	padding-left: 0;
+  list-style: none;
+  padding-left: 0;
 }
 
 .left-home-menu ul a li{
-	color: black;
-	font-family: 'kerdenRegular';
-	padding:10px 10px;
-	width: 100%;
+  color: black;
+  font-family: 'kerdenRegular';
+  padding:10px 10px;
+  width: 100%;
 }
 
 .left-home-menu ul a:hover{
-	text-decoration: none;
+  text-decoration: none;
 }
 .left-home-menu ul a li:hover{
-	background-color: #cbf6d9;
+  background-color: #cbf6d9;
 }
 
 .left-home-menu .active li{
-	background-color: #a1fbbe;
+  background-color: #a1fbbe;
 }
 
 .left-home-sub-menu{
-	border-left: 2px solid #ccc;
+  border-left: 2px solid #ccc;
 }
 
 .left-home-sub-menu ul li a{
-	color: black;
-	font-family: 'kerdenRegular';
+  color: black;
+  font-family: 'kerdenRegular';
 }
 
 .left-home-sub-menu ul li a span.badge{
-	float: right;
-	background-color: transparent;
-	color: green;
-	border: 1px solid black;
-	margin-top: 4px;
+  float: right;
+  background-color: transparent;
+  color: green;
+  border: 1px solid black;
+  margin-top: 4px;
 }
 
 .left-home-sub-menu ul li.active a{
-	background-color: #a1fbbe;
+  background-color: #a1fbbe;
 }
 
 .left-home-menu ul li.divider{
-	height: 2px;
-	border: 1px solid #bbb;
+  height: 2px;
+  border: 1px solid #bbb;
 }
 
 .nav-pills>li+li {
 margin: 0;}
 
 .resaPreview{
-	background-color: #a1fbbe;
-	padding: 17px;
-	margin:15px;
-	color: black;
-	max-width: 420px;
+  background-color: #a1fbbe;
+  padding: 17px;
+  margin:15px;
+  color: black;
+  max-width: 420px;
 }
 
 .resaPreview a {
-	color: black;
+  color: black;
 }
 
 .resaPreview .rightArrow{
-	float: right;
+  float: right;
     font-size: 3em;
     margin-top: -15px;
     -webkit-transform: scale(0.8,2);
@@ -2241,58 +2286,58 @@ margin: 0;}
 }
 
 .resaPreview .caption{
-	font-size: 1.3em;
-	margin-left: 0px;
-	color: black;
+  font-size: 1.3em;
+  margin-left: 0px;
+  color: black;
 }
 
 .resaPreview .captionDate{
-	font-size: 0.7em;
-	float: right;
-	margin-top: 8px;
+  font-size: 0.7em;
+  float: right;
+  margin-top: 8px;
 }
 
 .resaPreview .captionDate.countdown{
-	font-size: 1em;
+  font-size: 1em;
 }
 
 .resaPreview .sub-caption{
-	display: block;
-	font-size: 0.8em;
+  display: block;
+  font-size: 0.8em;
 }
 
 .resaPreviewLink{
-	max-width: 420px;
+  max-width: 420px;
 }
 .resaPreview a:hover{
-	text-decoration: none;
+  text-decoration: none;
 }
 
 .panel-kerden-home .panel-body .checkbox span.glyphicon{
-	color:#bbb;
+  color:#bbb;
 }
 
 div[class^="kerden-back-button"]{
-	background-image: url('../images/kerden-back-button.png');
-	background-position: center left;
-	background-size: contain;
-	background-repeat: no-repeat;
-	width: 100%;
-	height: 35px;
-	padding-left: 35px;
-	font-size: 1.4em;
+  background-image: url('../images/kerden-back-button.png');
+  background-position: center left;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 35px;
+  padding-left: 35px;
+  font-size: 1.4em;
     font-weight: bold;
     padding-top: 4px;
     display: inline;
 }
 
 .gardenMenuCaption{
-	background-color: #fafafa;
-	padding: 10px;
+  background-color: #fafafa;
+  padding: 10px;
 }
 
 .kerden-flat-btn{
-	border: none;
+  border: none;
     background-color: transparent;
     font-size: 1.5em;    color:black!important;
     font-weight: bold;
@@ -2303,60 +2348,60 @@ div[class^="kerden-back-button"]{
 }
 
 .kerden-flat-btn:hover{
-	background-color: #a1fbbe; /* For browsers that do not support gradients */
-	-webkit-transition:all ease .4s;
+  background-color: #a1fbbe; /* For browsers that do not support gradients */
+  -webkit-transition:all ease .4s;
     -moz-transition:all ease .4s;
     -ms-transition:all ease .4s;
     transition:all ease .4s;
 }
 .table>tbody>tr.info>td{
-	background-color: #a1fbbe;
+  background-color: #a1fbbe;
 }
 .nav .open>a, .nav .open>a:focus, .nav .open>a:hover{
-	background-color: #cbf6d9;
+  background-color: #cbf6d9;
 }
 
 .kerden-page-2 h5{
-	font-size: 2em;
+  font-size: 2em;
 }
 
 
 .cardForm{
-	border: 1px solid #ccc;
-	padding:0;
-	font-family: "Avenir Next";
-	font-weight: 300;
+  border: 1px solid #ccc;
+  padding:0;
+  font-family: "Avenir Next";
+  font-weight: 300;
 }
 
 .cardForm label{
-	margin-left: 15px;
+  margin-left: 15px;
 }
 
 .cardForm .caption{
-	background-color: #D9F8E2;
-	padding-left: 30px;
-	padding-top: 20px;
-	padding-bottom: 20px;
-	font-size:2em;
+  background-color: #D9F8E2;
+  padding-left: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size:2em;
 }
 
 .cardForm img{
-	margin-left: 35px;
-	margin-top: 27px;
+  margin-left: 35px;
+  margin-top: 27px;
 }
 
 .cardForm .row{
-	margin:0;
-	padding: 0;
+  margin:0;
+  padding: 0;
 }
 
 .cardForm input{
-	margin-top: 35px;
+  margin-top: 35px;
 }
 
 .cardForm .btn-primary{
-	font-size:1.7em;
-	margin-bottom: 15px;
+  font-size:1.7em;
+  margin-bottom: 15px;
 }
 /*!
  * Datepicker for Bootstrap
@@ -2372,8 +2417,8 @@ div[class^="kerden-back-button"]{
   border-radius: 4px;
   direction: ltr;
   /*.dow {
-		border-top: 1px solid #ddd !important;
-	}*/
+    border-top: 1px solid #ddd !important;
+  }*/
 }
 .datepicker-inline {
   width: 100%;
@@ -3441,16 +3486,16 @@ fieldset[disabled] .datepicker table tr td span.active.disabled:hover.active {
 }
 
 .fc-other-month{
-	background-color: lightgray;
+  background-color: lightgray;
    opacity: 0;
    border: none;
 }
 .fc-other-month.fc-day-number{
-	visibility: hidden;
+  visibility: hidden;
 }
 
 .selecting::after{
-	content: '';
+  content: '';
    display: inline-block;
    width: 30px;
    height: 30px;
@@ -3470,18 +3515,18 @@ fieldset[disabled] .datepicker table tr td span.active.disabled:hover.active {
    position:fixed;
    top:33%;
    left:50%;
-	background-color: red;
-	z-index: 11;
+  background-color: red;
+  z-index: 11;
    padding:15px;
    transform:translateX(-50%);
 }
 
 .affix-top{
-	position: absolute;
+  position: absolute;
 }
 
 .affix{
-	top:50px;
+  top:50px;
 }
 
 .autoDispo{
@@ -3592,7 +3637,7 @@ fieldset[disabled] .datepicker table tr td span.active.disabled:hover.active {
 }
 
 tr[data-href]{
-	cursor:pointer;
+  cursor:pointer;
 }
 
 .blockPicto{
@@ -3752,56 +3797,56 @@ http://www.tipue.com/popr
 .popr_point_top, .popr_point_bottom 
 {
      position: relative;
-	background: #fff;
-	border: 1px solid #dcdcdc;
+  background: #fff;
+  border: 1px solid #dcdcdc;
 }
 .popr_point_top:after, .popr_point_top:before
 {
-	position: absolute;
-	pointer-events: none;
-	border: solid transparent;
-	top: 100%;
-	content: "";
-	height: 0;
-	width: 0;
+  position: absolute;
+  pointer-events: none;
+  border: solid transparent;
+  top: 100%;
+  content: "";
+  height: 0;
+  width: 0;
 }
 .popr_point_top:after
 {
-	border-top-color: #fff;
-	border-width: 8px;
-	left: 50%;
-	margin-left: -8px;
+  border-top-color: #fff;
+  border-width: 8px;
+  left: 50%;
+  margin-left: -8px;
 }
 .popr_point_top:before 
 {
-	border-top-color: #dcdcdc;
-	border-width: 9px;
-	left: 50%;
-	margin-left: -9px;
+  border-top-color: #dcdcdc;
+  border-width: 9px;
+  left: 50%;
+  margin-left: -9px;
 }
 .popr_point_bottom:after, .popr_point_bottom:before
 {
-	position: absolute;
-	pointer-events: none;
-	border: solid transparent;
-	bottom: 100%;
-	content: "";
-	height: 0;
-	width: 0;
+  position: absolute;
+  pointer-events: none;
+  border: solid transparent;
+  bottom: 100%;
+  content: "";
+  height: 0;
+  width: 0;
 }
 .popr_point_bottom:after
 {
-	border-bottom-color: #fff;
-	border-width: 8px;
-	left: 50%;
-	margin-left: -8px;
+  border-bottom-color: #fff;
+  border-width: 8px;
+  left: 50%;
+  margin-left: -8px;
 }
 .popr_point_bottom:before 
 {
-	border-bottom-color: #dcdcdc;
-	border-width: 9px;
-	left: 50%;
-	margin-left: -9px;
+  border-bottom-color: #dcdcdc;
+  border-width: 9px;
+  left: 50%;
+  margin-left: -9px;
 }
 
 
@@ -3816,23 +3861,23 @@ http://www.tipue.com/popr
 }
 
 .brace{
-	position: absolute;
-	right: -35%;
-	font-weight: 100;
+  position: absolute;
+  right: -35%;
+  font-weight: 100;
 }
 
 #weekDaysBrace{
-	font-size: 16em;
-	top:-68px;
+  font-size: 16em;
+  top:-68px;
 }
 
 #weekEndBrace{
-	font-size: 12em;
-	top: 187px;
+  font-size: 12em;
+  top: 187px;
 }
 
 .droite hr{
-	border: 2px solid #ddd;
+  border: 2px solid #ddd;
 }
 
 .header{
@@ -3850,101 +3895,101 @@ http://www.tipue.com/popr
 }
 
 .header h3{
-	color: white;
-	font-size: 1.1em;
-	width: 100%;
+  color: white;
+  font-size: 1.1em;
+  width: 100%;
 }
 
 .rentCall{
-	margin-top: 30px;
+  margin-top: 30px;
 }
 
 .rentCall hr{
-	width:35%;
-	border: 1px solid lightgrey;
+  width:35%;
+  border: 1px solid lightgrey;
 }
 
 .rentCall h2{
-	text-align: center;
-	font-size: 3em;
-	font-family: 'kerdenRegular';
+  text-align: center;
+  font-size: 3em;
+  font-family: 'kerdenRegular';
 }
 
 .rentCall h4{
-	text-align: center;
-	margin: auto;
-	margin-bottom: 20px;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 20px;
 }
 
 .rentCall .row{
-	padding:10px;
+  padding:10px;
 }
 
 .rentCall .images{
-	text-align: center;
+  text-align: center;
 }
 
 .rentCall .row img{
-	max-height: 100px;
-	margin: 0 60px 0 0;
-	float: right;
-	transform:translateX(50%);
-	-webkit-transform:translateX(50%);
-	-ms-transform:translateX(50%);
-	-moz-transform:translateX(50%);
+  max-height: 100px;
+  margin: 0 60px 0 0;
+  float: right;
+  transform:translateX(50%);
+  -webkit-transform:translateX(50%);
+  -ms-transform:translateX(50%);
+  -moz-transform:translateX(50%);
 }
 
 .rentCall .row span{
-	font-size: 1.5em;
-	display: inline-block;
-	margin-top: 30px;
-	font-weight: 500;
+  font-size: 1.5em;
+  display: inline-block;
+  margin-top: 30px;
+  font-weight: 500;
 }
 
 .rentCall .row .rentDesc{
-	font-size: 1.3em;
+  font-size: 1.3em;
 }
 
 
 
 .resumeBloc{
-	margin:10px;
+  margin:10px;
 }
 
 .resumeBloc .caption{
-	font-weight: bold;
-	font-size:1.1em;
+  font-weight: bold;
+  font-size:1.1em;
 }
 
 .hours{
-	margin-left: 25px;
+  margin-left: 25px;
 }
 
 .hours span{
-	margin-left: 20px;
+  margin-left: 20px;
 }
 
 .nbStaff{
-	margin-left: 40px;
+  margin-left: 40px;
 }
 
 .price table .info{
-	font-size: 1.5em;
+  font-size: 1.5em;
 }
 
 .link .main{
-	font-size: 1.3em;
+  font-size: 1.3em;
 }
 
 .link .helper{
-	font-size: 0.8em;
-	display: block;
+  font-size: 0.8em;
+  display: block;
 }
 
 .helperTwo{
-	font-size: 0.8em;
-	display: block;
-	
+  font-size: 0.8em;
+  display: block;
+  
 }
 
 #mainResult{
@@ -4461,17 +4506,17 @@ content:"";
 
 
 .mainRow{
-	background-color: #f9f7f8;
-	margin-top: 24px;
-	margin-bottom: -20px;
+  background-color: #f9f7f8;
+  margin-top: 24px;
+  margin-bottom: -20px;
 }
 
 .mainRow h3{
-	font-family: 'kerdenRegular';
+  font-family: 'kerdenRegular';
 }
 
 .mainRow .leftCol{
-	padding-top: 11px;
+  padding-top: 11px;
     padding-left: 95px;
     font-size: 1.05em;
     font-weight: 600;
@@ -4481,44 +4526,44 @@ content:"";
 
 
 .mainRow .leftCol ul{
-	padding-left: 0px;
+  padding-left: 0px;
     margin-top: -15px;
     white-space: nowrap;
 }
 
 .mainRow .leftCol ul li{
-	line-height: 2.4em;
+  line-height: 2.4em;
 }
 
 .mainRow .leftCol .gMapPreview{
-	margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 
 
 .mainRow .guidelinesList{
-	white-space: normal!important;
+  white-space: normal!important;
 }
 
 .mainRow .guidelinesList li{
-	line-height: 1em!important;
-	margin-bottom: 20px;
+  line-height: 1em!important;
+  margin-bottom: 20px;
 }
 
 .daySpan{
-	min-width: 100px;
+  min-width: 100px;
   display: inline-block;
   font-weight: 700;
 }
 
 .container-fluid h1{
-	font-weight: 200;
+  font-weight: 200;
 }
 .container-fluid h5{
-	font-weight: 200;
+  font-weight: 200;
 }
 .container-fluid ul{
-	list-style: none;
+  list-style: none;
 }
 
 .img-contain img{
@@ -4526,17 +4571,17 @@ content:"";
 }
 
 .carousel-control{
-	border-radius: 0!important;
-	background:none!important;
+  border-radius: 0!important;
+  background:none!important;
 }
 
 .carousel-control .glyphicon{
-	font-size: 2em!important;
+  font-size: 2em!important;
 }
 
 .carousel-control:hover .glyphicon{
-	color:grey!important;
-	text-shadow: 0 0 1em grey,0 0 1.5em grey,0 0 2em grey,0 0 3em grey;
+  color:grey!important;
+  text-shadow: 0 0 1em grey,0 0 1.5em grey,0 0 2em grey,0 0 3em grey;
 }
 
 
@@ -4564,59 +4609,59 @@ content:"";
 }
 
 .visor-carousel .carousel-control.layout-landscape:hover{
-	box-shadow: none!important;
+  box-shadow: none!important;
 }
 
 .img-contain .item.active:hover .zoomIcon{
-	opacity: 1;
+  opacity: 1;
 }
 
 .checkList{
-	color:black;
+  color:black;
 }
 
 .nonCheckList{
-	color:grey;
+  color:grey;
 }
 
 .descContent{
-	font-size:1.4em;
-	margin-left: 45px;
+  font-size:1.4em;
+  margin-left: 45px;
 }
 
 .max_hour{
-	color:grey;
-	margin-left:60px;
+  color:grey;
+  margin-left:60px;
 }
 
 .col-gauche{
-	background-color: #F2FCF2;
-	padding-top:13px;
-	border-right: 50px solid;
+  background-color: #F2FCF2;
+  padding-top:13px;
+  border-right: 50px solid;
     border-image: linear-gradient(to right, #F2FCF2, rgb(255,255,255 )) 1 100%;
 }
 
 .col-gauche .row:before{
-	content:'';
-	border-top:2px solid gray;
-	width:90%;
-	margin-left:10%;
-	display: block;
+  content:'';
+  border-top:2px solid gray;
+  width:90%;
+  margin-left:10%;
+  display: block;
 }
 
 .col-gauche .row{
-	margin-bottom:30px; 
+  margin-bottom:30px; 
 }
 
 .col-gauche a{
-	z-index: 3;
+  z-index: 3;
 }
 
 .pictoLine .picto{
-	width: 35px;
-	height: 35px;
-	float: right;
-	margin: 15px;
+  width: 35px;
+  height: 35px;
+  float: right;
+  margin: 15px;
 }
 
 .garden-header {
@@ -4645,9 +4690,9 @@ content:"";
 }
 
 .backButton{
-	background-color: #7cbc91;
-	color: white;
-	border-radius: 0px;
+  background-color: #7cbc91;
+  color: white;
+  border-radius: 0px;
   font-family: 'Amatic SC', cursive;
   font-size: 25px;
   line-height: 30px;
@@ -4662,7 +4707,7 @@ content:"";
 }
 
 .backButton:hover{
-	color: white;
+  color: white;
 }
 
 .garden-title-container h1 {
@@ -4737,8 +4782,8 @@ content:"";
 }
 
 .resaBloc{
-	background-color: white;
-	z-index: 3;
+  background-color: white;
+  z-index: 3;
   -webkit-box-shadow: 0px 0px 35px 0px #d7d7d7;
   z-indexmoz-box-shadow: 0px 0px 35px 0px #d7d7d7;
   filter:progid:DXImageTransform.Microsoft.Glow(Color=#d7d7d7,Strength=35);
@@ -4758,15 +4803,15 @@ content:"";
 
 
 .resaBloc .priceRow span{
-	float: right;
+  float: right;
 }
 
 .resaBloc .priceRow .price{
-	font-size: 1.3em;
+  font-size: 1.3em;
 }
 
 .resaBloc .btn-kerden-full{
-	width: 100%;
+  width: 100%;
     max-width: none!important;
     margin: 10px 0px!important;
     font-size: 1.6em;
@@ -4788,49 +4833,49 @@ content:"";
 }
 
 .subscribeCTA{
-	height: 208px;
+  height: 208px;
     background-color: #f4e58c;
     border-bottom-left-radius: 29px;
     padding-top: 52px;
 }
 
 .subscribeCTA a{
-	margin-left: 37%;
+  margin-left: 37%;
 }
 .subscribeCTA a .btn{
-	margin-top: 30px;
+  margin-top: 30px;
 }
 
 #slider-guests{
-	margin-top:12px;
+  margin-top:12px;
 }
 
 .staffContent{
-	margin-left: 45px;
+  margin-left: 45px;
 }
 
 .staffContent span{
-	font-size:0.85em;
+  font-size:0.85em;
 }
 
 .dispoTable{
-	border:1px solid grey;
-	width:525px;
-	height: 98px;
-	position: relative;
+  border:1px solid grey;
+  width:525px;
+  height: 98px;
+  position: relative;
 }
 .dispoTable>tbody>tr>td{
-	border: none;
-	min-width: 75px;
-	max-width: 75px;
-	width: 75px;
-	text-align: center;
+  border: none;
+  min-width: 75px;
+  max-width: 75px;
+  width: 75px;
+  text-align: center;
 }
 
 .dispoTable>tbody>tr>td:after{
-	content:'';
-	border: 1px solid grey;
-	display: block;
+  content:'';
+  border: 1px solid grey;
+  display: block;
     position: absolute;
     height: 75%;
     top: 12%;
@@ -4839,31 +4884,31 @@ content:"";
 }
 
 .dispoTable>tbody>tr>td:first-child:after{
-	border:none!important;
+  border:none!important;
 }
 
 .dispoTable>thead>tr>th{
-	text-align: center;
-	border:none;
-	font-weight: 100;
-	min-width: 75px;
-	max-width: 75px;
-	width: 75px;
-	padding-bottom: 0;
+  text-align: center;
+  border:none;
+  font-weight: 100;
+  min-width: 75px;
+  max-width: 75px;
+  width: 75px;
+  padding-bottom: 0;
 }
 
 .gardenware{
-	border-left: 1px solid grey;
-	font-weight: 200;
+  border-left: 1px solid grey;
+  font-weight: 200;
 }
 
 .oscarHelp{
-	cursor: pointer;
-	color:lightgray;
-	padding-left:15px;
+  cursor: pointer;
+  color:lightgray;
+  padding-left:15px;
 }
 .oscarHelp:before{
-	content: '';
+  content: '';
     border: 1px solid black;
     border-radius: 50%;
     position: absolute;
@@ -4874,16 +4919,16 @@ content:"";
 
 }
 .picto-all_day-night{
-	width: 43px!important;
-	height: 43px!important;
+  width: 43px!important;
+  height: 43px!important;
 }
 .picto-late_day-night{
-	width: 43px!important;
-	height: 43px!important;	
+  width: 43px!important;
+  height: 43px!important; 
 }
 
 .noDispo{
-	font-size:0.6em;
+  font-size:0.6em;
     width: 77px;
     background-color: #eee;
     height: 281%;
@@ -4893,76 +4938,76 @@ content:"";
 }
 
 .loadingAjax{
-	position: absolute;
-	width: 100%;
-	max-width: 250px;
-	height: 100%;
-	z-index:10;
-	background-color: rgba(200,200,200,0.9);
+  position: absolute;
+  width: 100%;
+  max-width: 250px;
+  height: 100%;
+  z-index:10;
+  background-color: rgba(200,200,200,0.9);
 }
 
 .loadingAjax img{
-	width:100px;
-	height: 100px;
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	margin: auto;
+  width:100px;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
 #dateError{
-	color:red;
-	font-weight: bold;
+  color:red;
+  font-weight: bold;
 }
 
 .ui-slider-handle:before{
-	content: attr(data-hour);
-	position: absolute;
-	top:-19px;
-	width: 35px;
-	color: #cceebe;
+  content: attr(data-hour);
+  position: absolute;
+  top:-19px;
+  width: 35px;
+  color: #cceebe;
 }
 #hoursRow {
   margin-bottom: 20px;
 }
 
 #hoursRow .slider{
-	margin-top: 18px;
-	padding-left: 51px;
+  margin-top: 18px;
+  padding-left: 51px;
   padding-right: 44px;
 }
 
 .reportBtn{
-	font-size: 0.4em;
-	color: fireBrick;
-	cursor:pointer;
+  font-size: 0.4em;
+  color: fireBrick;
+  cursor:pointer;
 }
 
 .trickyList{
-	margin-left: 70px!important;
+  margin-left: 70px!important;
 }
 
 .tripleList,.doubleList{
-	width: 100%;
-	float: left;
-	margin-bottom: 26px;
+  width: 100%;
+  float: left;
+  margin-bottom: 26px;
 }
 
 .tripleList li{
-	width: 31%;
-	display: inline;
-	float: left;
+  width: 31%;
+  display: inline;
+  float: left;
 }
 .tripleList li:nth-child(3n){
-	margin-left: 30px;
+  margin-left: 30px;
 }
 
 .doubleList li{
-	width: 50%;
-	float: left;
-	display: inline;
+  width: 50%;
+  float: left;
+  display: inline;
 }
 
 .resaBloc.affix{
