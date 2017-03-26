@@ -58,10 +58,10 @@ return [
 
         's3' => [
             'driver' => 's3',
-            'key' => 'AKIAINPE3GVXC3D67KEQ',
-            'secret' => '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',
-            'region' => 'eu-west-1',
-            'bucket' => 'kerden-img',
+            'key' => env('AWS_KEY'),
+            'secret' => env('AWS_SECRET'),
+            'region' => env('AWS_REGION'),
+            'bucket' => env('AWS_BUCKET'),
         ],
 
     ],
