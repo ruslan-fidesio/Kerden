@@ -16,7 +16,7 @@ class GardenStaffController extends Controller
 
     public function create($id, Request $req){
     	$garden = Garden::find($id);
-        if ($garden->state != 'dispo_ok') {
+        if ($garden->state != 'dispo_ok' && $garden->state != 'validated') {
             return redirect('/garden/menu/'.$id)->with('message',trans('garden.details_needed'));
         }
     	return view('garden.staff',['garden'=>$garden]);
