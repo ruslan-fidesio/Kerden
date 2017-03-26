@@ -37,6 +37,8 @@ class GardenViewController extends Controller
 			$staticImgUrl.="|".$pLat.','.$pLng;
         }
 
+        $staticImgUrl .= "&style=element:labels|visibility:off";
+
     	return view('search.view',['garden'=>$garden,'message'=>$req->message,'preview'=>$req->preview,'staticImgUrl'=>$staticImgUrl]);
     }
 

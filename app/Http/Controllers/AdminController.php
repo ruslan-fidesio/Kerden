@@ -46,6 +46,11 @@ class AdminController extends Controller
         if($garden->owner->role->role !='owner' && $garden->owner->role->role !='admin'){
             return redirect()->back()->with('error','Le propriétaire du jardin n\'a pas le statut "propriétaire"');
         }
+
+        if ($garden->state != 'dispo_ok') {
+            return redirect()->back()->with('error','Il manque des infos pour valider le jardin');
+        }
+
     	$garden->state = "validated";
     	$garden->save();
         KerdenMailer::mailNoReply($garden->owner->email, 'validGarden',
