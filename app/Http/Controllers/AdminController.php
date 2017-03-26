@@ -156,7 +156,7 @@ class AdminController extends Controller
         $mangoId = $user->mangoUser->mangoUserId;
         $accounts  = $this->getBankAccounts($mangoId);
         $active = !empty($user->mangoBankAccount)?$user->mangoBankAccount->account_id:0;
-        return view('admin.bankAccounts',['user'=>$user,'accounts'=>$accounts,'active'=>$active]);
+        return view('admin.bankAccounts',['user'=>$user,'accounts'=>$accounts,'active'=>$active,'error'=>$req->session()->get('error')]);
     }
 
     public function setActiveUserBank($id, Request $req){
@@ -176,6 +176,9 @@ class AdminController extends Controller
         $user = User::find($id);
         $mangoId = $user->mangoUser->mangoUserId;
         $res = $this->createBankAccount($mangoId,$user->details, $user->fullName, $req->iban, $req->bic);
+        if (!$res) {
+            return redirect('/admin/bank/'.$id)->with('error', "Erreur création iban, le numéro iban ne semble pas être valide.");
+        }
         return redirect('/admin/bank/'.$id);
     }
 

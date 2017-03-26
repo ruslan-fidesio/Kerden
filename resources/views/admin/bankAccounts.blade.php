@@ -13,6 +13,12 @@
 @endsection
 
 @section('content')
+@if(isset($error))
+  <div class="alert alert-danger fade in">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    {{$error}}
+  </div>
+@endif
 <div class="container">
 	<div class="panel panel-default">
 		<div class="panel-heading">Coordonnées bancaires</div>

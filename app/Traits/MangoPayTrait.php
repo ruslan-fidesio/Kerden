@@ -172,7 +172,11 @@ trait MangoPayTrait{
                 $bankAcc->Details = new \MangoPay\BankAccountDetailsIBAN();
                 $bankAcc->Details->IBAN = $iban;
                 $bankAcc->Details->BIC = $bic;
-                return $this->getApi()->Users->CreateBankAccount($userId,$bankAcc);
+                try{
+                    return $this->getApi()->Users->CreateBankAccount($userId,$bankAcc);
+                } catch(\MangoPay\Libraries\ResponseException $e) {
+                    return false;
+                }
         }
 
         private function createKYCDocument($userId,$documentType){
