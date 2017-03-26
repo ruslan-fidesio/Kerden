@@ -17,8 +17,8 @@ class GardenDispoController extends Controller
 
     public function create($id,Request $req){
     	$garden = Garden::find($id);
-    	if($garden->state == "new"){
-    		return redirect('/home')->with('message',trans('garden.details_needed'));
+    	if($garden->state != "prices_ok" && $garden->state != 'dispo_ok' && $garden->state !='validated'){
+    		return redirect('/garden/menu/'.$id)->with('message',trans('garden.details_needed'));
     	}
         
     	return view('garden.dispo', ['garden'=>$garden]);

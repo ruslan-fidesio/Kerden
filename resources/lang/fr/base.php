@@ -24,7 +24,7 @@ return [
 	'low'		=> 'Léger',
 	'high'		=> 'Moyen',
 	'powerfull'	=> 'Puissant',
-	'rent'		=> 'Louer mon jardin',
+	'rent'		=> 'Proposer mon jardin',
 
 
 	'weekDays'	=> [1=>'Lundi',

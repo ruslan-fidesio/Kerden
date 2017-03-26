@@ -19,6 +19,7 @@
 				<div class="col-xs-12">
 					<h3>{{$user->fullName}}</h3>
 					<span>Statut : </span>{{$user->role->role}}
+					<span>Type : </span>{{ $user->details->type}}
 				</div>
 				<div class="col-xs-12">
 					Adresse : {{$user->details->fullAddress}}

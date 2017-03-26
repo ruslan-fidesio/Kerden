@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-md-12">
             <div class="panel panel-default">
-                <div class="panel-heading"><strong>Informations</strong> -> Critères -> Tarifs / Créneaux horaires -> Calendrier </div>
+                <div class="panel-heading"><strong>Informations</strong></div>
                 <div class="panel-body">
                 	{!! Form::open(['url'=>'/garden/create','class'=>'form-horizontal']) !!}
 

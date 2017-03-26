@@ -28,7 +28,7 @@ class ProofOfIdController extends Controller
             }
         }
         else{
-            return redirect('/home')->with('error','Opération impossible : <a href="/userdetails">Renseignez d\'abord vos coordonnées</a>');
+            return redirect()->back()->with('error','Opération impossible : <a href="/userdetails">Renseignez d\'abord vos coordonnées</a>');
         }
     }
 
@@ -76,7 +76,9 @@ class ProofOfIdController extends Controller
                 'kbisFile'=>$kbisFile,
                 'shareHoldFile'=>$shareHoldFile,
                 'organization'=>$orga,
-                'userFromAdmin'=>$userFromAdmin
+                'userFromAdmin'=>$userFromAdmin,
+                'message'=>$req->session()->get('message'),
+                'error'=>$req->session()->get('error')
             ]);
         }
         else {
@@ -90,7 +92,8 @@ class ProofOfIdController extends Controller
         	if($test>0){
         		return redirect('/userdetails')->withError('Vous avez récemment envoyé un document. Merci d\'attendre la validation ou le refus de celui-ci avant d\'en envoyer un autre.');
         	}
-        	return view('auth.proofOfId');
+        	return view('auth.proofOfId',['message'=>$req->session()->get('message'),
+                                            'error'=>$req->session()->get('error')]);
         }
     }
 
@@ -109,12 +112,12 @@ class ProofOfIdController extends Controller
             $fileType = "SHAREHOLDER_DECLARATION";
         }
         else {
-            return redirect('/home')->with('error','Erreur envoi fichier');
+            return redirect()->back()->with('error','Erreur envoi fichier');
         }
 
 		//test file size
 		if($file->getClientSize() > 7000000){
-			return redirect('/home')->with('error','Erreur envoi fichier : fichier trop lourd!');
+			return redirect()->back()->with('error','Erreur envoi fichier : fichier trop lourd!');
 		}
 		if($req->has('userIdFromAdmin')){
 			$user = User::find($req->userIdFromAdmin);
@@ -139,7 +142,11 @@ class ProofOfIdController extends Controller
 		$storedDoc->ressource_id = $KYCDocumentId;
 		$storedDoc->state = 'asked';
 		$storedDoc->save();
-		return redirect('/home')->with('message','Envoi fichier ok');
+
+        if (!$req->user()->mangoBankAccount) {
+            return redirect('/rib');
+        }
+		return redirect()->back()->with('message','Envoi fichier ok');
     }
 
     public function adminCreate($id, Request $req){

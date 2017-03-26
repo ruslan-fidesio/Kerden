@@ -43,7 +43,6 @@
 					</div>
 				</div>
 			</div>
-			
 
 			@if(Auth::user()->role->role == 'admin')
 			<div class="row">
@@ -207,6 +206,9 @@
 	    </div>
 	</div>
 
+		</div>
+	</div>
+
 @endsection
 
 @section('scripts')
@@ -229,10 +231,10 @@ function readAndLoadURL(input){
     $('.userMenu').addClass('active');
 
     $('.left-menu-link').removeClass('active');
-    @if (Auth::User()->details->type == 'legal')
-    	$('.left-menu-link:nth-child(2)').addClass('active');
-    @else
+    @if (Auth::user() && Auth::user()->details && Auth::user()->details->type == 'natural')
     	$('.left-menu-link:nth-child(3)').addClass('active');
+    @else
+    	$('.left-menu-link:nth-child(2)').addClass('active');
     @endif
     showPage2();
 

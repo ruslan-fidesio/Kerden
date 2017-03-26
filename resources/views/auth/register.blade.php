@@ -20,6 +20,18 @@
                     <form class="form-horizontal" role="form" method="POST" action="{{ url('/register') }}" autocomplete="off">
                         {!! csrf_field() !!}
 
+
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">Statut : </label>
+                            <div class="col-md-6">
+                                <select class="form-control" name="iamlegal">
+                                    <option value='false'>Particulier</option>
+                                    <option value='true'>Professionnel</option>
+                                    <option value='true'>Association</option>
+                                </select>
+                            </div>
+                        </div>
+
                         <div class="form-group{{ $errors->has('last_name') ? ' has-error' : '' }}">
                             <label class="col-md-4 control-label">{{trans('validation.attributes.last_name')}}</label>
 
@@ -104,11 +116,10 @@
                             </div>
                         </div>
 
-                        <div class="form-group">
-                            <label class="col-md-6 control-label">{{trans('userdetails.iamlegal')}}</label>
-
-                            <div class="col-md-1">
-                                <input type="checkbox" class="form-control" name="iamlegal">
+                        <div class="form-group{{ $errors->has('acceptCGU') ? ' has-error' : '' }}">
+                            <label class="col-xs-8 control-label">J'accepte les <a href='#' data-toggle='modal' data-target='#cguModal'>Conditions Générales d'Utilisation</a></label>
+                            <div class="col-xs-4">
+                                <input class="form-control" type="checkbox" name="acceptCGU">
                             </div>
                         </div>
 
@@ -135,4 +146,6 @@
         </div>
     </div>
 </div>
+
+@include('footer')
 @endsection
