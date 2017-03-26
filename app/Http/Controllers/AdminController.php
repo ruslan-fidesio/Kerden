@@ -47,7 +47,7 @@ class AdminController extends Controller
             return redirect()->back()->with('error','Le propriétaire du jardin n\'a pas le statut "propriétaire"');
         }
 
-        if ($garden->state != 'prices_ok') {
+        if ($garden->state != 'dispo_ok') {
             return redirect()->back()->with('error','Il manque des infos pour valider le jardin');
         }
 
