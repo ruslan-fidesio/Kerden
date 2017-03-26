@@ -61,6 +61,7 @@ class AuthController extends Controller
             'email' => 'required|email|max:255|unique:users|confirmed',
             'password' => 'required|min:6|confirmed',
             'g-recaptcha-response' => 'recaptcha|required',
+            'acceptCGU' => 'required', 
         ]);
     }
 
@@ -90,7 +91,7 @@ class AuthController extends Controller
     }
 
     protected function createNewDetails($userid,$islegal){
-        $type = $islegal ? 'legal' : 'natural';
+        $type = $islegal == 'true' ? 'legal' : 'natural';
         return UserDetail::create([
             'id' => $userid,
             'type' => $type,

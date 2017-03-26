@@ -37,16 +37,7 @@
         </div>
 
         <div class="collapse navbar-collapse" id="app-navbar-collapse">
-            <!-- Left Side Of Navbar -->
-            @if(Auth::user())
-             <ul class="nav navbar-nav HomeLeftLink">
-                <li><a href="{{ url('/home') }}">Espace Membre
-                    @if(Auth::user()->unreadMessages > 0)
-                        <i class="fa fa-envelope-o"></i><sup class="unreadNumber">{{ Auth::user()->unreadMessages }}</sup>
-                    @endif
-                </a></li>
-            </ul> 
-            @endif
+            
 
             <!-- Right Side Of Navbar -->
             <ul class="nav navbar-nav navbar-right">
@@ -56,7 +47,7 @@
                 @else
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                            {{ Auth::user()->firstName.' '.Auth::user()->lastName }} <span class="caret"></span>
+                            Mon Espace <span class="caret"></span>
                         </a>
 
                         <ul class="dropdown-menu" role="menu">
@@ -64,7 +55,18 @@
                             <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Déconnexion</a></li>
                         </ul>
                     </li>
-                @endif                
+                @endif  
+                
+                @if(Auth::user())
+                    <li>
+                      <a href="{{ url('/home') }}">Espace Membre
+                        @if(Auth::user()->unreadMessages > 0)
+                            <i class="fa fa-envelope-o"></i><sup class="unreadNumber">{{ Auth::user()->unreadMessages }}</sup>
+                        @endif
+                        <i class="fa fa-envelope-o"></i><sup class="unreadNumber">3</sup>
+                      </a>
+                    </li>
+                @endif                              
                 <!-- Authentication Links -->
                 <li><a class="rentCTA" 
                     @if(Auth::guest())

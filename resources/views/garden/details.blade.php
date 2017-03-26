@@ -2,15 +2,12 @@
 
 @section('contentPane')
 <div class="kerden-page-2-1">
-    
-    <div class="kerden-back-button">Retour</div>
-    <h1>{{$garden->title}}</h1>
     <div class="panel-kerden-home" style='border:none'>
         <div class="panel-heading"><strong>Critères</strong></div>
     </div>
 </div>
     <div class="row tabbable">
-        <div class="left-home-sub-menu col-md-3 kerden-page-2-2">
+        <div class="left-home-sub-menu col-md-4 kerden-page-2-2">
             <ul class=" nav nav-pills-stacked details-tab">
                 <li class="active">
                     <a href="#tabActi"data-toggle="tab" data-kerdenpage="3">Activités
@@ -40,16 +37,12 @@
                 <li>
                     <a href="#tabGuidelines" data-toggle="tab" data-kerdenpage="3">Consignes</a>
                 </li>
-                <li>
-                    <a href="#tabSave" data-toggle="tab" data-kerdenpage="3">Enregistrer</a>
-                </li>
             </ul>
         </div>
 
 {!! Form::open(['url'=>'/garden/details/'.$garden->id]) !!}
 
-        <div class="tab-content col-md-9 kerden-page-3">
-            <div class="kerden-back-button-p3">Retour</div>
+        <div class="tab-content col-md-8 kerden-page-3">
             <div class="tab-first-level tab-pane fade active in" id="tabActi">
                     
                 @include('garden.details.activities')
@@ -112,18 +105,7 @@
                     <div class="col-xs-6"><div class="btn btn-kerden-confirm nextBtn">Suivant &gt;</div></div>
                 </div>
             </div>            
-            <div class="tab-first-level tab-pane fade" id="tabSave">
-                <div class="form-group col-xs-12">
-                    <div class="col-xs-6 text-right"><div class="btn btn-kerden-cancel prevBtn">&lt; Précédent</div></div>
-                    <div class='col-xs-6'>
-                        @if($garden->state == "new")
-                            {!! Form::submit(trans('pagination.next'),['class'=>'btn btn-kerden-confirm']) !!}
-                        @else
-                            {!! Form::submit('Enregistrer',['class'=>'btn btn-kerden-confirm']) !!}
-                        @endif
-                    </div>
-                </div>
-            </div>
+            {!! Form::submit('Enregistrer',['class'=>'btn btn-kerden-confirm']) !!}
         </div>
 
 

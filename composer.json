@@ -21,7 +21,8 @@
         "greggilbert/recaptcha": "dev-master",
         "mangopay/php-sdk-v2":"^2.3",
         "laravel/socialite": "^2.0",
-        "barryvdh/laravel-snappy": "^0.3.0"
+        "barryvdh/laravel-snappy": "^0.3.0",
+        "league/flysystem-aws-s3-v3": "~1.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

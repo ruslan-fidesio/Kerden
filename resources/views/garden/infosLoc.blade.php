@@ -1,12 +1,9 @@
 @extends ('garden.menu')
 
 @section('contentPane')
-<div class="kerden-back-button">Retour
-</div>
-	<h1>{{$garden->title}}</h1>
     <div class="row">
         <div class="col-md-12">
-            <div class="panel panel-kerden-home">
+            <div class="panel">
             	@if(isset($message))
                 	<div class="alert alert-success fade in">
                 		<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>

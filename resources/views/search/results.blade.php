@@ -133,8 +133,8 @@
 							<a class="col-lg-4 col-sm-6 garden-sortable-link garden-result-item" data-item-id="{{$garden->id}}" href="{{ url('/view/'.$garden->id) }}" >
 								
 									<div class="thumbnail">
-										<!-- <img src="{{ asset('storage/'.$garden->getFirstPhotoURL()) }}"> -->
-										<img src="/images/bg1.jpg">
+										<img src="{{ $garden->getFirstPhotoURL() }}">
+										<!-- <img src="/images/bg1.jpg"> -->
 										<div class="priceCall">
 											À partir de<br><span> {{$garden->getMinPrice($params['date'])}} €</span>
 										</div>

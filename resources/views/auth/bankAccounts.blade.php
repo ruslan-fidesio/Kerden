@@ -21,7 +21,7 @@
 			<h3>{{$user->fullName}}</h3>
 			<h4>Comptes enregistrés :</h4>
 			@if(!$active)
-				<span style='color:red;font-size:2em'>Pas de compte actif</span>
+				<span>Pas de compte actif</span>
 			@endif
 
 			@if(!empty($accounts) )
@@ -62,7 +62,11 @@
     $('.userMenu').addClass('active');
 
     $('.left-menu-link').removeClass('active');
-    $('.left-menu-link:nth-child(4)').addClass('active');
+    @if (Auth::user() && Auth::user()->details && Auth::user()->details->type == 'natural')
+    	$('.left-menu-link:nth-child(4)').addClass('active');
+    @else
+    	$('.left-menu-link:nth-child(3)').addClass('active');
+    @endif
     showPage2();
 }) (jQuery);
 </script>

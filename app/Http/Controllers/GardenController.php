@@ -56,11 +56,22 @@ class GardenController extends Controller
         $gardenLoca->lng = $req->lng;
         $gardenLoca->save();
 
-    	return redirect('/garden/details/'.$garden->id);
+    	return redirect('/garden/infosLoc/'.$garden->id);
     }
 
     public function edit($id,Request $req){
-        return $this->menu($id, $req);
+        $garden = Garden::find($id);
+        $cat = 'Le jardin';
+        foreach (Garden::$CATEGORIES as $key => $value) {
+            if($value == 'Le Jardin') continue;
+            if(preg_match('/'.$value.'/i', $garden->title)){
+                $cat = $value;
+                break;
+            }
+        }
+        $name = $garden->title;
+        $name = preg_replace('/'.$cat.'/i', '', $name);
+        return view('garden.edit',['garden'=>$garden,'categories'=>Garden::$CATEGORIES,'cat'=>$cat,'name'=>$name]);
     }
 
     public function update($id, Request $req){
@@ -79,25 +90,40 @@ class GardenController extends Controller
         $loca->lat = $req->lat;
         $loca->lng = $req->lng;
         $loca->save();
-        return redirect('/home')->with('message',trans('garden.updateOK'));
+        return redirect()->back()->with('message',trans('garden.updateOK'));
     }
 
     public function menu($id, Request $req){
         $garden = Garden::find($id);
+        $message = $req->session()->get('message');
+        $error = $req->session()->get('error');
         switch($garden->state){
             case 'new':
-                return redirect('/garden/details/'.$id);
+                return redirect('/garden/infosLoc/'.$id)
+                    ->with('message', $message)
+                    ->with('error', $error);
+                break;
+            case 'infos_ok':
+                return redirect('/garden/details/'.$id)
+                    ->with('message', $message)
+                    ->with('error', $error);
                 break;
             case 'details_ok':
-                return redirect('/garden/prices/'.$id);
+                return redirect('/garden/prices/'.$id)
+                    ->with('message', $message)
+                    ->with('error', $error);
                 break;
             case 'dispo_ok':
                 if (!$garden->staff){
-                    return redirect('/garden/staff/'.$id);
+                    return redirect('/garden/staff/'.$id)
+                        ->with('message', $message)
+                        ->with('error', $error);
                 }
                 break;
             case 'prices_ok':
-                return redirect('/garden/dispo/'.$id);
+                return redirect('/garden/dispo/'.$id)
+                    ->with('message', $message)
+                    ->with('error', $error);
                 break;
             default: 
                 break;

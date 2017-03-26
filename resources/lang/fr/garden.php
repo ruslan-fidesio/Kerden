@@ -36,7 +36,7 @@ return [
 	'staffrequiredNight' => 'J\'éxige la présence d\'Oscardiens dans mon jardin au delà de 18h.',
 	'cookrequired'	=> 'Je souhaite limiter l\'accès de la cuisine au personnel autorisé.',
 	'details_ok'	=> 'Les détails du jardin ont été correctement enregistrés',
-	'details_needed'=> 'Merci de renseigner les détails du jardin avant de continuer',
+	'details_needed'=> 'Vous devez d\'abord remplir ces informations.',
 	'morningPrice'	=> 'Entre 9h et 14h :',
 	'afternoonPrice'=> 'Entre 14h et 18h :',
 	'eveningPrice'	=> 'Entre 18h et 22h :',

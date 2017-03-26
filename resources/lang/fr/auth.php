@@ -21,7 +21,7 @@ return [
     'pleaseconfirmemail'    => 'Votre e-mail n\'a pas &eacute;t&eacute; confirm&eacute;. V&eacute;rifiez votre bo&icirc;te mail, ou <a href=":link"> Cliquez ici </a> pour renvoyer un email de confirmation.',
     'failemailconfirm'      => 'Impossible de valider cet email : jeton introuvable.',
     'expiredemailconfirm'   => 'Impossible de valider cet email : jeton trop vieux.',
-    'successemailconfirm'   => 'Votre email a correctement &eacute;t&eacute; confirm&eacute;. Vous pouvez vous connecter.',
+    'successemailconfirm'   => 'Votre email a correctement &eacute;t&eacute; confirm&eacute;. Vous pouvez renseignez vos détails.',
     'validate'              => 'Valider',
     'next'                  => 'Suivant',
     'cancel'                => 'Annuler',

@@ -26,10 +26,12 @@ class GardenPricesController extends Controller
 
     public function create($id,Request $req){
     	$garden = Garden::find($id);
-        if($garden->state == "new"){
-            return redirect('/home')->with('message',trans('garden.details_needed'));
+        if($garden->state == "new" || $garden->state == "infos_ok" ){
+            return redirect('/garden/menu/'.$id)->with('message',trans('garden.details_needed'));
         }
-    	return view('garden.prices',['garden'=>$garden]);
+    	return view('garden.prices',['garden'=>$garden,
+            'message'=>$req->session()->get('message'),
+            'error'=>$req->session()->get('error')]);
     }
 
     public function store($id, Request $req){

@@ -28,7 +28,8 @@ class GardenInfoLocController extends Controller
          'infos'=>$infos,
          'usephone'=>$usephone,
          'guestscansee'=>$guestscansee,
-         'message'=>$req->session()->get('message')]);
+         'message'=>$req->session()->get('message'),
+         'error'=>$req->session()->get('error')]);
     }
 
     public function store($id, Request $req){
@@ -47,6 +48,12 @@ class GardenInfoLocController extends Controller
     		$info->value = $value;
     		$info->save();
     	}
+
+        if ($garden->state == 'new') {
+            $garden->state = 'infos_ok';
+            $garden->save();
+            return redirect('/garden/details/'.$id);
+        }
     	return back()->with('message','Les infos ont bien été sauvegardées');
     }
 }

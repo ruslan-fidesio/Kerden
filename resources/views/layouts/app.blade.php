@@ -58,60 +58,57 @@
                 </div>
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                    <!-- Left Side Of Navbar -->
-                    @if(Auth::user())
-                     <ul class="nav navbar-nav HomeLeftLink">
-                        <li><a href="{{ url('/home') }}">Espace Membre
+            <ul class="nav navbar-nav navbar-right">
+                @if (Auth::guest())
+                    <li><a class="blue-menu" href="#" data-toggle="modal" data-target="#inscriptionModal">{{trans('auth.register')}}</a></li>
+                    <li><a class="green-menu" href="#" data-toggle="modal" data-target="#connexionModal">{{trans('auth.login')}}</a></li>
+                @else
+                    <li class="dropdown">
+                        <a href="#" class="blue-menu dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                             @if(Auth::user()->unreadMessages > 0)
                                 <i class="fa fa-envelope-o"></i><sup class="unreadNumber">{{ Auth::user()->unreadMessages }}</sup>
-                            @endif
-                        </a></li>
-                    </ul> 
-                    @endif
+                            @endif    
+                            <span class="badge">4</span>                                                    
+                            Mon espace
+                            <span class="caret"></span>
+                        </a>
 
-                    <!-- Right Side Of Navbar -->
-                    <ul class="nav navbar-nav navbar-right">
-                        @if (Auth::guest())
-                            <li><a class="blue-menu" href="#" data-toggle="modal" data-target="#inscriptionModal">{{trans('auth.register')}}</a></li>
-                            <li><a class="green-menu" href="#" data-toggle="modal" data-target="#connexionModal">{{trans('auth.login')}}</a></li>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="{{ url('/home') }}"><i class='fa fa-btn fa-user'></i> Espace membre</a> </li>
+                            <li><a href="#"><i class='fa fa-shield'></i> Espace Ker'house</a> </li>
+                            <li><a href="{{ url('/logout') }}">Déconnexion</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="green-menu" href="{{ url('/logout') }}">Déconnexion</a></li>
+                @endif  
+                <li class="separator-line"></li>
+                @if(Auth::user())
+
+                @endif                              
+                <!-- Authentication Links -->
+                <li><a class="rentCTA" 
+                    @if(Auth::guest())
+                        href="/rent"
+                    @else
+                        @if(count(Auth::user()->ownedGardens)>0)
+                            href="{{url('/garden/update/'. Auth::user()->ownedGardens[0]->id )}}" 
                         @else
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                    {{ Auth::user()->firstName.' '.Auth::user()->lastName }} <span class="caret"></span>
-                                </a>
-
-                                <ul class="dropdown-menu" role="menu">
-                                    <li><a href="{{ url('/home') }}"><i class='fa fa-btn fa-user'></i>Espace membre</a> </li>
-                                    <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Déconnexion</a></li>
-                                </ul>
-                            </li>
-                        @endif      
-                        <li class="separator-line"></li>          
-                        <!-- Authentication Links -->
-                        <li><a class="rentCTA" 
-                            @if(Auth::guest())
-                                href="/rent"
-                            @else
-                                @if(count(Auth::user()->ownedGardens)>0)
-                                    href="{{url('/garden/update/'. Auth::user()->ownedGardens[0]->id )}}" 
-                                @else
-                                    href="/rent"
-                                @endif
-                            @endif
-                        >{{trans('base.rent')}}</a>
-                        </li>
-                    </ul>
+                            href="/rent"
+                        @endif
+                    @endif
+                >{{trans('base.rent')}}</a>
+                </li>
+            </ul>
                 </div>
             </div>
         </nav>
         @if (Request::path() == '/')
             <h1 class="home-title">Location de jardins et terrasses</h1>        
         @endif
-
-        @yield('navbar')
     </header>
 
     <main class="{{ Request::path() == '/' ? 'homepage-content' : 'content' }}">
+        @yield('navbar')
         @yield('content')
     </main>
     
@@ -357,7 +354,10 @@
         }
 
         (function($){
-            $('#connexionModal').has('.help-block').modal('show');
+            @if (Request::path() != 'register')
+                $('#connexionModal').has('.help-block').modal('show');
+            @endif
+
             $('#switchModal').click(function(e){
                 $('#connexionModal').modal('hide');
                 $('#inscriptionModal').modal('show');
