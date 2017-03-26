@@ -4,7 +4,6 @@
     <div class="row">
         <div class="col-md-12">
             <div class="panel panel-kerden-home">
-                <div class="kerden-back-button">Retour</div>
                 <div class="panel-heading"><strong>Informations</strong></div>
                 <div class="panel-body">
                     {!! Form::model($garden,['url'=>'/garden/update/'.$garden->id,'class'=>'form-horizontal']) !!}
@@ -124,13 +123,179 @@ function initMap() {
    map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: 48.84, lng: 2.36},
     zoom: 10,
-    scrollwheel: false
-  });
+    streetViewControl:false,
+    disableDefaultUI: true,
+    scaleControl: true,
+    zoomControl: true,    
+    scrollwheel: false,
+        styles: [
+            {
+                "featureType": "all",
+                "elementType": "labels",
+                "stylers": [
+                    {
+                        "visibility": "off"
+                    }
+                ]
+            },
+            {
+                "featureType": "administrative.province",
+                "elementType": "all",
+                "stylers": [
+                    {
+                        "visibility": "off"
+                    }
+                ]
+            },
+            {
+                "featureType": "landscape",
+                "elementType": "all",
+                "stylers": [
+                    {
+                        "hue": "#0066ff"
+                    },
+                    {
+                        "saturation": 74
+                    },
+                    {
+                        "lightness": 100
+                    }
+                ]
+            },
+            {
+                "featureType": "road",
+                "elementType": "all",
+                "stylers": [
+                    {
+                        "visibility": "off"
+                    }
+                ]
+            },
+            {
+                "featureType": "road",
+                "elementType": "labels.text",
+                "stylers": [
+                    {
+                        "visibility": "off"
+                    }
+                ]
+            },
+            {
+                "featureType": "road.highway",
+                "elementType": "all",
+                "stylers": [
+                    {
+                        "visibility": "simplified"
+                    },
+                    {
+                        "weight": 0.6
+                    },
+                    {
+                        "saturation": -85
+                    },
+                    {
+                        "lightness": 61
+                    }
+                ]
+            },
+            {
+                "featureType": "road.highway",
+                "elementType": "geometry",
+                "stylers": [
+                    {
+                        "visibility": "on"
+                    }
+                ]
+            },
+            {
+                "featureType": "road.highway",
+                "elementType": "labels",
+                "stylers": [
+                    {
+                        "visibility": "off"
+                    }
+                ]
+            },
+            {
+                "featureType": "road.highway",
+                "elementType": "labels.text",
+                "stylers": [
+                    {
+                        "visibility": "off"
+                    }
+                ]
+            },
+            {
+                "featureType": "road.arterial",
+                "elementType": "all",
+                "stylers": [
+                    {
+                        "visibility": "off"
+                    }
+                ]
+            },
+            {
+                "featureType": "road.arterial",
+                "elementType": "labels",
+                "stylers": [
+                    {
+                        "visibility": "off"
+                    }
+                ]
+            },
+            {
+                "featureType": "road.local",
+                "elementType": "all",
+                "stylers": [
+                    {
+                        "visibility": "on"
+                    }
+                ]
+            },
+            {
+                "featureType": "road.local",
+                "elementType": "labels",
+                "stylers": [
+                    {
+                        "visibility": "off"
+                    }
+                ]
+            },
+            {
+                "featureType": "water",
+                "elementType": "all",
+                "stylers": [
+                    {
+                        "visibility": "simplified"
+                    },
+                    {
+                        "color": "#5f94ff"
+                    },
+                    {
+                        "lightness": 26
+                    },
+                    {
+                        "gamma": 5.86
+                    }
+                ]
+            }
+        ]   
+    });
    geocoder = new google.maps.Geocoder();
    marker = new google.maps.Marker({map:map});
+   // customPin = new google.maps.MarkerImage("/images/map-pin.png",
+   //      new google.maps.Size(22, 50),
+   //      new google.maps.Point(0,0),
+   //      new google.maps.Point(11, 25));
+   //  @if(is_array($gardens) && count($gardens)>0)    
+   //      @foreach($gardens as $k=>$garden)
+   //          dropMarker({{$garden->location->lat}},{{$garden->location->lng}},{{$garden->id}},customPin);
+   //      @endforeach
+   //  @endif   
    bounds = map.getBounds();
    autocomplete = new google.maps.places.Autocomplete(document.getElementById('address'),{bounds:bounds});
    autocomplete.addListener('place_changed',centerMap);
+
    centerMap();
 }
 

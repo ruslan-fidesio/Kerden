@@ -249,7 +249,7 @@
 
 
         <div class="garden-details">
-          <img src="{{$staticImgUrl}}" alt="" class='img-responsive gMapPreview'>
+          <img src="{{$staticImgUrl}}" alt="" class='img-responsive gMapPreview'>          
         </div>
       </div>
 

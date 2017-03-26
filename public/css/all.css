@@ -1728,12 +1728,6 @@ background-color: #fff!important;
   box-shadow: none;
   -webkit-box-shadow: none;
   border-radius: 0px;
-  border-left: 1px solid #ccc;
-}
-
-.panel-kerden-home .panel-heading{
-  font-size: 2e
-  padding-bottom: 0;
 }
 
 .panel-kerden-home .panel-body{
@@ -2230,9 +2224,6 @@ ul#gardenList{
   background-color: #a1fbbe;
 }
 
-.left-home-sub-menu{
-  border-left: 2px solid #ccc;
-}
 
 .left-home-sub-menu ul li a{
   color: black;
