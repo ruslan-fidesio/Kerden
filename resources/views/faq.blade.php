@@ -30,8 +30,8 @@
 			</ul>
 	  </div>
 	</div>
-  <div class="faq-container">
-    <div class="faq-bg">
+  <div class="side-container">
+    <div class="side-bg">
 
         <div class="col-md-4 grey-bg">
 
@@ -41,10 +41,10 @@
         </div>
     </div>
   	<div class="container">
-  		<div class="tabbable faq-padding">
+  		<div class="tabbable side-padding">
   			<div class="tab-content">
   				<div class="tab-first-level tab-pane fade" id="tabPro">
-  					<div class="tabbable tabs-left row">
+  					<div class="tabs-left row">
   						<div class="col-sm-3 col-xs-12">
   							<ul class="nav nav-pills-stacked">
   								<li class="active"><a data-faq-tab="ev" href="#evnmts" data-toggle="tab">Evènement</a></li>
