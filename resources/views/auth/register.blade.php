@@ -33,7 +33,7 @@
                         </div>
 
                         <div class="form-group{{ $errors->has('last_name') ? ' has-error' : '' }}">
-                            <label class="col-md-4 control-label">{{trans('validation.attributes.last_name')}}</label>
+                            <label for="last_name" class="col-md-4 control-label">{{trans('validation.attributes.last_name')}}</label>
 
                             <div class="col-md-6">
                                 <input type="text" class="form-control" name="last_name" value="{{ old('last_name') }}">
@@ -47,7 +47,7 @@
                         </div>
 
                         <div class="form-group{{ $errors->has('first_name') ? ' has-error' : '' }}">
-                            <label class="col-md-4 control-label">{{trans('validation.attributes.first_name')}}</label>
+                            <label for="first_name" class="col-md-4 control-label">{{trans('validation.attributes.first_name')}}</label>
 
                             <div class="col-md-6">
                                 <input type="text" class="form-control" name="first_name" value="{{ old('first_name') }}">
@@ -61,7 +61,7 @@
                         </div>
 
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label class="col-md-4 control-label">{{trans('validation.attributes.email')}}</label>
+                            <label for="email" class="col-md-4 control-label">{{trans('validation.attributes.email')}}</label>
 
                             <div class="col-md-6">
                                 <input type="email" class="form-control" name="email" value="{{ old('email') }}">
@@ -89,7 +89,7 @@
                         </div>
 
                         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                            <label class="col-md-4 control-label">{{trans('validation.attributes.password')}}</label>
+                            <label for="password" class="col-md-4 control-label">{{trans('validation.attributes.password')}}</label>
 
                             <div class="col-md-6">
                                 <input type="password" class="form-control" name="password">
@@ -103,7 +103,7 @@
                         </div>
 
                         <div class="form-group{{ $errors->has('password_confirmation') ? ' has-error' : '' }}">
-                            <label class="col-md-4 control-label">{{trans('validation.attributes.password_confirmation')}}</label>
+                            <label for="password-confirm" class="col-md-4 control-label">{{trans('validation.attributes.password_confirmation')}}</label>
 
                             <div class="col-md-6">
                                 <input type="password" class="form-control" name="password_confirmation">

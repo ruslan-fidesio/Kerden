@@ -1,177 +1,1028 @@
-<p>Le fait que Kerden ne se prévale pas à un moment donné de l’une ou l’autre des présentes CGU ne peut être interprété comme une renonciation à se prévaloir ultérieurement de l’une quelconque des dites conditions. Kerden (ci-après « Kerden » ou « Site Internet ») est un site web, accessible à l’adresse www.kerden.fr, exploité par la société Adenor, société par actions simplifiée au capital de 500 euros, ayant son siège social situé 25 Bis rue de l’Armorique 75015 Paris et immatriculée au registre du commerce et des sociétés de Paris sous le numéro 820 157 717.</p>Kerden est un service de mise en relation entre propriétaires (ci-après « Propriétaire ») de jardins ou terrasses et entre locataires (ci-après « Locataire ») de ces mêmes jardins ou terrasses.
-<p>Les Propriétaires et les Locataires sont ci-après désignés conjointement « Utilisateur (s) ».</p>
-<p>L’objet des présentes conditions générales d’utilisation (ci-après « CGU ») est de définir les termes et les conditions régissant les relations entre les Utilisateurs et Kerden. Les CGU constituent un accord contractuel pour une durée indéterminée à compter de leur acceptation par l’Utilisateur.</p>
-<p>En cliquant sur s’inscrire sur « Kerden », l’Utilisateur reconnait avoir pris connaissance des CGU et les accepte expressément. Si l’Utilisateur accède au Site Internet pour le compte d’une personne morale, il est personnellement lié par les CGU.</p>
-<br/>
-<h3>Article 1 – Définitions</h3>
-<p>Les termes et expressions commençant par une majuscule, utilisés ci-après ont la signification suivante :</p>
 
- <p><b>« Annonce »</b> désigne un post internet regroupant les informations mises en ligne sur une page dédiée de la plateforme du Site par le Propriétaire ;</p>
+@extends('layouts.app')
 
-<p><b>« Commission »</b> : désigne la rémunération de 17% du montant de la location perçue par ADENOR lors d’une location.</p>
-<p><b>« Jardin »</b> désigne toute parcelle privée dont le Propriétaire dispose de la pleine jouissance.</p>
+@section('headers')
 
-<p><b>« Terrasse »</b> désigne un espace privatif à ciel ouvert dont le Propriétaire dispose de la pleine jouissance.</p>     
-<p><b>« Evènement »</b> désigne l’activité de loisir ou l’activité professionnelle dont les caractéristiques, en particulier le lieu, la date, la plage horaire, le nombre de participants sont déterminées par le Locataire sur Kerden ; </p>
-<p><b>« Locataire »</b> désigne tout Utilisateur souhaitant louer un Jardin ou une Terrasse afin d’y organiser un évènement ;</p>
-<p><b>« Prix de la Location »</b> désigne le prix proposé par le Propriétaire pour la location de son Jardin ou de sa Terrasse majoré de la Commission lors de la réalisation d’une location de Terrasse ou de Jardin.</p>
-<p><b>« Propriétaire »</b> désigne tout Utilisateur publiant une annonce sur Kerden relative à la location d’un Jardin ou d’une Terrasse dont il dispose de la pleine jouissance.</p>
-<p><b>« Services du Site Internet »</b> désigne la constitution et la mise à jour d’un profil d’Utilisateur, la publication d’annonces de location de Jardin ou Terrasse (tel que ces termes sont définis ci-dessus), la recherche et prise de contact avec des Utilisateurs ayant publié une Annonce de location de Jardin ou Terrasse.</p>
+<!--   <link href="{{ asset('css/slideshow-home.css') }}" rel="stylesheet">
+  <link href="{{ asset('slick/slick.css') }}" rel="stylesheet">
+  <link href="{{ asset('slick/slick-theme.css') }}" rel="stylesheet"> -->
 
-<h3>Article 2- Mise en relation </h3>
-<p>Kerden permet à ses Utilisateurs de mettre en relations des Propriétaires et des Locataires de Jardins ou Terrasses. Kerden ne loue pas les Jardins et Terrasses ; les locations sont effectuées directement entre les Propriétaires et les Locataires. Kerden n’intervient pas dans la transaction entre les Propriétaires et les Locataires. De ce fait, Kerden n’exerce aucun contrôle sur la qualité, la véracité, l’exactitude, la sûreté ou la licéité des Annonces, ni sur la capacité des Propriétaires à louer des Jardins ou des Terrasses ni sur la capacité des Locataires à louer des Jardins ou des Terrasses.</p>
+@endsection
 
-<h3>Article 3 – Champ d’application</h3>
-<p>Les CGU sont en langue française et s’appliquent de façon exclusive entre tout Utilisateur et la société ADENOR.</p>
-
-
-<h3>Article 4 – Inscription sur Kerden</h3>
-	<h4>4.1 Age minimum</h4>
-<p>L’Utilisateur doit être une personne morale ou une personne physique ayant atteint l’âge de 18 ans et disposant de sa pleine capacité juridique. </p>
-
-<h4>4.2 Création d’un compte</h4>
-<p>La création d’un compte utilisateur sur Kerden est un préalable obligatoire à l’utilisation des Services du Site Internet. Elle suppose de compléter le formulaire d’inscription, disponible sur Kerden, en fournissant des informations exactes, à jour et complètes. Ces informations devront faire, par la suite, l’objet de mises à jour régulières par l’Utilisateur afin de préserver leur exactitude. L’Utilisateur devra choisir un nom d’utilisateur constitué d’une adresse électronique valide et d’un mot de passe et fournir obligatoirement les informations suivantes : son nom et prénom. Les codes d’accès au compte d’Utilisateur sont strictement confidentiels. En cas d’utilisation non autorisée de son compte ou de toute atteinte à la confidentialité et à la sécurité de ses moyens d’identification, l’Utilisateur devra, sans délais, en informer Kerden. Chaque Utilisateur s’engage à ne créer qu’un seul compte correspondant à son profil.</p>
-
-<h3>Article 5 – Modalités de réservation</h3>
-<h4>5.1 Durée de la location</h4>
-<p>La durée minimum de la location est de deux (2) heures.</p>
-<p>Lorsqu’un ou plusieurs Oscardiens sont présents lors de la location, la durée minimum de la location est de trois (3) heures.</p>
-
-<h4>5.2 Paiement de la location par le Locataire</h4>
-<p>Le paiement du Prix de la Location est effectué exclusivement en ligne sur le Site Internet, au moyen d’une carte de paiement. Kerden utilise le service de paiement sécurisé fourni par la société MangoPay. Les Utilisateurs reconnaissent accepter les conditions générales d’utilisation du service MangoPay. Kerden n’a pas d’accès aux données bancaires confidentielles (le numéro de carte bancaire à 16 chiffres ainsi que la date d'expiration, le code CVV) lesquelles sont directement transmises cryptées sur le serveur de la banque. Le Locataire est engagé par sa réservation dès qu’il a « Payé » le Prix de la Location et que le Propriétaire a « Accepté » sa demande. </p>
-
-<h4>5.3 Commission </h4>
-<p>KERDEN perçoit une Commission.</p>
-
-<h4>5.4 Paiement du Propriétaire</h4>
-<p>Le Propriétaire sera payé dans les (5) cinq jours suivants la date de l’Evènement.</p>
-<p>ADENOR émet une facture au nom et pour le compte du Propriétaire du Prix de la Location diminué de la Commission et la transmet au locataire.</p>
-<p>ADENOR émet également une facture en son nom propre du montant de la Commission et la transmet au Locataire. Les systèmes d'enregistrement automatique sont considérés comme valant preuve de la nature, du contenu et de la date de la réservation. Kerden confirme au Locataire l'acceptation de sa réservation par l'envoi d'un message de confirmation à l'adresse électronique qu’il aura communiquée. Kerden se réserve le droit de refuser ou d'annuler toute réservation d'un Utilisateur notamment en cas d'insolvabilité du Locataire ou dans l'hypothèse d'un défaut de paiement de la réservation concernée ou d'un litige relatif au paiement d'une commande antérieure. Les mentions indiquées par le Locataire, lors de la saisie des informations relatives à sa réservation engagent celui-ci. Kerden ne saurait être tenu responsable des erreurs commises par les Utilisateurs dans le libellé des champs à compléter pour réaliser une réservation (par exemple adresse de facturation).</p>
-
-<h4 id="annulationAnchor">5.5 Annulation d'une réservation </h4>
-<b><p>-  Annulation par le Locataire :</p></b>
-<p>Une fois que le Propriétaire a « Accepté » une demande de réservation, le Locataire a la possibilité d'annuler la réservation moyennant des frais d’annulation (ci-après « Frais d’Annulation »).</p>
-<p>Pour annuler une réservation, le Locataire clique sur le bouton « Annuler » accessible en choisissant Menu > Ma réservation en cours > « Annuler » et que le statut de la réservation indique « Annulée ».</p>
-<p>Lorsque le Locataire annule sa réservation plus de 72 heures avant le début de l’Evènement, des frais d’annulation de 17% du Prix de la Location s’appliquent. Ainsi, 83% du Prix de la Location est restitué par Kerden au Locataire. Le montant de la Commission de 17% est conservé par Kerden. </p>
-<p>Lorsque le Locataire annule sa réservation moins de 72 heures avant le début de l’Evènement, des frais d’annulation de 40% du Prix de la Location s’appliquent. Ainsi, 60% du Prix de la Location est restitué par Kerden au Locataire. Le montant de la Commission de 17% est conservé par KERDEN. Kerden verse au Propriétaire 23% du Prix de la Location. </p>
-<p>A compter du début de l’Evènement, aucun remboursement ne peut avoir lieu. Des frais d’annulation de 100% du Prix de la Location s’appliquent au Locataire.</p>
-
-<b><p>-  Annulation par le Propriétaire :</p></b>
-<p>En cas d’annulation de la réservation par le Propriétaire, celui-ci ne percevra aucune rémunération et ne recevra pas le Prix de la Location. Lorsque le Propriétaire annule la réservation moins de 72 heures avant le début de l’Evénement, des frais d’annulation de cinquante (50) euros s’appliquent. Ces frais sont prélevés par Kerden au Propriétaire lors de la prochaine location et viendront en déduction de la rémunération du Propriétaire sur le Prix de la Location.</p>
-<p>En cas d’annulation de la location par le Propriétaire, Kerden en informe le Locataire concerné par courriel, à l’adresse électronique qu’il a indiqué. Le Locataire sera remboursé intégralement du Prix de la Location par Kerden dans un délai de (5) jours.</p>
-
-<h3>Article 6 – Utilisation des Services du Site Internet</h3>
-<h4>6.1 Droit d’accès au Site Internet</h4>
-<p>Kerden, accorde aux Utilisateurs un droit d’accès limité révocable, non exclusif, non cessible aux Services du Site Internet à titre strictement personnel. Toute utilisation contraire du Site Internet à sa finalité est strictement interdite et constitue un manquement aux présentes CGU. L’utilisation du Site Internet requiert une connexion et un navigateur internet. Afin de garantir un bon fonctionnement du Site, il est précisé que le Site Internet est optimisé pour :</p>
-	<ul>
-		<li>une résolution d’écran de 1280×768 pixels</li>
-		<li>les dernières versions des navigateurs Internet Explorer, Chrome, Firefox et Safari.</li>
-	</ul>
-<p>Kerden se réserve le droit de suspendre, modifier, remplacer, refuser un accès ou supprimer discrétionnairement des comptes d’Utilisateurs.</p>
-<p>Le Site Internet est accessible gratuitement en tout lieu à tout internaute ou Utilisateur ayant un accès à internet. Kerden fait ses meilleurs efforts pour rendre le site internet disponible 24 heures sur 24 et 7 jours sur 7. Tous les frais supportés par l’internaute ou l’Utilisateur pour accéder aux Services du Site Internet sont à sa charge (matériel informatique, logiciels, connexion internet...) sont à sa charge.</p>
-
-<h4>6.2 Obligations des Utilisateurs</h4>
-<p>Les Utilisateurs s’interdisent :</p>
-<ul style="list-style-type:decimal">
-	<li>de transmettre, publier, distribuer, enregistrer, ou détruire tout matériel, en particulier les contenus de Kerden, en violation des lois ou règlementations en vigueur concernant la collecte, le traitement ou le transfert d'informations personnelles ;</li>
-	<li>de créer des profils fictifs ;</li>
-	<li>de fournir des informations inexactes dans le formulaire ou de ne pas les mettre à jour régulièrement ;</li>
-	<li>de diffuser des données, informations, ou contenus à caractère diffamatoire, injurieux, obscène, offensant, violent ou incitant à la violence, ou à caractère politique, raciste ou xénophobe et de manière générale tout contenu qui serait contraire aux lois et règlements en vigueur ou aux bonnes mœurs ;</li>
-	<li>de référencer ou créer des liens vers tout contenu ou information disponible depuis les sites de Kerden, sauf expressément autorisé par les présentes Conditions ;</li>
-	<li>d’obtenir d’autres Utilisateurs des mots de passe ou des données personnelles d’identification ;</li>
-	<li>d’utiliser des informations, contenus ou toutes données présentes sur le Site Internet afin de proposer un service considéré, à l’entière discrétion de Kerden, comme concurrentiel à Kerden ;</li>
-	<li>de vendre, échanger ou monnayer des informations, contenus ou toutes données ou Services du Site Internet, sans l’accord expresse et écrit de Kerden ;</li>
-	<li>de supprimer ou modifier tout élément publié par une autre personne ou entité sous réserve des possibilités offertes par le Site notamment dans le cadre de l’invitation d’un nouveau contact ;</li>
-	<li>de pratiquer de l’ingénierie inversée (Reverse Engineering), décompiler, désassembler, déchiffrer ou autrement tenter d’obtenir le code source en relation avec toute propriété intellectuelle sous-jacente utilisée pour fournir tout ou partie des Services ;</li>
-	<li>d’utiliser des logiciels ou appareils manuels ou automates, robots de codage ou autres moyens pour accéder, explorer, extraire ou indexer toute page du Site ;</li>
-	<li>de mettre en danger ou essayer de mettre en danger la sécurité d'un site web de Kerden. Cela comprend les tentatives de contrôler, scanner ou tester la vulnérabilité d’un système ou réseau ou de violer des mesures de sécurité ou d’authentification sans une autorisation préalable expresse ;</li>
-	<li>de contrefaire ou d’utiliser les produits, les logos, les marques ou tout autre élément protégé par les droits de propriété intellectuel de Kerden ;</li>
-	<li>de simuler l’apparence ou le fonctionnement du Site, en procédant par exemple à un effet miroir ;</li>
-	<li>de perturber ou troubler, directement ou indirectement, Kerden ou les Services, ou imposer une charge disproportionnée sur l’infrastructure du Site ou tenter de transmettre ou d’activer des virus informatiques via ou sur le Site.</li>
-</ul>
-<p>Il est rappelé que les violations de la sécurité du système ou du réseau peuvent conduire à des poursuites civiles et pénales. Kerden vérifie l’absence de telle violation et peut faire appel aux autorités judiciaires pour poursuivre, le cas échéant, des Utilisateurs ayant participé à de telles violations. Les Utilisateurs s’engagent à utiliser le Site de manière loyale, conformément à sa finalité professionnelle et aux dispositions légales, règlementaires, aux présentes Conditions et aux usages en vigueur.</p>
-
-<h3>Article 7 - Utilisation du contenu du Site Internet</h3>
-<p>L’ensemble de la Charte Graphique et le contenu du Site Internet, notamment les designs, textes, graphiques, images, vidéos, informations, logos, icônes-boutons, logiciels, fichiers audio et autres appartient à la société ADENOR, laquelle est seule titulaire de l’intégralité des droits de propriété intellectuelle y afférents. Toute représentation et/ou reproduction et/ou exploitation partielle ou totale des contenus et Services du Site Internet proposés par Kerden, par quelque procédé que ce soit, sans l'autorisation préalable et écrite de Kerden, est strictement interdite et serait susceptible de donner lieu à des poursuites judiciaires.</p>
-
-<h4>7.1 – Publication de Commentaires</h4>
-<p>Le Site Internet permet aux Locataires de publier des commentaires et de noter le Jardin ou la Terrasse loué. Dans ses commentaires, le Locataire s’engage à respecter les règles de la Netiquette et les règles de droit en vigueur. Le Site Internet exerce une modération à priori ou à posteriori sur les publications et se réserve le droit de refuser leur mise en ligne, sans avoir à s’en justifier auprès de l’Utilisateur ou de l’auteur. Les Utilisateurs cèdent à ADENOR le droit non exclusif et gratuit de représenter, reproduire, adapter, modifier, diffuser, et distribuer leur publication directement ou par un tiers autorisé, dans le monde entier, sur tout support (numérique ou physique) pour la durée de la propriété intellectuelle. Le Propriétaire cède à ADENOR le droit d’utiliser sa publication sur internet ou sur les réseaux de téléphone mobile. </p>
-
-<h3>Article 8 – Données à caractère personnel</h3>
-<p>Toutes les données à caractère personnel dont dispose Kerden sont recueillies légalement et loyalement. Ces données sont fournies par les Utilisateurs qui acceptent, en créant un compte sur le Site Internet, de manière volontaire et expresse les présentes CGU autorisant Kerden à traiter ces données. Elles sont utilisées afin de permettre à l’Utilisateur de profiter pleinement des Services du Site Internet et des fonctions proposées par le Site Internet. Afin de faciliter l’utilisation du Site Internet et de personnaliser l’expérience du Site Internet par l’Utilisateur, Kerden utilise des cookies et fichiers journaux. L’utilisation des cookies peut être désactivée en modifiant les paramètres du navigateur internet. Les données à caractère personnel sont stockées par Kerden sur ses serveurs, en vue de leur traitement dans le cadre de l’utilisation des Services du Site Internet. Elles sont conservées aussi longtemps que nécessaire pour l’apport des Services et fonctions offerts par le Site. L’Utilisateur reste toujours propriétaire des informations le concernant qu’il transmet à Kerden. L’Utilisateur dispose, conformément à la loi n° 78-17 du 6 janvier 1978 modifiée par la loi n° 2004-801 du 6 août 2004, d’un droit d’accès, de rectification et de suppression des données à caractère personnel le concernant, ainsi que du droit de s’opposer à la communication de ces données à des tiers pour de justes motifs. L’Utilisateur pourra exercer ses droits en écrivant à l’adresse électronique suivante : contact@kerden.com ou à l’adresse postale suivante : 25 bis rue de l’Armorique 75015 Paris. Une réponse sera adressée à l’Utilisateur dans un délai de (30) trente jours.</p>
+@section('content')
 
 
 
+	<div class="header">
+	  <div class="container">	
 
-
-<h3>Article 9 – Responsabilité</h3>
-<p>Kerden ne contrôle pas l’exactitude du contenu généré par les Utilisateurs, en conséquence, Kerden ne donne aucune garantie sur la teneur de ce contenu et ne serait en aucun être tenu responsable au titre de ce contenu. Seul l’Utilisateur, à l’exclusion de Kerden, est responsable de toutes données et informations qu’il a fournies, que ces données soient accessibles ou non du public, et plus généralement, l’Utilisateur est seul responsable de l’utilisation qu’il fait du Site Internet. Kerden n’a pas d’obligation générale de surveillance des données et du contenu fournis par les Utilisateurs, ni d’obligation de suppression d’un contenu qui ne paraitrait pas manifestement illicite, nonobstant son signalement. Kerden ne garantit pas que l’utilisation, par l’Utilisateur, du Site Internet n’enfreindra pas les droits des tiers.</p>
-<p>Kerden ne garantit pas la légalité de l’activité proposée par le Propriétaire sur son Jardin ou sur sa Terrasse notamment via le Site Internet, ni l’utilisation de ce Jardin ou Terrasse par le Locataire. En conséquence, il revient aux Utilisateurs de s’assurer de la légalité du projet de location qu’ils envisagent et d’organiser les conditions juridiques et financières de leurs relations dont ils seront les seuls responsables.</p>
-<p>Kerden ne saurait en aucun cas être tenu responsable notamment : </p>
-<ul style="list-style-type:decimal">
-	<li>des conséquences des rencontres virtuelles ou réelles entre Utilisateurs à la suite de l’utilisation du Site Internet ; </li>
-	<li>de la légalité des Annonces publiées sur le Site Internet ;</li>
-	<li>de tout préjudice consécutif à une faute de l’Utilisateur, ou à un évènement imputable à tiers étranger à la fourniture du service de signature électronique, ou à un cas de force majeure.</li>
-</ul>
-<p>Pour l’ensemble des Services du Site Internet, Kerden ne saurait en aucun cas avoir la qualité de loueur. Le rôle de Kerden étant limité à la facilitation des rencontres, la mise en relation entre les Propriétaires et les Locataires. Plus généralement, Kerden reste tiers aux actes conclus par les Utilisateurs via le Site Internet, et ne serait être responsable des conséquences de tels actes à quelque titre que ce soit. Le Propriétaire et le Locataire certifient être détenteurs d’une assurance responsabilité civile qui sera mise en jeu si nécessaire lors de la réalisation de la location. Le Locataire s’engage à restituer les lieux de location dans l’état où ils trouvaient à l’entrée dans les lieux du Locataire. Il est rappelé que les données publiées par les Utilisateurs et les informations partagées par ces derniers peuvent être captées et exploitées par d’autres Utilisateurs ou des tiers. En ce sens, Kerden ne garantit pas le respect de la propriété de ces données, il incombe à l’Utilisateur de prendre l’ensemble des dispositions nécessaires afin que soit préservée la propriété de ses données. Kerden ne garantit pas le fonctionnement sans interruption ou sans erreur de fonctionnement des Services du Site Internet, en particulier, la responsabilité de Kerden ne saurait être engagée en cas d’interruption d’accès au Site Internet en raison d’opérations de maintenance, de mises à jour ou d’améliorations techniques. Kerden n’est pas responsable de tout retard ou inexécution de ses obligations telles que définies aux présentes CGU justifiés par un cas de force majeure, telle qu’elle est définie par la jurisprudence des juridictions françaises.</p>
-
-<h3>Article 10 -  Modalités de la location</h3>
-<p>Le Propriétaire peut exiger que du personnel ayant vocation à assurer la sécurité de son Jardin ou de sa Terrasse soit présent lors de la location (ci-après « Oscardiens »). Le Locataire peut également faire une demande d’Oscardiens au moment de la réservation de la location.</p>
-<p>Kerden ne saurait en aucun cas être tenu responsable : </p>
-<ul style="list-style-type:decimal">
-	<li>des conséquences des rencontres virtuelles ou réelles entre les Oscardiens et les Utilisateurs à la suite de l’utilisation du Site Internet ;</li>
-	<li>de l’attitude des Oscardiens ;</li>
-	<li>de tout préjudice consécutif à une faute des Oscardiens, ou à un évènement imputable à des Oscardiens.</li>
-</ul>
-<p>Le rôle de Kerden est strictement limité à la mise en relation entre les Propriétaires et les Oscardiens. Plus généralement, Kerden reste tiers aux actes conclus entre les Utilisateurs et les Oscardiens via le Site Internet, et ne serait être responsable des conséquences des actes imputables aux Oscardiens à quelque titre que ce soit.</p>
-<p>Lorsqu’un ou plusieurs Oscardiens sont présents lors de la location, la durée minimum de la location est de trois (3) heures.</p>
-<p>Le tarif horaire des Oscardiens est fixé à <b>trente quatre euros (34 €) TTC</b>.</p>
-<p>Ce tarif s’ajoute au Prix de la Location et est payé par le Locataire en même temps que la réservation. Si le Locataire annule sa réservation plus de vingt quatre (24) heures avant le début de l’Evénement, l’intégralité de la somme versée au titre des Oscardiens sera restituée au Locataire. Si le Locataire annule sa réservation moins de vingt quatre (24) heures avant le début de l’Evénement, l’intégralité de la somme versée au titre des Oscardiens est due par le Locataire, aucune somme ne lui est restituée.</p>
-
-<h3>Article 11 – Résiliation</h3>
-<p>Le Propriétaire peut résilier à tout moment son annonce, en se rendant sur le Site Internet et en y suivant la procédure prévue à cet effet. Kerden se réserve le droit de restreindre, suspendre ou supprimer, sans préavis ni remboursement, le compte des Propriétaires ou Locataires qui utilisent de façon abusive ou inappropriée les Services du Site Internet. L’appréciation du comportement de l’Utilisateur est réservée à l’entière discrétion de Kerden.</p>
-
-<h3>Article 12 – Convention de preuve</h3>
-<p>Les systèmes et fichiers informatiques font foi dans les rapports entre Kerden et l’Utilisateur. Ainsi, Kerden pourra valablement produire dans le cadre de toute procédure, aux fins de preuve les données, fichiers, programmes, enregistrements ou autres éléments, reçus, émis ou conservés au moyen des systèmes informatiques exploités par Kerden, sur tous supports numériques ou analogiques, et s’en prévaloir sauf erreur manifeste.</p>
-
-<h3>Article 13 – Dispositions diverses</h3>
-<h4>13.1 Intégralité et indivisibilité des CGU</h4>
-<p>Les présentes CGU constituent l’intégralité de l’accord entre Kerden et l’Utilisateur. Elles annulent et remplacent tout accord et CGU antérieures, écrits ou verbaux. Le fait que l’une quelconque des stipulations des CGU soit ou devienne illégale ou inapplicable n’affectera en aucune façon la validité ou l’applicabilité des autres stipulations des CGU.</p>
-
-<h4>13.2 Modification des CGU</h4>
-<p>Kerden se réserve le droit de modifier, compléter ou remplacer les CGU.</p>
- <h4>13.3 Durée</h4>
-<p>La durée des présentes CGU est indéterminée. Les CGU produisent leurs effets à l’égard de l’Utilisateur à compter de l’utilisation des Services du Site Internet.</p>
-
-<h3>Article 14 – Règlement des différends</h3>
-<h4>14.1</h4><p> La conclusion, l’interprétation et la validité des CGU sont régies par la loi française, quelque soit le pays d’origine de l’Utilisateur ou le pays depuis lequel l’Utilisateur accède à Kerden et nonobstant les principes de conflits de lois. Dans l’hypothèse où un différend portant sur la validité, l’exécution ou l’interprétation des CGU, à défaut d’accord amiable, le différent sera porté devant la Juridiction de Paris compétente.</p>
-
-<h4>14.2. Droit applicable et juridiction compétente :</h4>
-<p>La législation française s’applique aux présentes CGU. En cas d’absence de résolution amiable d’un litige né entre les Utilisateurs et Kerden, seuls les tribunaux du ressort de la Cour d’appel de Paris sont compétents.</p>
-
-<h3>Mentions légales</h4>
-
-<b><p>Editeur :</p></b>
-<p>Le directeur de la publication est : </p>
-<p>www.kerden.fr est édité par Adenor SAS</p>
-	<div style='margin-left:25px'>
-		<p>•	Adresse : 25 bis rue de l’Armorique 75015 Paris</p>
-		<p>•	Capital : 500€</p>
-		<p>•	820 157 717 R.C.S Paris</p>
-		<p>•	Contact :</p>
-		<p>•	E-mail : contact@kerden.com</p>
-		<p>•	Téléphone : +33 (0)6 35 36 86 45</p>
+      <h1>Conditions générales d'utilisation</h1>
+    </div>
+  </div>
+  <div class="filter-collapse">
+    <div class="container">
+	  	<ul class="nav nav-pills row no-gutters">
+	  		<li class="col-md-2 col-md-offset-4 col-sm-3 col-sm-offset-3 col-xs-6 active">
+					<a class="left-faq-tab" href="#tabLoc" data-toggle='tab'>Locataire</a>
+				</li> 
+				<li class="col-md-2 col-sm-3 col-xs-6">
+					<a class="right-faq-tab" href="#tabPro" data-toggle="tab">Propriétaire</a>
+				</li>
+			</ul>
+	  </div>
 	</div>
-<b><p>Hébergement :</p></b>
-	<div style='margin-left:25px'>
-		<p>•	Le site web est hébergé par :</p>
-		<p>•	OVH SAS au capital de 10.000.000 €</p>
-		<p>•	Adresse : 2 rue Kellermann - 59100 Roubaix, France</p>
-		<p>•	N° TVA : FR 22 424 761 419 – Code APE 6202A</p>
-		<p>•	Téléphone : 0 820 698 765</p>
-	</div>
-<h4>ASSURANCE : </h4>
-<p>L’édition du site Kerden.fr est assurée par la société GROUPAMA SA au capital de 1 .686 .569. 399 Euros, dont le siège social est situé 8-10 rue d’Astorg 75008 Paris.</p>
+  <div class="side-container">
+    <div class="side-bg">
 
-<h4>CNIL</h4>
-<p>Déclaration CNIL N°1973719v0 </p>
+        <div class="col-md-4 grey-bg">
+
+        </div>
+        <div class="col-md-8 white-bg">
+
+        </div>
+    </div>
+  	<div class="container">
+  		<div class="tabbable side-padding">
+  			<div class="tab-content">
+  				<div class="tab-first-level tab-pane fade" id="tabPro">
+  					<div class="col-sm-3">
+  						<div class="cgu cgu-index">
+	  						<h3>Table des Matières</h3>
+	  						<ul>
+									<li><a href="#">1. Services proposés par Kerden</a></li>
+									<li><a href="#">1.1 Objectifs du service</a></li>
+									<li><a href="#">1.2 Catégories d’Utilisateur </a></li>
+									<li><a href="#">1.3 Description des services  </a></li>
+									<li><a href="#">1.4 Rôle de Kerden</a></li>
+									<li><a href="#">2. Règles d’utilisation du Service Kerden</a></li>
+									<li><a href="#">2.1 Acceptation des CGU </a></li>
+									<li><a href="#">2.2 Entrée en vigueur des CGU et mises à jour</a></li>
+									<li><a href="#">2.3 Conditions d’inscription</a></li>
+									<li><a href="#">3. Mise en location sur le Site Kerden</a></li>
+									<li><a href="#">3.1 Mise en ligne des Annonces</a></li>
+									<li><a href="#">3.2 Modalités de location</a></li>
+									<li><a href="#">3.3 Annulation et modification des locations</a></li>
+									<li><a href="#">4. Conditions financières</a></li>
+									<li><a href="#">4.1 Prix des Locations</a></li>
+									<li><a href="#">4.2 Modalités de règlement</a></li>
+									<li><a href="#">4.3 Pénalités en cas d’annulation ou interruption</a></li>
+									<li><a href="#">5. Obligations des Propriétaires</a></li>
+									<li><a href="#">5.1 Espaces extérieurs proposés en location</a></li>
+									<li><a href="#">5.2 Bonne foi et loyauté</a></li>
+									<li><a href="#">5.3 Engagements </a></li>
+									<li><a href="#">5.4 Obligations spécifiques aux professionnels</a></li>
+									<li><a href="#">6. Propriété intellectuelle</a></li>
+									<li><a href="#">6.1 Contenu du Site Kerden</a></li>
+									<li><a href="#">6.2 Licence d’utilisation des contenus des Utilisateurs</a></li>
+									<li><a href="#">7. Indemnisation </a></li>
+									<li><a href="#">8. Limitation de garantie</a></li>
+									<li><a href="#">9. Limitation de responsabilité </a></li>
+									<li><a href="#">9.1 Services proposés par Kerden</a></li>
+									<li><a href="#">9.2 Annonces de location</a></li>
+									<li><a href="#">9.3 Contenus publiés sur le Site Kerden</a></li>
+									<li><a href="#">9.4 Réseau internet et accessibilité du Site Kerden</a></li>
+									<li><a href="#">9.5 Perte de données et autres</a></li>
+									<li><a href="#">9.6 Liens hypertextes</a></li>
+									<li><a href="#">9.7 Limitation</a></li>
+									<li><a href="#">10. Maintenance du Site</a></li>
+									<li><a href="#">11. Durée et résiliation</a></li>
+									<li><a href="#">11.1 Durée</a></li>
+									<li><a href="#">11.2 Résiliation</a></li>
+									<li><a href="#">11.3 Effets de la résiliation</a></li>
+									<li><a href="#">12. Stipulations diverses</a></li>
+									<li><a href="#">12.1 Notifications </a></li>
+									<li><a href="#">12.2 Conditions additionnelles</a></li>
+									<li><a href="#">12.3 Assurance</a></li>
+									<li><a href="#">12.4 Force majeure</a></li>
+									<li><a href="#">12.5 Indépendance</a></li>
+									<li><a href="#">12.6 Non-validité partielle</a></li>
+									<li><a href="#">12.7 Non renonciation</a></li>
+									<li><a href="#">12.8 Maintien en vigueur</a></li>
+									<li><a href="#">13. Droit applicable et compétence juridictionnelle</a></li>
+									<li><a href="#">14. Intégralité du Contrat</a></li>
+
+	  						</ul>
+							</div>
+  					</div>
+  					<div class="col-sm-8 col-sm-offset-1">
+  						<div class="cgu">
+  											<p>Le service accessible à l’URL http://kerden.fr est proposé par la société ADENOR, SAS au capital social de 15.000 euros, inscrite au RCS de Paris sous le numéro 822 675 963, dont le siège social est situé au 25 bis rue de l’Armorique – 75015 Paris - France (ci-après, le « Site Kerden » ou le « Service Kerden » ou la « Société » ou « Kerden »).</p>
+
+												<p>Vous êtes invité à lire attentivement le présent document. De même, nous invitons expressément l’Utilisateur à consulter la Charte de protection des données personnelles qui fait partie intégrante des présentes.</p>
+
+												<p>Les présentes conditions générales d’utilisation (ci-après, les « Conditions d’utilisation » ou le « Contrat » ou les « CGU ») définissent les conditions contractuelles selon lesquelles les utilisateurs peuvent accéder et utiliser le Service Kerden.</p>
+
+												<p>Les expressions définies entre parenthèses dans le corps du texte auront le sens tel que donné dans le texte s’y rapportant.</p>
+
+
+
+
+												<h3>Article 1. Services proposés par Kerden</h3>
+
+												<h4>1.1 Objectif du service Kerden</h4>
+												<p>
+												La Société a développé un service accessible sur internet permettant de faciliter la location ponctuelle d’espaces d’extérieurs privés (jardin, terrasse, domaine, cour, château, etc.) (ci-après les « Espaces extérieurs »).</p>
+
+												<p>L’objectif est de permettre à des personnes physiques ou morales de louer des Espaces extérieurs afin d’organiser un évènement d’ordre personnel ou professionnel, tels que des repas, réunion, réception, mariage, cérémonie, soirée, etc. (ci-après « Evènement(s) »).</p>
+
+												<h4>1.2 Catégories d’Utilisateur</h4>
+												<p>Le Service Kerden permet la mise en relation entre des propriétaires d’Espaces extérieurs (les « Propriétaires ») et des internautes souhaitant disposer de tels Espaces, le temps d’un Evènement (les « Locataires ») et des prestataires de services chargés de s’assurer du bon déroulement d’un Evènement (les « Ker-House »). Le Service Kerden distingue donc trois catégories d’utilisateur (ci-après « Utilisateur(s) »). Les présentes Conditions d’utilisation concerne la seconde catégorie d’utilisateur, les Locataires.</p>
+
+												<p>En outre, les Propriétaires et les Locataires peuvent être des personnes physiques ou des personnes morales. Dès lors, les relations entre la Société et les Utilisateurs, et entre les Utilisateurs eux-mêmes relèvent selon les cas du C-to-C, ou du C-to-B, ou du B-to-C ou encore du B-to-B. Notez que les conditions d’utilisation du Service Kerden peuvent varier en fonction de la qualité de l’Utilisateur, personne physique ou personne morale. </p>
+
+												<h4>1.3 Description des services</h4>
+												<p>
+												Le Service Kerden propose aux Utilisateurs : 
+												<ul>
+												<li>-> La consultation d’informations en ligne (type d’Espaces extérieurs, leur description, etc.), </li>
+												<li>-> La mise en ligne d’annonce pour la location d’Espace extérieur,</li>
+												<li>-> La réservation d’Espaces extérieurs en ligne,</li>
+												<li>-> La mise en relation entre les Propriétaires, les Locataires et les Ker-House,</li>
+												<li>-> La mise à disposition d’espaces personnels pour le suivi des locations/réservations,</li>
+												<li>-> La mise à disposition d’outil d’échanges en ligne (messagerie)</li>
+												<li>-> La mise en ligne d’avis et commentaires sur les locations </li>
+												<li>-> La mise à disposition d’un service d’aide et de sécurité Ker-House </li>
+												</ul>
+												</p>
+
+												<h4>1.4 Rôle de Kerden</h4>
+												<p>La Société a pour rôle de mettre en relation les Utilisateurs et d’héberger des pages web sur lesquelles les Utilisateurs peuvent mettre en ligne du contenu (description des Espaces extérieurs, photos, commentaires, etc.). La Société ne modère pas ces contenus avant leur mise en ligne par les Utilisateurs.</p>
+
+												<p>La Société n’a qu’un rôle d’intermédiaire. La Société n’est ni locataire, ni propriétaire des Espaces extérieurs référencés via le Site Kerden, et n’exploite pas ces biens. De même, la Société n’a pas la qualité de courtier en immobilier, d’agent immobilier ou d’assureur. Nous ne vendons ou revendons pas, ne louons ou relouons pas, ne gérons pas et/ou ni ne contrôlons les Espaces extérieurs référencés via le Site Kerden. Enfin, la Société n’exerce aucune activité hôtelière.</p>
+
+												<p>Si vous avez des questions concernant nos services, veuillez consulter la Foire Aux Questions. ou interagir avec Kerden à travers l’encart « Besoin d’aide ». </p>
+
+												<h3>Article 2. Règles d’utilisation du Service Kerden</h3>
+
+												<h4>2.1 Acceptation des CGU</h4>
+												<p>L’utilisation du Service Kerden est soumise à votre inscription préalable sur notre Site, sous réserve que vous ayez pris connaissance et que vous acceptiez les termes des présentes Conditions d’utilisation. </p>
+
+												<p>En cochant en ligne la case “J’ai lu et j’accepte les Conditions d’utilisation du Service Kerden”, vous (en qualité d’Utilisateur) confirmez accepter sans réserve les présentes Conditions d’utilisation du Service Kerden. </p>
+
+												<p>Les Conditions d’utilisation est un contrat conclu entre l’Utilisateur et la Société (la « Partie » ou les « Parties »).</p>
+
+												<h4>2.2 Entrée en vigueur des CGU et mises à jour</h4>
+												<p>Les présentes Conditions d’utilisation entrent en vigueur à compter du 1er mars 2017.</p>
+
+												<p>Nous nous réservons le droit de modifier les présentes Conditions d’utilisation à tout moment en mettant en ligne sur le Site la nouvelle version. Cette nouvelle version des Conditions d’utilisation entrera en vigueur dès votre inscription si vous êtes un nouvel Utilisateur, et 15 jours après sa mise en ligne si vous êtes déjà Utilisateur de Kerden. Une fenêtre pop-up apparaîtra lors de votre connexion sur le Site Kerden suite aux modifications des Conditions d’utilisation. Si vous refusez la nouvelle version des Conditions d’utilisation, vous ne pourrez plus utiliser nos services à l’issue de cette période de 15 jours. </p>
+
+												<h4>2.3 Conditions d’inscription</h4>
+
+												<h5>2.3.1 Capacité juridique requise et Utilisateur professionnel</h5>
+
+												<p>L’inscription à nos services et leur utilisation sont réservées aux personnes morales ou aux personnes physiques capables de souscrire à un contrat conformément au droit français. </p>
+
+												<p>Tout accès ou toute utilisation du Site Kerden par une personne de moins de 18 ans est strictement interdite. En accédant ou en utilisant le Service Kerden vous déclarez et garantissez avoir 18 ans ou plus.</p>
+
+												<p>Si vous vous inscrivez au Service Kerden à titre professionnel pour le compte d’un tiers, vous déclarez être dûment autorisé pour engager cette entité que vous représentez. </p>
+
+												<p>Tout Utilisateur agissant en qualité de professionnel s’engage à le signaler à la Société lors de la création de son compte Utilisateur. A ce titre, son accès au Service Kerden sera validé sous réserve qu’il communique lors de son inscription les documents valables suivants :
+												<ul>
+												<li>- Une copie de la carte d’identité ou passeport en cours de validité ;</li>
+												<li>- La dénomination commerciale de la société qu’il représente ;</li>
+												<li>- La forme juridique de ladite société ;</li>
+												<li>- Le capital social ;</li>
+												<li>- Le numéro Siret et le lieu d’immatriculation ;</li>
+												<li>- L’adresse de don siège social ;</li>
+												<li>- Le numéro de TVA intracommunautaire ;</li>
+												<li>- Le prénom et le nom de son représentant légal ;</li>
+												<li>- Le RIB de ladite société.</li>
+												</ul>
+												Kerden se réserve le droit de refuser l’inscription d’un Utilisateur.
+												</p>
+												<h5>2.3.2 Création d’un compte Utilisateur</h5>
+												<p>Lors de votre inscription au Service Kerden et pendant toute la durée d’utilisation du Service Kerden, vous garantissez que les données que vous communiquez sont exactes et conformes à la réalité. En cas de modification des données communiquées lors de votre inscription au Service Kerden, vous vous engagez à procéder sans délai auxdites modifications sur votre compte personnel. </p>
+												<p>
+												Lorsque les conditions nécessaires à l’inscription sont remplies, vous disposerez d’un identifiant personnel (login) et d’un mot de passe. Les identifiants et mots de passe sont strictement personnels et confidentiels, ils ne doivent en aucun cas être communiqués ni partagés avec des tiers. Chaque Utilisateur s’engage à ne créer qu’un seul compte personnel correspondant à son profil.</p>
+												<p>
+												La Société se réserve le droit de résilier le compte de tout Utilisateur qui diffuserait ou utiliserait ces éléments de façon contraire à leur destination. Si votre inscription a été réalisée en violation des présentes Conditions d’utilisation, vous ne serez plus autorisé à utiliser le Service. </p>
+
+																								
+												<h3>Article 3. Mise en location sur le Site Kerden</h3>
+
+												<h4>3.1 Mise en ligne des Annonces</h4>
+
+												<p>Après s’être inscrit au Service Kerden, le Propriétaire peut utiliser le Site et via son interface saisir l’annonce (textes et photos) détaillant les conditions de la location de son Espace extérieur (ci-après « Annonce(s) »). Le Propriétaire a la possibilité de mettre en location plusieurs Espaces extérieurs. </p>
+
+												<ul>
+												<li>- Description : l’Annonce doit comporter a minima les informations suivantes concernant l’Espace extérieur proposé à la location </: 
+												<li>- le prix</:>
+												<li>- une courte description avec ses principales caractéristiques, </li>
+												<li>- sa localisation géographique, </li>
+												<li>- sa superficie, </li>
+												<li>- le nombre de participants maximum autorisé, </li>
+												<li>- les conditions relatives à l’utilisation de musique (volume sonore autorisé, présence de musiciens, orchestres, DJ, etc.), </li>
+												<li>- les équipements éventuels (tables, chaises, piscine, WC, etc.), </li>
+												<li>- les disponibilités et les créneaux horaires,</li>
+												<li>- trois (3) photographies au minimum et cinq (5) photographies au maximum.</li>
+												</ul>
+
+												<p>De même, vous avez la possibilité d’ajouter toute autre information appropriée ainsi qu’un règlement intérieur avec des consignes (ex : présence d’animaux domestique autorisée).</p>
+												<p>
+												- Piscine : Si le Propriétaire dispose d’une piscine, il devra s’assurer de sa conformité aux règles de sécurité requises. A défaut, il devra d’une part préciser sur la fiche descriptive de l’Espace extérieur concerné que sa piscine n’est pas aux normes et d’autre part la rendre inaccessible aux Locataires et à leurs invités le jour des Evènements.
+												</p>
+												<p>
+												- Evènements : le Propriétaire a la possibilité de délimiter la nature des Evènements pour lesquels il souhaite louer son Espace extérieur.
+												</p>
+												<p>
+												- Présence de Ker-House : le service Kerden offre la possibilité aux Utilisateurs de faire intervenir une personne ayant pour mission la supervision de l’Evènement, à savoir notamment l’accueil, le service, la sécurité, et de l’aide au rangement de l’Espace extérieur loué (ci-après le « Ker-House »).
+												</p>
+												<p>
+												- Responsabilité : la mise en ligne des Annonces et la location des Espaces extérieurs via le Service Kerden sont faites sous l'entière responsabilité du Propriétaire. Le Propriétaire est seul responsable du contenu des Annonces, notamment concernant le caractère loyal et exhaustif de la description des Espaces extérieurs et de leur disponibilité.
+												</p>
+												<h4>3.2 Modalités de Location</h4>
+												<p>
+												- Durée de la location : la durée d’une location est de deux heures (2H) minimum. 
+												</p>
+												<p>
+												- Réservation en ligne : les réservations sont réalisées depuis le Site Kerden. Le Locataire peut sélectionner, grâce à un moteur de recherche, la date de la location, le type d’Evènement qu’il souhaite organiser, la catégorie d’Espace extérieur à louer et, le lieu géographique de cet Espace, le type d’équipement souhaité et le nombre d’invités.
+												</p>
+												<p>
+												Ensuite, le Locataire a accès au descriptif d’un ou plusieurs Espaces extérieurs à louer correspondant à sa recherche. S’il fait son choix pour un Espace extérieur, il peut le réserver en ligne, sous réserve de s’être inscrit au préalable au Service Kerden.
+												</p>
+												<p>
+												Une certification conférant la mention « professionnel » aux Locataires utilisant Kerden à titre professionnel permet aux Propriétaires de les identifier. 
+												</p>
+												<p>
+												- Validation de la demande de location : le Propriétaire reçoit une notification via l’interface Kerden comportant les détails de la demande de location du Locataire. Le Propriétaire doit valider la demande dans les délais prévus aux Conditions de location figurant sur les pages du Site Kerden. Le Propriétaire n’a pas besoin de motiver son éventuel refus. Le défaut de réponse dans les délais impartis vaut refus. Le Propriétaire peut recevoir plusieurs demandes de réservation en même temps. Une fois la confirmation faite par le Propriétaire, le Locataire reçoit une notification de confirmation automatique par email et SMS.
+												</p>
+												<p>
+												- Coordonnées du Locataire : le Propriétaire reçoit le descriptif de la « demande de location », comportant notamment la notation du Locataire et les différents commentaires des Propriétaires précédents.
+												</p>
+												<p>
+												- Garant : le Propriétaire a la possibilité d’avoir recours à un garant qu’il mandate pour donner les clés au Locataire, en cas d’indisponibilité le jour de l’Evènement.
+												</p>
+												<p>
+												- Avis des Locataires : après l’Evènement, une notification sera adressée via l’interface Kerden et par email au Propriétaire et au Locataire afin de collecter leurs appréciations sur la location (système de notation accompagné par un court texte d’appréciation).
+												</p>
+												 
+												<h4>3.3 Annulation et modification de la location</h4>
+
+												<p>Les demandes de réservation et les locations pourront être annulées ou modifiées par les Utilisateurs dans les conditions et selon les modalités décrites ci-après et à l’article 4 des présentes. A ce titre, les notifications d’annulation doivent impérativement être réalisées via l’interface du Site Kerden, pour être validées.</p>
+
+
+												<p>- Défaut de validation ou de paiement : la demande de location est annulée si le Propriétaire ne valide pas la demande du Locataire ou si le Locataire ne paie pas la réservation dans les délais prévus aux Conditions de location figurant sur les pages du Site Kerden.</p>
+
+												<p>- Délais d’annulation : le Propriétaire et le Locataire ont la possibilité d’annuler la location. En fonction de la date d’annulation, plus de soixante-douze heures (72H) ou moins de soixante-douze heures (72H) avant l’Evènement, le Propriétaire sera pénalisé ou au contraire dédommagé dans les conditions définies à l’article 4 (Conditions financières) des présentes.</p>
+
+												<p>- (conditions d’annulation à venir prochainement) Conditions météorologiques en Ile de France : la Société rappelle que la qualité de jouissance des Espaces extérieurs loués est subordonnée aux conditions météorologiques. La Société considère que les prévisions météorologiques sont fiables 24H (vingt-quatre heures) avant le début de l’Evénement prévu. </p>
+
+												<p>En cas d’annulation par le Locataire 24H (vingt-quatre heures) avant le début de l’Evénement, pour cause d’intempéries, signalées par le système d’alerte Météo France (voir les Conditions d’annulation pour cause d’intempéries sur les pages du Site Kerden), le Propriétaire ne sera pas indemnisé.</p>
+
+												<p>Enfin, si le Locataire met fin à sa location plus tôt que prévu du fait d’Intempéries au cours de l’Evénement, le Propriétaire sera indemnisé. </p>
+
+												<p>Il est précisé que ces modalités particulières d’annulation ne concernent uniquement les Espaces extérieurs situés en Île-de-France.</p>
+
+												<h3>Article 4.  Conditions financières</h3>
+
+												<p>La consultation des pages du Site Kerden, l’inscription au Service Kerden et la publication d’une annonce de location sont gratuites, sous réserve des conditions décrites ci-dessous. </p>
+
+												<h4>4.1 Prix de la location</h4>
+												<p>Le prix de la location comprend (ci-après « Prix de la location ») :
+												<ul>
+												<li>- le prix fixé par le Propriétaire pour la location de l’Espace extérieur,</li>
+												<li>- la Commission Kerden,</li>
+												<li>- et, le cas échéant, le prix des services d’un Ker-House (si plus d’un Ker-House est mandaté pour l’Evènement, les frais associés sont pris en charge par le Locataire).</li>
+												<li>- la Commission de l’intermédiaire de paiement MangoPay. </li>
+												</ul>
+												</p>
+
+												<p>Le Prix de la location est affiché sur les pages du Site Kerden en euros, hors taxe et toute taxe comprise. </p>
+
+												<h5>4.1.1 Prix fixé par le Propriétaire </h5>
+												<p>Le Propriétaire fixe librement le prix de l’Espace extérieur à louer, en respectant néanmoins un prix minimum de 30€ HT (trente euros hors taxe). </p>
+												<p>
+												Pour la fixation du prix de son Espace extérieur, le Propriétaire doit prendre en compte plusieurs paramètres, à savoir :
+												<ul>
+												<li>- l’emplacement de son Espace extérieur, et son niveau de confort ;</li>
+												<li>- l’esthétique, l’équipement et la superficie de son Espace extérieur</li>
+												<li>- le jour de réservation : il est suggéré au Propriétaire de pratiquer des prix inférieurs en semaine par rapport aux week-ends.</li>
+												</ul>
+												</p>
+
+												<p>Le taux de TVA et le montant des taxes appliqués à la réservation de votre Espace extérieur seront ceux en vigueur au jour de la date d’émission des factures. </p>
+
+												<p>Enfin, aucune caution ne peut être exigée par le Propriétaires pour la location de son Espace extérieur via le Service Kerden. </p>
+
+												<h5>4.1.2 Commission Kerden </h5>
+												<p>En contrepartie des services proposés par Kerden, le Propriétaire consent à verser à la Société une commission sur chaque location réalisée via le Site Kerden. Le montant de la commission due à la Société varie selon la présence ou non de Ker-House lors de l’évènement :
+												<ul>
+												<li>- Sans Ker-House : la commission est égale à dix-sept pourcent (17%) du Prix de la location (la "Commission Kerden”), répartie à parts égales entre le Propriétaire et le Locataire ;</li>
+												<li>- Avec Ker-House : la commission est égale à treize pourcent (13%) du Prix de la location, répartie à parts égales entre le Propriétaire et le Locataire.</li>
+												</ul>
+												</p>
+
+												<p>La Société se réserve le droit de modifier le pourcentage de la Commission Kerden à tout moment. Un message informant de la modification des conditions financières sera envoyé à chaque Propriétaire. Si le Propriétaire refuse les nouvelles conditions financières, il ne pourra plus utiliser le Service Kerden à l’issue d’une période de quinze (15) jours à compter de l’envoi de ce message et le présent Contrat sera résilié à l’issue de cette période de 15 jours, tel que stipulé à l’article 11 (durée et résiliation) ci-après. En l’absence de notification écrite de refus dans ce délai de 15 jours, le Propriétaire sera réputé avoir accepté le nouveau pourcentage de Commission Kerden applicable.</p>
+
+												<h4>4.2 Modalités de paiement</h4>
+												<p>Si la location est confirmée par le Propriétaire, le Locataire doit régler le Prix de la location via le Site Kerden. Le paiement est réalisé en ligne par carte bancaire au moyen d’un service de paiement sécurisé proposé par un établissement de paiement partenaire de Kerden (« MangoPay »).</p>
+
+												<p>S’agissant de l’utilisation du service MangoPay par les Utilisateurs, certains justificatifs peuvent être requis afin de procéder au paiement ou au transfert de fonds, et la nature de ces justificatifs dépend du montant des sommes transférées ou perçues par année. Kerden invite donc ses Utilisateurs à prendre connaissance des conditions d’utilisation du service MangoPay afin d’être en mesure de lui fournir les justificatifs requis en fonction de leur situation.</p>
+
+												<p>Dans les cinq (5) jours suivant l’Evènement, l’établissement de paiement créditera par virement bancaire le compte du Propriétaire de la somme représentant le Prix de la location, moins la Commission Kerden et, le cas échéant, le coût du Ker-House</p>
+
+												<p>Si le Propriétaire est un professionnel, il s’assure de l’envoi des justificatifs et factures requises afin que la Société puisse procéder au paiement. </p>
+
+												<h4>4.3 Pénalités en cas d’annulation ou interruption</h4>
+
+
+												<h5>A. Annulation du fait du Propriétaire : </h5>
+
+												<p>Sans Ker-House</p>
+												<p>
+												• Si l’annulation intervient au-delà de soixante-douze heures (72H) avant le début de l’Evènement, Kerden prélève des frais d’annulation dont le montant est égal à huit pourcent et demi (8,5%) du Prix de la location annulée. Ces frais seront déduits du prix de la prochaine location effectuée par le Propriétaire via le Site Kerden.
+												</p>
+												<p>
+												• Si l’annulation intervient moins de soixante-douze heures (72H) avant le début de l’Evènement, des frais dix-sept pourcent (17%) du Prix de la location lui seront prélevés. Ces frais seront déduits du prix de la prochaine location effectuée par le Propriétaire via le Site Kerden. 
+												</p>
+
+												<p>Avec Ker-House</p>
+
+												<p>• Si l’annulation intervient au-delà de soixante-douze heures (72H) avant le début de l’Evènement, Kerden prélève des frais d’annulation dont le montant est égal à six pourcent et demi (6,5%) du Prix de la location annulée. Ces frais seront déduits du prix de la prochaine location effectuée par le Propriétaire via le Site Kerden.</p>
+
+												<p>• Si l’annulation intervient entre soixante-douze heures (72H) et trois heures (3H) avant le début de l’Evènement, Kerden prélève des frais d’annulation dont le montant est égal à treize pourcent (13%) du Prix de la location annulée. Ces frais seront déduits du prix de la prochaine location effectuée par le Propriétaire via le Site Kerden</p>
+
+
+												<p>• Si l’annulation intervient moins de trois heures (3H) avant le début de l’Evènement, Kerden prélève des frais d’annulation dont le montant est égal à treize pourcent (13%) du Prix de la location annulée et deux heures (2H) de prestation du service Ker-House, soit vingt-quatre euros (24€) par Ker-House. Ces frais seront déduits du prix de la prochaine location effectuée par le Propriétaire via le Site Kerden</p>
+
+												<p>B. Annulation du fait du Locataire : </p>
+
+												<p>Sans Ker-House</p>
+
+												<p>• Si l’annulation intervient au-delà de soixante-douze heures (72H) avant le début de l’Evènement, le Propriétaire ne sera pas indemnisé.</p>
+
+												<p>• Si l’annulation intervient entre soixante-douze heures (72H) et vingt-quatre heures (24H) avant le début de l’Evènement, il sera versé au Propriétaire une indemnité d’un montant égal à vingt-trois pourcent (23%) du Prix de la location.</p>
+
+												<p>• Si l’annulation intervient entre vingt-quatre heures (24H) et le début de l’Evènement, il sera versé au Propriétaire une indemnité d’un montant égal à quarante-cinq pourcent (45%) du Prix de la location. </p>
+
+												<p>Avec Ker-House</p>
+
+												<p>• Si l’annulation intervient au-delà de soixante-douze heures (72H) avant le début de l’Evènement, le Propriétaire ne sera pas indemnisé.</p>
+
+												<p>• Si l’annulation intervient entre soixante-douze heures (72H) et vingt-quatre heures (24H) avant le début de l’Evènement, il sera versé au Propriétaire une indemnité d’un montant égal à vingt-quatre pourcent (24%). </p>
+
+												<p>• Si l’annulation intervient entre vingt-quatre heures (24H) et trois heures (3H) avant le début de l’Evènement, il sera versé au Propriétaire une indemnité d’un montant égal à quarante-sept pourcent (47%) du Prix de la location. </p>
+
+												<p>• Si l’annulation intervient moins de trois heures (3H) avant le début de l’Evènement, il sera versé au Propriétaire une indemnité d’un montant égal à quarante-vingt-treize et demi pourcent (93,5%) du Prix de la location. </p>
+
+												<p>- (conditions d’annulation en attente) Annulation ou interruption pour Intempéries : en cas d’annulation par le Locataire 24H (vingt-quatre heures) avant le début de l’Evénement, pour cause de conditions météorologiques défavorables avérées, le Propriétaire ne perçoit aucune indemnité. Si le Locataire est amené à mettre fin à sa location plus tôt que prévu du fait de détérioration brutale des conditions météorologiques au cours de l’Evénement, le Propriétaire percevra un prorata du Prix de la location, au regard de la durée effective de l’Evénement. </p>
+
+												<h3>Article 5. Obligations des Propriétaires</h3>
+
+												<p>Dans le cadre de l’utilisation du Service, vous vous engagez à vous conformer aux stipulations décrites dans les présentes Conditions d’utilisation, mais également aux lois en vigueur, et à respecter les droits des tiers. Vous vous engagez notamment à n’utiliser le Service qu’à des fins conformes à celles décrites dans les présentes Conditions d’utilisation et à utiliser vos mots de passe et/ou identifiants selon leur stricte finalité d’authentification au Site Kerden.</p>
+
+												<h4>5.1 Espaces extérieurs proposés en location</h4>
+												<p>En mettant des annonces d’espaces extérieurs en ligne sur le Service Kerden, le Propriétaire déclare et garantit être le propriétaire ou reconnaît être dûment autorisé par les propriétaires pour les proposer à la location et agir en qualité de mandataire de ces derniers. Il s’engage à fournir tout justificatif à première demande.</p>
+
+												<p>Le Propriétaire déclare par ailleurs que les Espaces extérieurs proposés à la location sont dûment assurés, et que leur police d’assurance couvre expressément la location. D’une manière générale, et dans le cadre de l’utilisation du Service Kerden, le Propriétaire s’engage à ne proposer à la location que des Espaces extérieurs en conformité avec toutes réglementations ou obligations légales applicables et en vigueur dans le pays (ou la région, l’état, etc.) de situation dudit espace.</p>
+
+												  <h4>5.2 Bonne foi et loyauté</h4>
+												<p>En contrepartie de la mise à disposition du Site Kerden et des services associés, les Propriétaires s’engagent expressément ne pas utiliser, à des fins commerciales et/ou publicitaires, tout ou partie du fichier des données Utilisateur constitué grâce aux locations réalisées via le Service Kerden. A ce titre, le Propriétaire s’engage à ne pas détourner le Service Kerden en traitant en direct avec les Locataires. Cet engagement est valable pendant toute la durée du présent Contrat.</p>
+
+												<h4>5.3 Engagements</h4>
+												<p>L’utilisation du Service Kerden implique l’engagement express des Propriétaires à :
+												<ul>
+												<li>- ne pas mettre en ligne d’annonces comportant des informations, y compris des photos, erronées ou trompeuses ;</li>
+												<li>- ne pas diffuser des propos ou des contenus illicites, et notamment tous contenus contrefaisants, diffamatoires, injurieux, insultants, obscènes, offensants, discriminatoires, violents, xénophobes ou incitant à la haine raciale ; ou tout autre contenu contraires aux bonnes mœurs et aux règles de bienséance ;</li>
+												<li>- ne pas mettre en ligne ou divulguer du contenu qui serait contraire à la finalité du Site Kerden ; </li>
+												<li>- ne pas mettre en ligne d’annonces concernant des Espaces extérieurs qui ne peuvent être proposés à la location, au regard de la réglementation en vigueur ;</li>
+												  <li>- le cas échéant, ne pas proposer à la location d’Espaces extérieurs sans y être dûment autorisés par les propriétaires ;
+												  <li>- ne pas proposer à la location un Espace extérieur qui ne peut être loué ou sous-loué sans violer des accords passés avec des tiers (tels que règlement de copropriété, bail, contrat de location, etc.) ;</li>
+												<li>- ne pas utiliser le Site Kerden afin de constituer des fichiers d’Utilisateurs et leur envoyer des courriers électroniques ou postaux non sollicités en nombre (spamming) ; </li>
+												<li>- ne pas obtenir d’autres Utilisateurs des mots de passe ou des données personnelles d’identification ;</li>
+												<li>- ne pas mettre en ligne, communiquer ou envoyer, par l’intermédiaire du Site Kerden, du contenu quel qu’il soit qui comprendrait des liens pointant vers des sites web illicites ou offensants ou vers des sites web qui seraient incompatibles avec la finalité du Site ou du contenu qui violerait les droits de propriété intellectuelle de tiers. </li>
+												</ul>
+												En outre, le Propriétaire s’engage à :<ul>
+												<li>- remettre, le cas échéant, à un Ker-House, ou au Locataire, les clés permettant l’accès à l’espace loué 30 (trente) minutes avant le début programmé de l’Evènement ;</li>
+												<li>- accorder un accès automatique à ses toilettes, dès lors que l’Espace qu’il propose à la location en possède ;</li>
+												<li>- ne pas être intrusif, en cas de présence sur les lieux, lors du déroulement de l’Evénement. </li>
+												</ul>
+
+												<p>En cas de manquement à une ou plusieurs de ces obligations, le Société se réserve le droit, selon les cas, (i) de supprimer tout contenu qui ne serait pas conforme aux présentes Conditions d’utilisation, et/ou (ii) d'exclure du Service Kerden l’Utilisateur fautif et de clôturer son compte personnel conformément aux stipulations décrites à l’article 11 (Durée et résiliation) des présentes.</p>
+
+												<h4>5.4 Obligations spécifiques aux professionnels</h4>
+												<p>Nous rappelons au Propriétaire agissant en qualité de professionnel qu’il a l’obligation de se conformer à l’ensemble de la législation et règlementation applicable et notamment en matière de commerce électronique, de protection des consommateurs et de la vie privée. A ce titre, il appartient notamment au Propriétaire de déclarer et payer tous les impôts et toutes les taxes en relation avec l’utilisation du Service Kerden. </p>
+												<h3>Article 6. Propriété intellectuelle </h3>
+
+												<h4>6.1 Contenu du Site</h4>
+												<p>Le contenu du Site Kerden, notamment sa structure, son design, ses interfaces, les bases de données, les textes, images, fichiers audio et vidéo et éléments graphiques qui la composent ainsi que les balises HTML de référencement (méta-tags), à l’exclusion du contenu appartenant aux Utilisateurs et aux tiers, sont la propriété exclusive de la Société. Ce contenu est protégé par le Code de la propriété intellectuelle et, par tout texte national ou international applicable au droit d’auteur. </p>
+
+												<p>Vous êtes autorisé à représenter sur votre écran les pages du Site Kerden uniquement pour consultation personnelles à titre temporaire et selon la finalité du Site Kerden, telle que définie dans les présentes Conditions d’utilisation. </p>
+
+
+												<p>Toute reproduction, diffusion, utilisation, altération, modification et toute création d’œuvres dérivées de tout ou partie du contenu du Site Kerden sous quelque forme que ce soit, sans l’autorisation expresse et préalable de la Société, est interdite et serait constitutive d’une contrefaçon, sanctionnée par les articles L. 335-2 et suivants du Code de la propriété intellectuelle.</p>
+
+
+												<p>De même, vous vous interdisez de :</p>
+
+												<p>• Procéder à des extractions par transfert temporaire ou permanent, ou d’utiliser par la mise à disposition au public, la totalité ou une partie substantielle en termes quantitatifs ou qualitatifs du Site Kerden et autres bases de données visibles sur le Site Kerden, à des fins commerciales, statistiques ou autres ;</p>
+
+												<p>• Extraire ou d’utiliser de façon répétée et systématique tout ou partie des informations visibles sur le Site Kerden, lorsqu’une telle opération excède manifestement une utilisation normale et à titre privé du Site Kerden ;</p>
+
+												<p>• Exploiter, commercialiser ou distribuer tout élément constitutif du Site Kerden, notamment les informations visibles sur le Site Kerden et toute autre base de données. </p>
+
+												<p>• Utiliser des logiciels ou procédés manuels pour copier nos pages web ou pour enregistrer ou collecter les informations sur ces pages sans le consentement exprès préalable et écrit de la Société ; </p>
+
+												<p>• Utiliser des dispositifs ou logiciels aux fins de perturber ou tenter de perturber le bon fonctionnement du Service Kerden ; </p>
+
+												<p>• Mettre en œuvre des actions qui imposeraient une charge disproportionnée sur nos infrastructures.</p>
+
+												<h4>6.2 Licence d’utilisation des contenus fournis par les Utilisateurs</h4>
+												<p>L’Utilisateur accorde à la Société, qui accepte, une licence non-exclusive, et cessible d’utilisation des fichiers et autres contenus mis en ligne sur le Site Kerden par les Utilisateurs dans le cadre des présentes Conditions d’utilisation. Vous nous accordez le droit de concéder des sous-licences d’utilisation, d’exploitation et de divulgation de ces contenus pour les besoins de l’exécution des présentes. La présente licence d’utilisation restera en vigueur pendant toute la durée du Contrat. A cette fin, l’Utilisateur déclare être dûment autorisé à accorder des licences d’utilisation des contenus dans les limites définies dans les présentes Conditions d’utilisation.</p>
+												<h3>Article 7. Indemnisation </h3>
+												<p>Par les présentes, et eu égard notamment aux obligations figurant à l’article 5 ci-dessus, le Propriétaire agissant en qualité de professionnel garantit la Société contre toutes les réclamations, pertes, responsabilités, coûts et dépenses, y compris les honoraires d'avocat et les frais de procédure que la Société pourrait encourir ou dont elle pourrait être redevable, à la suite de l’action judiciaire d’un tiers, causée par, ou résultant d'une violation des présentes Conditions d’utilisation par le Propriétaire, et/ou en cas de violation des droits de propriété intellectuelle, ou en cas de violation de toute réglementation applicable dans le cadre de l’utilisation du Service Kerden et/ou de toute réglementation applicable à la location, par le Propriétaire.</p>
+												<p>En cas de poursuites à l’encontre de la Société, la Société s'engage à : i) notifier le Propriétaire par écrit de la réception d'une plainte ; ii) accorder au Propriétaire le droit, l'information et l'assistance raisonnablement nécessaires pour assurer sa défense ; et iii) laisser au Propriétaire le contrôle de ses moyens de défense et l'autorité pour transiger ou négocier. Toutefois, toute décision du Propriétaire de nature à porter atteinte aux droits et intérêts de la Société sera soumise à l’approbation écrite et préalable de la Société. La Société aura le droit de participer, à ses frais, à la défense de ses intérêts. </p>
+												<p>Les conditions d’indemnisation stipulées au présent article sont indépendantes des conditions de responsabilité et de garantie figurant ci-au présent Contrat.</p>
+
+												<h3>Article 8. Limitation de garantie</h3>
+
+												<p>Nous prenons les mesures nécessaires au maintien de la continuité et de la qualité du Service Kerden. Toutefois, le Site Kerden est fourni en l’état. La Société ne garantit pas que le fonctionnement du Site sera ininterrompu, exempt de toute erreur ou sûr. De manière générale, la Société ne garantit ni l’exhaustivité ni l’exactitude du contenu et des informations proposés par la Société. Néanmoins, nous mettons tous les moyens disponibles en œuvre afin d’offrir aux Utilisateurs du Site Kerden un service de qualité. La Société ne garantit pas que le Site Kerden sera conforme aux besoins des Utilisateurs. Il appartient aux Utilisateurs de s’assurer qu’ils ont effectivement accès aux moyens techniques appropriés pour l’utilisation de nos services. </p>
+
+												<h3>Article 9. Limitation de responsabilité </h3>
+
+												<p>D’une manière générale, la Société ne se porte garante d’aucun Utilisateur ni Ker-House, aucune Annonce ou aucun Espace extérieur.</p>
+
+												<h4>9.1 Services proposés par Kerden</h4>
+												<p>La responsabilité de la Société ne pourra être recherchée au titre de l’utilisation que vous ferez du Site et du Service Kerden. La responsabilité de la Société ne saurait être mise en cause pour de simples erreurs ou omissions qui auraient pu subsister malgré toutes les précautions prises dans la présentation du Service Kerden. La Société ne pourra être tenue responsable d’aucun dommage résultant de l’utilisation des services ou de la mise en relation entre vous et un autre Utilisateur ou entre vous et un Ker-House. De même, la Société ne pourra être tenue responsable d’aucun dommage quel qu’il soit causé lors d’un Evènement ou d’aucun dommage ou dégradation causés aux Espaces extérieurs mis en location via le Site Kerden. L’utilisation du Site Kerden proposée par la Société est faite sous votre seule et entière responsabilité. </p>
+
+												<h4>9.2 Annonces de location</h4>
+												<p>La Société n’exerce aucun contrôle sur les Annonces mis en ligne sur le Site Kerden par les Propriétaires. A ce titre, la Société ne contrôle pas l’état, la légalité la disponibilité, la qualité ou le caractère adapté des Espaces extérieurs proposées par les Propriétaires et pouvant être réservées via le Site Kerden. Les Propriétaires sont seuls responsables des Annonces qu’ils publient sur le Site Kerden, la Société n’ayant qu’un rôle d’hébergeur technique des Annonces mises en ligne par les Propriétaires. En conséquence, la Société exclut toute responsabilité relative aux Espaces extérieurs fournis par les Propriétaires. </p>
+
+												<h4>9.3 Contenus publiés sur le Site Kerden</h4>
+												<p>D’une manière générale, la Société n’exerce aucun contrôle sur les contenus mis en ligne par les Utilisateurs, ni sur la capacité des personnes inscrites sur Kerden. A ce titre, la Société ne contrôle pas notamment l’exactitude, la fiabilité, la complétude, l’actualité ou la pertinence de ces informations. La Société ne peut être tenue responsable des contenus mis en ligne par les Utilisateurs. Les Utilisateurs sont seuls responsables des contenus (textes, images, vidéos, commentaires, etc.) qu’ils publient sur le Site Kerden, la Société n’ayant qu’un rôle d’hébergeur technique des contenus mis en ligne sur le Site Kerden par les Utilisateurs. Chaque catégorie d’Utilisateur du Service Kerden, Propriétaire et Locataire, est seule responsable de la vérification des informations fournies et échangées avec les autres. </p>
+
+												<h4>9.4 Réseau internet et accessibilité du Site Kerden</h4>
+												<p>Vous reconnaissez et acceptez que le réseau Internet, et plus généralement tout réseau télématique utilisé à des fins de transmission de données peut (i) comporter des risques liés à l’absence de protection de certaines données contre des détournements éventuels et des risques de contamination par des virus, et (ii) connaître des périodes de saturation en raison de l’encombrement de la bande passante, des coupures dues à des incidents techniques ou à des interventions de maintenance, des décisions de sociétés gérant lesdits réseaux ou tout autre événement indépendant de la volonté de la Société. </p>
+
+												<h4>9.5 Perte de données et autres</h4>
+												<p>La Société ne pourra être tenue responsable d’aucune perte ou altération de données, d’aucune perte de profit, de chiffre d’affaires, d’opportunité, de temps ou d’aucun dommage indirect, que ladite perte ou ledit dommage soit dû à une négligence, ou à toute autre cause, en lien avec l’exécution ou la non-exécution des présentes Conditions d’utilisation. A ce titre, la Société décline toute responsabilité quant aux bénéfices éventuellement attendus par le Propriétaire. </p>
+
+												<p>La Société n’est pas responsable en cas d’usurpation de l’identité d’un Utilisateur. Au cas où vous auriez des raisons de penser qu’une personne non autorisée utiliserait vos données d’identification ou votre compte, vous devez en informer immédiatement la Société, à l’adresse email suivante : contact@kerden.fr. </p>
+
+												<p>Les serveurs de Kerden sont disponibles 24 heures sur 24 et 7 jours sur 7, sauf pendant les opérations de maintenance et les interruptions de service, telles que définies à l’article 10 des présentes. En cas d’interruption de service ayant pour cause des faits échappant au contrôle de la Société (tel qu’un événement de force majeure) et en cas de perte de données, la Société s’engage à restituer la dernière version sauvegardée du Site Kerden. </p>
+
+												<h4>9.6 Liens hypertextes</h4>
+												<p>Le Site Kerden peut intégrer des liens hypertextes en direction des sites web tiers, y compris des sites de partenaires commerciaux. Nous ne pourrons en aucune façon être tenus responsables des dommages directs et/ou indirects qui pourraient résulter de l’utilisation de contenus, données ou informations de toute nature, accessibles à partir desdits liens hypertextes. Il vous incombe de contrôler que les informations figurant sur ces sites web partenaires sont exactes, complètes et conformes à la réglementation. L’application des présentes Conditions d’utilisation ne s’étend pas aux sites tiers. </p>
+
+												<h4>9.7 Limitation</h4>
+												<p>Il est expressément convenu entre les Parties que tous les dommages allégués devront être prouvés par la Partie qui se prétend victime. En outre, la responsabilité de la Société en vertu des présentes Conditions d’utilisation ne pourra excéder le Prix de la location de l’Espace extérieur concerné.</p>
+
+												<h3>Article 10. Maintenance du Site Kerden</h3>
+
+												<p>La Société se réserve le droit de suspendre l’accès au Site Kerden de temps à autres aux fins de réaliser des opérations de maintenance et de mises à jour du Site Kerden. La Société s’efforcera de réaliser les opérations de maintenance pendant les heures non-ouvrées et d’en limiter la durée. En cas d’intervention de maintenance d’urgence, la Société se réserve le droit de suspendre tout ou partie de l’accès au Site et au Service Kerden pour réaliser les interventions techniques nécessaires. Par ailleurs, la Société pourra mettre le Site Kerden à jour de temps à autres. La Société s’engage à informer les Utilisateurs sur la page de login du Site Kerden des maintenances prévues. </p>
+
+												<h3>Article 11. Durée et résiliation</h3>
+
+												<h4>11.1 Durée</h4>
+												<p>Les présentes Conditions d’utilisation entrent en vigueur lorsque vous avez complété la procédure d’inscription sur le Site Kerden, pour une durée indéterminée.</p>
+
+												<h4>11.2 Résiliation</h4>
+												<p>Nous pourrons, et vous pourrez y mettre fin dans les conditions suivantes : 
+												- en cas de demande de votre de part de fermeture de votre compte personnel ; 
+												- en cas d’utilisation du Service Kerden contraire aux présentes Conditions d’utilisation, ou tout autre manquement aux Conditions d’utilisation. Dans ce cas, nous vous adresserons un e-mail de notification vous demandant de remédier aux violations des Conditions d’utilisation dans un délai de sept (7) jours. En cas d’absence de correction dans ce délai, nous nous réservons le droit de fermer votre compte personnel sans autre préavis. Toute fermeture de compte initiée par la Société sera effectuée sans préjudice de l’indemnisation de l’entier dommage éventuellement subi par du fait de vos actions sur le Site Kerden. 
+												</p>
+												<p>
+												En outre, le présent Contrat prendra fin automatiquement en cas de refus de votre part de toute nouvelle version des Conditions d’utilisation, comme précisé à la section 2.2.
+												</p>
+
+												<h4>11.3 Effets de la résiliation</h4>
+												<p>En cas de résiliation du présent Contrat pour quelque cause que ce soit, la Société procédera à la fermeture du ou des comptes personnels concernés. Aucune nouvelle réservation ne pourra être faite via le Service Kerden à compter de cette date. La Société ne pourra être tenue responsable des conséquences éventuelles de la résiliation sur les engagements, quels qu’ils soient, que les Utilisateurs auront pris. Le cas échéant, la Société s’engage à régler les montants dus à l’Utilisateur et non encore réglés à la date de résiliation conformément aux conditions prévues à l’article 4 (Conditions financières).
+												</p>
+
+												<h3>Article 12. Stipulations diverses</h3>
+
+												<h4>12.1 Notifications et signalement </h4>
+												<p>Sauf stipulation expresse contraire, toute notification envoyée au Service Kerden doit être adressée par courrier postal, à l’adresse suivante : Société ADENOR, Service clients Kerden, 25 bis rue de l’Armorique - 75015 Paris – France.</p>
+												<p>Toute notification, concernant le fonctionnement du Service Kerden, qui vous est destinée sera envoyée par e-mail à l’adresse communiquée sur votre compte personnel. Les notifications sont réputées vous être parvenues 24 heures après l’envoi d’un e-mail, sauf si l’expéditeur se voit notifier l’invalidité de l’adresse e-mail. Les notifications peuvent également vous parvenir par lettre recommandée avec accusé de réception à l’adresse communiquée sur votre compte personnel. Dans ce cas, les notifications sont réputées vous être parvenues dans un délai de 48 heures après l’envoi du courrier.</p>
+												<p>Au cas où vous auriez connaissance d’un contenu illicites figurant sur le Site Kerden, tel que notamment décrit à l’article 5 (Obligations des Propriétaires) ci-dessus, ou si vous relevez qu’un Utilisateur ou un Ker-House à un comportement inapproprié (choquant, violent, sexuellement inapproprié, en cas de vol, etc.), vous devez nous notifier ce contenu illicite ou cette mauvaise conduite immédiatement, en nous adressant un email explicatif à l’adresse suivante : support@kerden.fr. 
+												</p> 
+
+												<h4>12.2 Conditions additionnelles</h4>
+												<p>Au fur et à mesure du développement du Site, nous pourrons être amenés à proposer des services et rubriques complémentaires. L’utilisation de ces services pourra être soumise à des conditions additionnelles qui vous seront notifiées lors de votre première utilisation desdits services et rubriques. Ces conditions additionnelles seront incorporées aux présentes Conditions d’utilisation par référence et auront pleine valeur contractuelle. 
+												</p>
+												<h4>12.3 Assurance</h4>
+												<p>
+												Le Propriétaire déclare avoir souscrit auprès d'une compagnie notoirement solvable une assurance habitation et le cas échéant, une assurance responsabilité civile professionnelle couvrant très largement et explicitement les risques, notamment pour les locations objet du Contrat. 
+												</p>
+												<p>
+												Le Propriétaire s’engage à maintenir cette police d’assurance ou une police d’assurance de même niveau, pendant toute la durée du Contrat. Le Prestataire s’engage à produire, à première demande de la Société, les attestations d’assurance correspondantes sous un délai de cinq (5) jours ouvrés à compter de la demande.
+												</p>
+												<h4>12.4 Force majeure</h4>
+												<p>
+												Nous ne pouvons être tenus responsables d’aucun manquement à nos obligations au titre des présentes Conditions d’utilisation ayant pour cause des faits échappant à notre contrôle, le fait d’un tiers et/ou résultant d’un cas de force majeure. Les cas de force majeure comprendront notamment, outre les cas reconnus par la jurisprudence, toutes grèves, lock-out, y compris les cas de perturbation d’ordre technique, électromagnétique, défaillance des systèmes et des réseaux, et tous problèmes électriques et techniques externes aux parties et empêchant les communications.
+												</p>
+												<h4>12.5 Indépendance</h4>
+												<p>
+												La Société d'une part et le Propriétaire d’autre part sont des parties indépendantes, chacune agissant en son nom et pour son propre compte. Les présentes Conditions d’utilisation ne créent aucun lien de subordination, de mandat, société en participation, entreprise commune, de relations employeur/employé ou franchiseur/franchisé entre la Société et le Propriétaire.
+												</p>
+												<h4>12.6 Non-validité partielle</h4>
+												<p>Dans l’hypothèse où une ou plusieurs stipulations figurant dans les présentes Conditions d’utilisation étaient considérées comme illégales, inopposables ou inapplicables par une décision de justice, les autres stipulations des Conditions d’utilisation resteront en vigueur, à la condition que l’économie générale du contrat n’en soit pas bouleversée. 
+												</p>
+												<h4>12.7 Non renonciation</h4>
+												<p>
+												Le fait pour une Partie de ne pas exiger le strict respect d’une quelconque obligation des présentes Conditions d’utilisation, en quelque occasion que ce soit, ne sera pas considéré comme un renoncement à l’un des droits susmentionnés et ne privera pas cette Partie du droit d'exiger le strict respect de cette obligation ou de toute autre obligation des Conditions d’utilisation à tout moment.</p>
+
+												<h4>12.8 Maintien en vigueur</h4>
+												<p>Lors de la résiliation ou de l’expiration des présentes, les articles suivants resteront en vigueur : Propriété intellectuelle ; Indemnisation ; Limitation de responsabilité, Stipulations diverses ; Droit applicable et compétence juridictionnelle.</p>
+
+												<h3>Article 13. Droit applicable et compétence juridictionnelle </h3>
+
+												<p>Les présentes Conditions d’utilisation sont soumises à la loi française. </p>
+
+												<p>EN CAS DE LITIGE, LES PARTIES DECIDENT, DANS UN PREMIER TEMPS, DE TENTER DE LE RESOUDRE A L’AMIABLE. </p>
+
+												<p>EN CAS D’ECHEC LORS DE LA RECHERCHE D’UNE SOLUTION AMIABLE, L’UTILISATEUR NON PROFESSIONNEL PEUT ADRESSER SA RECLAMATION AU MEDIATEUR DE LA CONSOMMATION COMPETENT EN SE REFERANT AU SITE WEB SUIVANT : http://www.economie.gouv.fr/mediation-conso.</p>
+
+												<p>EN CAS D’ECHEC DE RESOLUTION A L’AMIABLE, TOUS LES LITIGES SUSCEPTIBLES DE NAITRE ENTRE LES PARTIES, RELATIFS A LA SIGNATURE, L’INTERPRETATION, L'EXECUTION ET LA RESILIATION DES PRESENTES, SERONT SOUMIS A LA JURIDICTION EXCLUSIVE DES TRIBUNAUX DU RESSORT DE LA COUR D’APPEL DE PARIS AUXQUELS LES PARTIES FONT EXPRESSEMENT ATTRIBUTION DE COMPETENCE, MEME EN CAS DE PLURALITE DE DEFENDEURS, EN REFERE, APPEL EN GARANTIE OU PAR REQUETE.</p>
+
+												<p>LA CLAUSE ATTRIBUTIVE DE JURIDICTION S’APPLIQUE UNIQUEMENT AUX PROFESSIONNELS.</p>
+
+												<h3>Article 14. Intégralité du Contrat</h3>
+
+												<p>Les présentes Conditions d’utilisation, y compris le préambule, son Annexe et la Charte de protection des données personnelles du Service Kerden, constituent l’intégralité de l’accord conclu entre les Parties. </p>
+
+
+												
+  						</div>
+  					</div>
+
+
+  				</div>
+
+  				<div class="tab-first-level tab-pane active fade in" id="tabLoc">
+  					<div class="col-sm-3">
+  						<div class="cgu cgu-index">
+	  						<h3>Table des Matières</h3>
+								<ul>
+									<li><a href="#">1. Services proposés par Kerden</a></li>
+									<li><a href="#">1.1 Objectifs du service</a></li>
+									<li><a href="#">1.2 Catégories d’Utilisateur </a></li>
+									<li><a href="#">1.3 Description des services  </a></li>
+									<li><a href="#">1.4 Rôle de Kerden</a></li>
+									<li><a href="#">2. Règles d’utilisation du Service Kerden</a></li>
+									<li><a href="#">2.1 Acceptation des CGU </a></li>
+									<li><a href="#">2.2 Entrée en vigueur des CGU et mises à jour</a></li>
+									<li><a href="#">2.3 Conditions d’inscription</a></li>
+									<li><a href="#">3. Location d’Espace extérieur sur le Site Kerden</a></li>
+									<li><a href="#">3.1 Modalités de réservation</a></li>
+									<li><a href="#">3.3 Annulation et modification des réservations</a></li>
+									<li><a href="#">4. Conditions financières</a></li>
+									<li><a href="#">4.1 Prix des Locations</a></li>
+									<li><a href="#">4.2 Modalités de paiement</a></li>
+									<li><a href="#">4.3 Pénalités en cas d’annulation ou interruption</a></li>
+									<li><a href="#">5. Obligations des Locataires</a></li>
+									<li><a href="#">5.1 Bonne foi et loyauté</a></li>
+									<li><a href="#">5.2 Engagements</a></li>
+									<li><a href="#">5.3 Obligations spécifiques aux professionnels</a></li>
+									<li><a href="#">6. Propriété intellectuelle</a></li>
+									<li><a href="#">6.1 Contenu du Site Kerden</a></li>
+									<li><a href="#">6.2 Licence d’utilisation des contenus des Utilisateurs</a></li>
+									<li><a href="#">7. Indemnisation </a></li>
+									<li><a href="#">8. Limitation de garantie</a></li>
+									<li><a href="#">9. Limitation de responsabilité </a></li>
+									<li><a href="#">9.1 Services proposés par Kerden</a></li>
+									<li><a href="#">9.2 Annonces de location</a></li>
+									<li><a href="#">9.3 Contenus publiés sur le Site Kerden</a></li>
+									<li><a href="#">9.4 Réseau internet et accessibilité du Site Kerden</a></li>
+									<li><a href="#">9.5 Perte de données et autres</a></li>
+									<li><a href="#">9.6 Liens hypertextes</a></li>
+									<li><a href="#">9.7 Limitation</a></li>
+									<li><a href="#">10. Maintenance du Site</a></li>
+									<li><a href="#">11. Durée et résiliation</a></li>
+									<li><a href="#">11.1 Durée</a></li>
+									<li><a href="#">11.2 Résiliation</a></li>
+									<li><a href="#">11.3 Effets de la résiliation</a></li>
+									<li><a href="#">12. Stipulations diverses</a></li>
+									<li><a href="#">12.1 Notifications </a></li>
+									<li><a href="#">12.2 Conditions additionnelles</a></li>
+									<li><a href="#">12.3 Assurance</a></li>
+									<li><a href="#">12.4 Force majeure</a></li>
+									<li><a href="#">12.5 Indépendance</a></li>
+									<li><a href="#">12.6 Non-validité partielle</a></li>
+									<li><a href="#">12.7 Non renonciation</a></li>
+									<li><a href="#">12.8 Maintien en vigueur</a></li>
+									<li><a href="#">13. Droit applicable et compétence juridictionnelle</a></li>
+									<li><a href="#">14. Intégralité du Contrat</a></li>
+								</ul>
+							</div>
+  					</div>
+  					<div class="col-sm-8 col-sm-offset-1">
+  						<div class="cgu">
+  											<p>Le service accessible à l’URL http://kerden.fr est proposé par la société ADENOR, SAS au capital social de 15.000 euros, inscrite au RCS de Paris sous le numéro 822 675 963, dont le siège social est situé au 25 bis rue de l’Armorique – 75015 Paris - France (ci-après, le « Site Kerden » ou le « Service Kerden » ou la « Société » ou « Kerden »).</p>
+
+												<p>Vous êtes invité à lire attentivement le présent document. De même, nous invitons expressément l’Utilisateur à consulter la Charte de protection des données personnelles qui fait partie intégrante des présentes.</p>
+
+												<p>Les présentes conditions générales d’utilisation (ci-après, les « Conditions d’utilisation » ou le « Contrat » ou les « CGU ») définissent les conditions contractuelles selon lesquelles les utilisateurs peuvent accéder et utiliser le Service Kerden.</p>
+
+												<p>Les expressions définies entre parenthèses dans le corps du texte auront le sens tel que donné dans le texte s’y rapportant.</p>
+
+
+
+
+												<h3>Article 1. Services proposés par Kerden</h3>
+
+												<h4>1.1 Objectif du service Kerden</h4>
+												<p>
+												La Société a développé un service accessible sur internet permettant de faciliter la location ponctuelle d’espaces d’extérieurs privés (jardin, terrasse, domaine, cour, château, etc.) (ci-après les « Espaces extérieurs »).</p>
+
+												<p>L’objectif est de permettre à des personnes physiques ou morales de louer des Espaces extérieurs afin d’organiser un évènement d’ordre personnel ou professionnel, tels que des repas, réunion, réception, mariage, cérémonie, soirée, etc. (ci-après « Evènement(s) »).</p>
+
+												<h4>1.2 Catégories d’Utilisateur</h4>
+												<p>Le Service Kerden permet la mise en relation entre des propriétaires d’Espaces extérieurs (les « Propriétaires ») et des internautes souhaitant disposer de tels Espaces, le temps d’un Evènement (les « Locataires ») et des prestataires de services chargés de s’assurer du bon déroulement d’un Evènement (les « Ker-House »). Le Service Kerden distingue donc trois catégories d’utilisateur (ci-après « Utilisateur(s) »). Les présentes Conditions d’utilisation concerne la seconde catégorie d’utilisateur, les Locataires.</p>
+
+												<p>En outre, les Propriétaires et les Locataires peuvent être des personnes physiques ou des personnes morales. Dès lors, les relations entre la Société et les Utilisateurs, et entre les Utilisateurs eux-mêmes relèvent selon les cas du C-to-C, ou du C-to-B, ou du B-to-C ou encore du B-to-B. Notez que les conditions d’utilisation du Service Kerden peuvent varier en fonction de la qualité de l’Utilisateur, personne physique ou personne morale. </p>
+
+												<h4>1.3 Description des services</h4>
+												<p>
+												Le Service Kerden propose aux Utilisateurs : 
+												<ul>
+												<li>-> La consultation d’informations en ligne (type d’Espaces extérieurs, leur description, etc.), </li>
+												<li>-> La mise en ligne d’annonce pour la location d’Espace extérieur,</li>
+												<li>-> La réservation d’Espaces extérieurs en ligne,</li>
+												<li>-> La mise en relation entre les Propriétaires, les Locataires et les Ker-House,</li>
+												<li>-> La mise à disposition d’espaces personnels pour le suivi des locations/réservations,</li>
+												<li>-> La mise à disposition d’outil d’échanges en ligne (messagerie)</li>
+												<li>-> La mise en ligne d’avis et commentaires sur les locations </li>
+												<li>-> La mise à disposition d’un service d’aide et de sécurité Ker-House </li>
+												</ul>
+												</p>
+
+												<h4>1.4 Rôle de Kerden</h4>
+												<p>La Société a pour rôle de mettre en relation les Utilisateurs et d’héberger des pages web sur lesquelles les Utilisateurs peuvent mettre en ligne du contenu (description des Espaces extérieurs, photos, commentaires, etc.). La Société ne modère pas ces contenus avant leur mise en ligne par les Utilisateurs.</p>
+
+												<p>La Société n’a qu’un rôle d’intermédiaire. La Société n’est ni locataire, ni propriétaire des Espaces extérieurs référencés via le Site Kerden, et n’exploite pas ces biens. De même, la Société n’a pas la qualité de courtier en immobilier, d’agent immobilier ou d’assureur. Nous ne vendons ou revendons pas, ne louons ou relouons pas, ne gérons pas et/ou ni ne contrôlons les Espaces extérieurs référencés via le Site Kerden. Enfin, la Société n’exerce aucune activité hôtelière.</p>
+
+												<p>Si vous avez des questions concernant nos services, veuillez consulter la Foire Aux Questions. ou interagir avec Kerden à travers l’encart « Besoin d’aide ». </p>
+
+												<h3>Article 2. Règles d’utilisation du Service Kerden</h3>
+
+												<h4>2.1 Acceptation des CGU</h4>
+												<p>L’utilisation du Service Kerden est soumise à votre inscription préalable sur notre Site, sous réserve que vous ayez pris connaissance et que vous acceptiez les termes des présentes Conditions d’utilisation. </p>
+
+												<p>En cochant en ligne la case “J’ai lu et j’accepte les Conditions d’utilisation du Service Kerden”, vous (en qualité d’Utilisateur) confirmez accepter sans réserve les présentes Conditions d’utilisation du Service Kerden. </p>
+
+												<p>Les Conditions d’utilisation est un contrat conclu entre l’Utilisateur et la Société (la « Partie » ou les « Parties »).</p>
+
+												<h4>2.2 Entrée en vigueur des CGU et mises à jour</h4>
+												<p>Les présentes Conditions d’utilisation entrent en vigueur à compter du 1er mars 2017.</p>
+
+												<p>Nous nous réservons le droit de modifier les présentes Conditions d’utilisation à tout moment en mettant en ligne sur le Site la nouvelle version. Cette nouvelle version des Conditions d’utilisation entrera en vigueur dès votre inscription si vous êtes un nouvel Utilisateur, et 15 jours après sa mise en ligne si vous êtes déjà Utilisateur de Kerden. Une fenêtre pop-up apparaîtra lors de votre connexion sur le Site Kerden suite aux modifications des Conditions d’utilisation. Si vous refusez la nouvelle version des Conditions d’utilisation, vous ne pourrez plus utiliser nos services à l’issue de cette période de 15 jours. </p>
+
+												<h4>2.3 Conditions d’inscription</h4>
+
+												<h5>2.3.1 Capacité juridique requise et Utilisateur professionnel</h5>
+
+												<p>L’inscription à nos services et leur utilisation sont réservées aux personnes morales ou aux personnes physiques capables de souscrire à un contrat conformément au droit français. </p>
+
+												<p>Tout accès ou toute utilisation du Site Kerden par une personne de moins de 18 ans est strictement interdite. En accédant ou en utilisant le Service Kerden vous déclarez et garantissez avoir 18 ans ou plus.</p>
+
+												<p>Si vous vous inscrivez au Service Kerden à titre professionnel pour le compte d’un tiers, vous déclarez être dûment autorisé pour engager cette entité que vous représentez. </p>
+
+												<p>Tout Utilisateur agissant en qualité de professionnel s’engage à le signaler à la Société lors de la création de son compte Utilisateur. A ce titre, son accès au Service Kerden sera validé sous réserve qu’il communique lors de son inscription les documents valables suivants :
+												<ul>
+												<li>- Une copie de la carte d’identité ou passeport en cours de validité ;</li>
+												<li>- La dénomination commerciale de la société qu’il représente ;</li>
+												<li>- La forme juridique de ladite société ;</li>
+												<li>- Le capital social ;</li>
+												<li>- Le numéro Siret et le lieu d’immatriculation ;</li>
+												<li>- L’adresse de don siège social ;</li>
+												<li>- Le numéro de TVA intracommunautaire ;</li>
+												<li>- Le prénom et le nom de son représentant légal ;</li>
+												<li>- Le RIB de ladite société.</li>
+												</ul>
+												Kerden se réserve le droit de refuser l’inscription d’un Utilisateur.
+												</p>
+												<h5>2.3.2 Création d’un compte Utilisateur</h5>
+												<p>Lors de votre inscription au Service Kerden et pendant toute la durée d’utilisation du Service Kerden, vous garantissez que les données que vous communiquez sont exactes et conformes à la réalité. En cas de modification des données communiquées lors de votre inscription au Service Kerden, vous vous engagez à procéder sans délai auxdites modifications sur votre compte personnel. </p>
+												<p>
+												Lorsque les conditions nécessaires à l’inscription sont remplies, vous disposerez d’un identifiant personnel (login) et d’un mot de passe. Les identifiants et mots de passe sont strictement personnels et confidentiels, ils ne doivent en aucun cas être communiqués ni partagés avec des tiers. Chaque Utilisateur s’engage à ne créer qu’un seul compte personnel correspondant à son profil.</p>
+												<p>
+												La Société se réserve le droit de résilier le compte de tout Utilisateur qui diffuserait ou utiliserait ces éléments de façon contraire à leur destination. Si votre inscription a été réalisée en violation des présentes Conditions d’utilisation, vous ne serez plus autorisé à utiliser le Service. </p>
+
+												<h3>Article 3. Location d’Espaces extérieurs sur le Site Kerden</h3>
+
+												<h4>3.1 Modalités de réservation</h4>
+
+												<p>- Evènements : Les Espaces extérieurs proposés à la location via le Service Kerden peuvent être loués pour tout type d’Evénement, sous réserve des limites imposées par les Propriétaires. </p>
+
+												<p>- Présence de Ker-House : le Service Kerden offre la possibilité aux Utilisateurs de faire intervenir une personne ayant pour mission la supervision de l’Evènement, à savoir notamment l’accueil, le service, la sécurité, et de l’aide au rangement de l’Espace extérieur loué (ci-après le « Ker-House »). </p>
+
+												<p>- Durée de la location : la durée d’une location est de deux heures (2H) minimum.</p>
+
+												<p>- Piscine : certains Espaces extérieurs proposés à la location peuvent comporter une piscine. Seules les piscines conformes aux règles de sécurité requises seront accessibles aux Locataires. </p>
+
+												<p>- Réservation en ligne : les réservations sont réalisées depuis le Site Kerden. Le Locataire peut sélectionner, grâce à un moteur de recherche, la date de la location, le type d’Evènement qu’il souhaite organiser, la catégorie d’Espace extérieur à louer, le lieu géographique de cet Espace, le type d’équipement souhaité et le nombre d’invités. </p>
+
+												<p>Ensuite, le Locataire a accès au descriptif d’un ou plusieurs Espaces extérieurs à louer correspondant à sa recherche. S’il fait son choix pour un Espace extérieur, il peut le réserver en ligne, sous réserve de s’être inscrit au préalable au Service Kerden et d’avoir renseigné les informations concernant son Evénement (date, type d’Evènement, nombre/tranche d’invités, musique, etc.). Une certification « professionnel » peut être obtenue par les Locataires agissant à titre professionnel. </p>
+
+												<p>- Validation de la demande de location : le Propriétaire reçoit une notification via l’interface Kerden comportant les détails de la demande de location du Locataire. Le Propriétaire doit valider la demande dans les délais prévus aux Conditions de réservation figurant sur les pages du Site Kerden. Le Propriétaire n’a pas besoin de motiver son éventuel refus. Le défaut de réponse dans les délais impartis vaut refus. Une fois la confirmation faite par le Propriétaire, le Locataire reçoit une notification de confirmation automatique par email et SMS. Le locataire peut utiliser le service de messagerie afin de communiquer avec le Propriétaire (sans faire de « demande de réservation »). En revanche, il recevra les coordonnées exactes de ce dernier (numéro de téléphone et adresse postale) qu’après avoir procédé au paiement.  </p>
+
+												<p>- Cartons d’invitation : lorsque le paiement du Prix de la location est effectué par le Locataire, ce dernier reçoit via son compte personnel Kerden un carton d’invitation pour l’Evènement, comportant les détails de l’Espace extérieur loué et de l’Evènement. Ce carton d’invitation pourra être communiqué aux invités du Locataire, par le biais de l’interface Kerden. </p>
+
+												<p>- Avis des Locataires : après l’Evènement, une notification sera adressée via l’interface Kerden et par email au Propriétaire et au Locataire afin de collecter leurs appréciations sur la location (système de notation accompagné par un court texte d’appréciation). </p>
+
+												<h4>3.2 Annulation et modification de la réservation</h4>
+
+												<p>Les demandes de réservation et les locations pourront être annulées ou modifiées par les Utilisateurs dans les conditions et selon les modalités décrites ci-après et à l’article 4 (Conditions financières) des présentes. A ce titre, les notifications d’annulation doivent impérativement être réalisées via l’interface du Site Kerden, pour être validées.</p>
+
+
+												<p>- Défaut de validation ou de paiement : la demande de location est annulée si le Propriétaire ne valide pas la demande du Locataire ou si le Locataire ne paie pas la réservation dans les délais prévus aux Conditions de réservation figurant en Annexe 1 des présentes.</p>
+
+												<p>- Délais d’annulation : les Utilisateurs ont la possibilité d’annuler la location. En fonction de la date d’annulation, plus de soixante-douze heures (72H), entre ce délai et vingt-quatre heures (24H) ou moins de vingt-quatre heures (24H) avant l’Evènement, le Locataire sera pénalisé ou au contraire dédommagé dans les conditions définies à l’article 4 (Conditions financières) des présentes.</p>
+
+												<p>- (Conditions d’annulation à venir prochainement) Conditions météorologiques : la Société rappelle que la qualité de jouissance des Espaces extérieurs loués est subordonnée aux conditions météorologiques. La Société considère que les prévisions météorologiques sont fiables 24H (vingt-quatre heures) avant le début de l’Evénement prévu. </p>
+
+												<p>Vous avez la possibilité d’annuler 24H (vingt-quatre heures) avant le début de l’Evénement, pour cause d’intempéries, signalées par le système d’alerte Météo France (voir les Conditions d’annulation pour cause d’intempéries sur les pages du Site Kerden) ou d’interrompre votre location du fait d’Intempéries au cours de l’Evénement, sous les conditions financières ci-après exposées à l’article 4. </p>
+
+												<p>Il est précisé que ces modalités particulières d’annulation ne concernent uniquement les Espaces extérieurs situés en Île-de-France.</p>
+
+												<h3>Article 4.  Conditions financières</h3>
+
+												<p>La consultation des pages du Site Kerden, l’inscription au Service Kerden et la publication d’une annonce de location sont gratuites, sous réserve des conditions décrites ci-dessous. </p>
+
+												<h4>4.1 Prix de la location</h4>
+												<p>Le Prix de la location est affiché sur les pages du Site Kerden en euros, hors taxe et toute taxe comprise. </p>
+
+												<p>Le Prix de la location comprend (ci-après « Prix de la location ») :
+												<ul>
+												<li>- le prix fixé par le Propriétaire pour la location de l’Espace extérieur,</li>
+												<li>- les frais de service de la Société,</li>
+												<li>- et, le cas échéant, le prix des services d’un Ker-House. (si plus d’un Ker-House est mandaté pour l’Evènement, les frais associés sont pris en charge par le Locataire).</li>
+												</ul>
+												</p>
+												<p>Enfin, aucune caution ne peut vous être demandée par le Propriétaires pour la location de son Espace extérieur via le Service Kerden. </p>
+
+												<h4>4.2 Modalités de paiement</h4>
+												<p>Si la location est confirmée par le Propriétaire, le Locataire doit régler le Prix de la location via le Site Kerden. Le paiement est réalisé en ligne par carte bancaire au moyen d’un service de paiement sécurisé proposé par un établissement de paiement partenaire de Kerden (« MangoPay »). Les Utilisateurs reconnaissent accepter les conditions générales d’utilisation du service MangoPay. La Société n’a pas d’accès aux données bancaires des Utilisateurs, lesquelles sont directement transmises cryptées sur le serveur de la banque. Le Prix de la location est débité immédiatement du compte du Locataire. </p>
+
+												<p>S’agissant de l’utilisation du service MangoPay par les Utilisateurs, certains justificatifs peuvent être requis afin de procéder au paiement ou au transfert de fonds, et la nature de ces justificatifs dépend du montant des sommes transférées ou perçues par année. Kerden invite donc ses Utilisateurs à prendre connaissance des conditions d’utilisation du service MangoPay afin d’être en mesure de lui fournir les justificatifs requis en fonction de leur situation. </p>
+
+												<p>Si le Locataire est un professionnel, il s’assure de l’envoi des justificatifs et factures requises afin que la Société puisse procéder au paiement. </p>
+												 
+												<h4>4.3  Pénalités en cas d’annulation ou interruption</h4>
+
+
+												<h5>A. Annulation du fait du Propriétaire : </h5>
+
+												<p>Sans et avec Ker-House</p>
+
+												<p>• Si le Propriétaire annule l’Evénement, un remboursement intégral du Prix de la location est effectué au profit du Locataire. </p>
+
+												<h5>B. Annulation du fait du Locataire : </h5>
+
+												<p>Sans Ker-House</p>
+
+												<p>• Si l’annulation intervient au-delà de soixante-douze heures (72H) avant le début de l’Evènement, des frais de huit et demi pourcent (8,5%) du Prix de la location lui seront prélevés. </p>
+
+												<p>• Si l’annulation intervient entre soixante-douze heures (72H) et vingt-quatre heures (24H) avant le début de l’Evènement, des frais de trente et un et demi pourcent (31,5%) du Prix de la location lui seront prélevés. </p>
+
+
+												<p>• Si l’annulation intervient moins de vingt-quatre heures (24H) avant le début de l’Evènement, des frais de soixante-deux pourcent (62%) du Prix de la location lui seront prélevés. </p>
+
+												<p>Avec Ker-House</p>
+
+												<p>• Si l’annulation intervient au-delà de soixante-douze heures (72H) avant le début de l’Evènement, des frais de six et demi pourcent (6,5%) du Prix de la location lui seront prélevés. </p>
+
+												<p>• Si l’annulation intervient entre soixante-douze heures (72H) et vingt-quatre heures (24H) avant le début de l’Evènement, des frais de trente et demi pourcent (30,5%) du Prix de la location lui seront prélevés. </p>
+
+												<p>• Si l’annulation intervient entre vingt-quatre heures (24H) et trois heures (3H) avant le début de l’Evènement, des frais de (60%) du Prix de la location lui seront prélevés.</p>
+
+												<p>• Si l’annulation intervient moins de trois heures (3H) avant le début de l’Evènement, aucun remboursement du Prix de la location est effectué au profit du Locataire. Si l’évènement excédent deux heures (2H) de location, le Locataire percevra le montant qui n’a pas été versé au Ker-House. </p>
+
+												<h5>C. (Conditions d’annulation à venir prochainement) Annulation ou interruption pour Intempéries : </h5>
+
+												<p>• En cas d’annulation par le Locataire 24H (vingt-quatre heures) avant le début de l’Evénement, pour cause de conditions météorologiques défavorables avérées, aucune pénalité sera appliquée et la totalité du Prix de la location lui sera remboursé. </p>
+
+												<p>• Si le Locataire est amené à mettre fin à sa location plus tôt que prévu du fait de détérioration brutale des conditions météorologiques au cours de l’Evénement, le Prix de la location sera déterminé au prorata de la durée effective de l’Evénement, et le solde sera remboursé au Locataire. </p>
+
+												<h3>Article 5. Obligations des Locataires</h3>
+
+												<p>Dans le cadre de l’utilisation du Service, vous vous engagez à vous conformer aux stipulations décrites dans les présentes Conditions d’utilisation, mais également aux lois en vigueur, et à respecter les droits des tiers. Vous vous engagez notamment à n’utiliser le Service qu’à des fins conformes à celles décrites dans les présentes Conditions d’utilisation et à utiliser vos mots de passe et/ou identifiants selon leur stricte finalité d’authentification au Site Kerden.</p>
+
+												<h4>5.1 Bonne foi et loyauté</h4>
+												<p>En contrepartie de la mise à disposition du Site Kerden et des services associés, les Propriétaires s’engagent expressément ne pas utiliser, à des fins commerciales et/ou publicitaires, tout ou partie du fichier des données Utilisateur constitué grâce aux locations réalisées via le Service Kerden. A ce titre, le Locataire s’engage à ne pas détourner le Service Kerden en traitant en direct avec les Propriétaires. Cet engagement est valable pendant toute la durée du présent Contrat.</p>
+
+												  <h4>5.2 Engagements</h4>
+
+												<p>L’utilisation du Service Kerden implique l’engagement express des Locataires à :
+												<ul>
+												<li>- ne pas mettre en ligne de contenus comportant des informations erronées ou trompeuses ;</li>
+												<li>- ne pas diffuser des propos ou des contenus illicites, et notamment tous contenus contrefaisants, diffamatoires, injurieux, insultants, obscènes, offensants, discriminatoires, violents, xénophobes ou incitant à la haine raciale ; ou tout autre contenu contraires aux bonnes mœurs et aux règles de bienséance ;</li>
+												<li>- ne pas mettre en ligne ou divulguer du contenu qui serait contraire à la finalité du Site Kerden ; </li>
+												<li>- ne pas utiliser le Site Kerden afin de constituer des fichiers d’Utilisateurs et leur envoyer des courriers électroniques ou postaux non sollicités en nombre (spamming) ; </li>
+												<li>- ne pas obtenir d’autres Utilisateurs des mots de passe ou des données personnelles d’identification ;</li>
+												<li>- ne pas mettre en ligne, communiquer ou envoyer, par l’intermédiaire du Site Kerden, du contenu quel qu’il soit qui comprendrait des liens pointant vers des sites web illicites ou offensants ou vers des sites web qui seraient incompatibles avec la finalité du Site ou du contenu qui violerait les droits de propriété intellectuelle de tiers.</li>
+												</ul>
+												</p>
+												<p>
+												En outre, le Locataire s’engage à :
+												<ul>
+												<li>- ne pas recourir à la sous-location de l’Espace extérieur loué via le Site Kerden ;</li>
+												<li>- communiquer de bonne foi la nature de l’Evénement pour lequel il effectue la location, et toutes les informations y afférentes (nombre de participants, etc.) ;</li>
+												<li>- respecter l’heure d’arrivée et de départ sélectionnées lors de la réservation ;</li>
+												<li>- être courtois avec le Propriétaire, le Ker-House et toute personne croisée sur les lieux de l’Evènement ;</li>
+												<li>- respecter l’intégrité de l’Espace extérieur loué (plantations, matériel et équipements du Propriétaire, etc.) ;</li>
+												<li>- ne pas créer de nuisances sonores qui pourraient déranger la tranquillité des voisins ;</li>
+												<li>- respecter toute directive émanant du Propriétaire ou d’un Ker-House, le cas échéant ;</li>
+												<li>- restituer l’Espace extérieur loué dans l’état dans lequel il l’a trouvé à l’issue de l’Evénement. </li>
+												</ul>
+												</p>
+												<p>
+												En outre, si un évènement à lieu en présence de Ker-House et que le nombre d’invité n’est pas conforme à la demande de location, des frais de cinquante euros (50€) seront prélevé lors de la prochaine location. 
+												</p>
+												<p>
+												Enfin, en cas de manquement à une ou plusieurs de ces obligations, le Société se réserve le droit, selon les cas, (i) de supprimer tout contenu qui ne serait pas conforme aux présentes Conditions d’utilisation, et/ou (ii) d'exclure du Service Kerden l’Utilisateur fautif et de clôturer son compte personnel conformément aux stipulations décrites à l’article 11 (Durée et résiliation) des présentes.
+												</p>
+												<h4>5.3 Obligations spécifiques aux professionnels</h4>
+												<p>
+												Nous rappelons au Locataire agissant en qualité de professionnel qu’il a l’obligation de se conformer à l’ensemble de la législation et règlementation applicable et notamment en matière de commerce électronique, de protection des consommateurs et de la vie privée. A ce titre, il appartient notamment au Locataire de déclarer et payer tous les impôts et toutes les taxes en relation avec l’utilisation du Service Kerden.
+												</p>
+
+												<h3>Article 6. Propriété intellectuelle</h3>
+
+												<h4>6.1 Contenu du Site</h4>
+
+												<p>Le contenu du Site Kerden, notamment sa structure, son design, ses interfaces, les bases de données, les textes, images, fichiers audio et vidéo et éléments graphiques qui la composent ainsi que les balises HTML de référencement (méta-tags), à l’exclusion du contenu appartenant aux Utilisateurs et aux tiers, sont la propriété exclusive de la Société. Ce contenu est protégé par le Code de la propriété intellectuelle et, par tout texte national ou international applicable au droit d’auteur. </p>
+
+												<p>Vous êtes autorisé à représenter sur votre écran les pages du Site Kerden uniquement pour consultation personnelles à titre temporaire et selon la finalité du Site Kerden, telle que définie dans les présentes Conditions d’utilisation. </p>
+
+
+												<p>Toute reproduction, diffusion, utilisation, altération, modification et toute création d’œuvres dérivées de tout ou partie du contenu du Site Kerden sous quelque forme que ce soit, sans l’autorisation expresse et préalable de la Société, est interdite et serait constitutive d’une contrefaçon, sanctionnée par les articles L. 335-2 et suivants du Code de la propriété intellectuelle.</p>
+
+
+												<p>De même, vous vous interdisez de :</p>
+
+												<p>• Procéder à des extractions par transfert temporaire ou permanent, ou d’utiliser par la mise à disposition au public, la totalité ou une partie substantielle en termes quantitatifs ou qualitatifs du Site Kerden et autres bases de données visibles sur le Site Kerden, à des fins commerciales, statistiques ou autres ;</p>
+
+												<p>• Extraire ou d’utiliser de façon répétée et systématique tout ou partie des informations visibles sur le Site Kerden, lorsqu’une telle opération excède manifestement une utilisation normale et à titre privé du Site Kerden ;</p>
+
+												<p>• Exploiter, commercialiser ou distribuer tout élément constitutif du Site Kerden, notamment les informations visibles sur le Site Kerden et toute autre base de données. </p>
+
+												<p>• Utiliser des logiciels ou procédés manuels pour copier nos pages web ou pour enregistrer ou collecter les informations sur ces pages sans le consentement exprès préalable et écrit de la Société ; </p>
+
+												<p>• Utiliser des dispositifs ou logiciels aux fins de perturber ou tenter de perturber le bon fonctionnement du Service Kerden ; </p>
+
+												<p>• Mettre en œuvre des actions qui imposeraient une charge disproportionnée sur nos infrastructures.</p>
+
+												<h4>6.2 Licence d’utilisation des contenus fournis par les Utilisateurs</h4>
+												<p>L’Utilisateur accorde à la Société, qui accepte, une licence non-exclusive, et cessible d’utilisation des fichiers et autres contenus mis en ligne sur le Site Kerden par les Utilisateurs dans le cadre des présentes Conditions d’utilisation. Vous nous accordez le droit de concéder des sous-licences d’utilisation, d’exploitation et de divulgation de ces contenus pour les besoins de l’exécution des présentes. La présente licence d’utilisation restera en vigueur pendant toute la durée du Contrat. A cette fin, l’Utilisateur déclare être dûment autorisé à accorder des licences d’utilisation des contenus dans les limites définies dans les présentes Conditions d’utilisation.</p>
+
+												<h3>Article 7. Indemnisation </h3>
+
+												<p>Par les présentes, et eu égard notamment aux obligations figurant à l’article 5 ci-dessus, le Locataire agissant en qualité de professionnel garantit la Société contre toutes les réclamations, pertes, responsabilités, coûts et dépenses, y compris les honoraires d'avocat et les frais de procédure que la Société pourrait encourir ou dont elle pourrait être redevable, à la suite de l’action judiciaire d’un tiers, causée par, ou résultant d'une violation des présentes Conditions d’utilisation par le Locataire, et/ou en cas de violation des droits de propriété intellectuelle, ou en cas de violation de toute réglementation applicable dans le cadre de l’utilisation du Service Kerden et/ou de toute réglementation applicable à la location, par le Locataire. </p>
+
+												<p>En cas de poursuites à l’encontre de la Société, la Société s'engage à : i) notifier le Locataire par écrit de la réception d'une plainte ; ii) accorder au Locataire le droit, l'information et l'assistance raisonnablement nécessaires pour assurer sa défense ; et iii) laisser au Locataire le contrôle de ses moyens de défense et l'autorité pour transiger ou négocier. Toutefois, toute décision du Locataire de nature à porter atteinte aux droits et intérêts de la Société sera soumise à l’approbation écrite et préalable de la Société. La Société aura le droit de participer, à ses frais, à la défense de ses intérêts. </p>
+
+												<p>Les conditions d’indemnisation stipulées au présent article sont indépendantes des conditions de responsabilité et de garantie figurant ci-au présent Contrat.</p>
+
+												<h3>Article 8. Limitation de garantie</h3>
+
+												<p>Nous prenons les mesures nécessaires au maintien de la continuité et de la qualité du Service Kerden. Toutefois, le Site Kerden est fourni en l’état. La Société ne garantit pas que le fonctionnement du Site sera ininterrompu, exempt de toute erreur ou sûr. De manière générale, la Société ne garantit ni l’exhaustivité ni l’exactitude du contenu et des informations proposés par la Société. Néanmoins, nous mettons tous les moyens disponibles en œuvre afin d’offrir aux Utilisateurs du Site Kerden un service de qualité. La Société ne garantit pas que le Site Kerden sera conforme aux besoins des Utilisateurs. Il appartient aux Utilisateurs de s’assurer qu’ils ont effectivement accès aux moyens techniques appropriés pour l’utilisation de nos services. </p>
+
+												<h3>Article 9. Limitation de responsabilité </h3>
+
+												<p>D’une manière générale, la Société ne se porte garante d’aucun Utilisateur ni Ker-House, aucune Annonce ou aucun Espace extérieur.</p>
+
+												            <h4>9.1 Services proposés par Kerden</h4>
+												<p>La responsabilité de la Société ne pourra être recherchée au titre de l’utilisation que vous ferez du Site et du Service Kerden. La responsabilité de la Société ne saurait être mise en cause pour de simples erreurs ou omissions qui auraient pu subsister malgré toutes les précautions prises dans la présentation du Service Kerden. </p>
+												<p>
+												La Société ne pourra être tenue responsable d’aucun dommage résultant de l’utilisation des services ou de la mise en relation entre vous et un autre Utilisateur ou entre vous et un Ker-House. De même, la Société ne pourra être tenue responsable d’aucun dommage quel qu’il soit causé lors d’un Evènement ou d’aucun dommage ou dégradation causés aux Espaces extérieurs mis en location via le Site Kerden. L’utilisation du Site Kerden proposée par la Société est faite sous votre seule et entière responsabilité. 
+												</p>
+												<p>
+												En cas de location pour l’organisation d’un mariage, ou encore d’un baptême, et de recours par les Locataires à des prestataires de service externes (traiteur, DJ, etc.), la Société décline toute responsabilité en cas d’annulation émanant du Propriétaire. L’aléa est mis à la charge du Locataire. 
+												</p>
+												<h4>9.2 Annonces de location</h4>
+												<p>La Société n’exerce aucun contrôle sur les Annonces mis en ligne sur le Site Kerden par les Propriétaires. A ce titre, la Société ne contrôle pas l’état, la légalité la disponibilité, la qualité ou le caractère adapté des Espaces extérieurs proposées par les Propriétaires et pouvant être réservées via le Site Kerden. Les Propriétaires sont seuls responsables des Annonces qu’ils publient sur le Site Kerden, la Société n’ayant qu’un rôle d’hébergeur technique des Annonces mises en ligne par les Propriétaires. En conséquence, la Société exclut toute responsabilité relative aux Espaces extérieurs fournis par les Propriétaires. </p>
+
+												<h4>9.3 Contenus publiés sur le Site Kerden</h4>
+												<p>D’une manière générale, la Société n’exerce aucun contrôle sur les contenus mis en ligne par les Utilisateurs, ni sur la capacité des personnes inscrites sur Kerden. A ce titre, la Société ne contrôle pas notamment l’exactitude, la fiabilité, la complétude, l’actualité ou la pertinence de ces informations. La Société ne peut être tenue responsable des contenus mis en ligne par les Utilisateurs. Les Utilisateurs sont seuls responsables des contenus (textes, images, vidéos, commentaires, etc.) qu’ils publient sur le Site Kerden, la Société n’ayant qu’un rôle d’hébergeur technique des contenus mis en ligne sur le Site Kerden par les Utilisateurs. Chaque catégorie d’Utilisateur du Service Kerden, Propriétaire et Locataire, est seule responsable de la vérification des informations fournies et échangées avec les autres. </p>
+
+												<h4>9.4 Réseau internet et accessibilité du Site Kerden</h4>
+												<p>Vous reconnaissez et acceptez que le réseau Internet, et plus généralement tout réseau télématique utilisé à des fins de transmission de données peut (i) comporter des risques liés à l’absence de protection de certaines données contre des détournements éventuels et des risques de contamination par des virus, et (ii) connaître des périodes de saturation en raison de l’encombrement de la bande passante, des coupures dues à des incidents techniques ou à des interventions de maintenance, des décisions de sociétés gérant lesdits réseaux ou tout autre événement indépendant de la volonté de la Société. </p>
+
+												<h4>9.5 Perte de données et autres</h4>
+												<p>La Société ne pourra être tenue responsable d’aucune perte ou altération de données, d’aucune perte de profit, de chiffre d’affaires, d’opportunité, de temps ou d’aucun dommage indirect, que ladite perte ou ledit dommage soit dû à une négligence, ou à toute autre cause, en lien avec l’exécution ou la non-exécution des présentes Conditions d’utilisation. A ce titre, la Société décline toute responsabilité quant aux bénéfices éventuellement attendus par le Propriétaire. </p>
+
+												<p>La Société n’est pas responsable en cas d’usurpation de l’identité d’un Utilisateur. Au cas où vous auriez des raisons de penser qu’une personne non autorisée utiliserait vos données d’identification ou votre compte, vous devez en informer immédiatement la Société, à l’adresse email suivante : contact@kerden.fr. </p>
+
+												<p>Les serveurs de Kerden sont disponibles 24 heures sur 24 et 7 jours sur 7, sauf pendant les opérations de maintenance et les interruptions de service, telles que définies à l’article 10 des présentes. En cas d’interruption de service ayant pour cause des faits échappant au contrôle de la Société (tel qu’un événement de force majeure) et en cas de perte de données, la Société s’engage à restituer la dernière version sauvegardée du Site Kerden. </p>
+
+												<h4>9.6 Liens hypertextes</h4>
+												<p>Le Site Kerden peut intégrer des liens hypertextes en direction des sites web tiers, y compris des sites de partenaires commerciaux. Nous ne pourrons en aucune façon être tenus responsables des dommages directs et/ou indirects qui pourraient résulter de l’utilisation de contenus, données ou informations de toute nature, accessibles à partir desdits liens hypertextes. Il vous incombe de contrôler que les informations figurant sur ces sites web partenaires sont exactes, complètes et conformes à la réglementation. L’application des présentes Conditions d’utilisation ne s’étend pas aux sites tiers. </p>
+
+												<h4>9.7 Limitation</h4>
+												<p>Il est expressément convenu entre les Parties que tous les dommages allégués devront être prouvés par la Partie qui se prétend victime. En outre, la responsabilité de la Société en vertu des présentes Conditions d’utilisation ne pourra excéder le Prix de la location de l’Espace extérieur concerné.</p>
+
+												<h3>Article 10. Maintenance du Site Kerden</h3>
+
+												<p>La Société se réserve le droit de suspendre l’accès au Site Kerden de temps à autres aux fins de réaliser des opérations de maintenance et de mises à jour du Site Kerden. La Société s’efforcera de réaliser les opérations de maintenance pendant les heures non-ouvrées et d’en limiter la durée. En cas d’intervention de maintenance d’urgence, la Société se réserve le droit de suspendre tout ou partie de l’accès au Site et au Service Kerden pour réaliser les interventions techniques nécessaires. Par ailleurs, la Société pourra mettre le Site Kerden à jour de temps à autres. La Société s’engage à informer les Utilisateurs sur la page de login du Site Kerden des maintenances prévues. </p>
+
+												<h3>Article 11. Durée et résiliation</h3>
+
+												<h4>11.1 Durée</h4>
+												<p>Les présentes Conditions d’utilisation entrent en vigueur lorsque vous avez complété la procédure d’inscription sur le Site Kerden, pour une durée indéterminée.</p>
+
+												<h4>11.2 Résiliation</h4>
+												<p>Nous pourrons, et vous pourrez y mettre fin dans les conditions suivantes :
+												<ul>
+												<li>- en cas de demande de votre de part de fermeture de votre compte personnel ; </li>
+												<li>- en cas d’utilisation du Service Kerden contraire aux présentes Conditions d’utilisation, ou tout autre manquement aux Conditions d’utilisation. Dans ce cas, nous vous adresserons un e-mail de notification vous demandant de remédier aux violations des Conditions d’utilisation dans un délai de sept (7) jours. En cas d’absence de correction dans ce délai, nous nous réservons le droit de fermer votre compte personnel sans autre préavis. Toute fermeture de compte initiée par la Société sera effectuée sans préjudice de l’indemnisation de l’entier dommage éventuellement subi par du fait de vos actions sur le Site Kerden. </li>
+												</ul>
+												</p>
+												<p>
+												En outre, le présent Contrat prendra fin automatiquement en cas de refus de votre part de toute nouvelle version des Conditions d’utilisation, comme précisé à la section 2.2.
+												</p>
+
+												<h4>11.3 Effets de la résiliation</h4>
+												<p>En cas de résiliation du présent Contrat pour quelque cause que ce soit, la Société procédera à la fermeture du ou des comptes personnels concernés. Aucune nouvelle réservation ne pourra être faite via le Service Kerden à compter de cette date. La Société ne pourra être tenue responsable des conséquences éventuelles de la résiliation sur les engagements, quels qu’ils soient, que les Utilisateurs auront pris. Le cas échéant, la Société s’engage à régler les montants dus à l’Utilisateur et non encore réglés à la date de résiliation conformément aux conditions prévues à l’article 4 (Conditions financières).</p>
+
+												<h3>Article 12. Stipulations diverses</h3>
+
+												<h4>12.1 Notifications et signalement </h4>
+												<p>Sauf stipulation expresse contraire, toute notification envoyée au Service Kerden doit être adressée par courrier postal, à l’adresse suivante : Société ADENOR, Service clients Kerden, 25 bis rue de l’Armorique - 75015 Paris – France.</p>
+												<p>
+												Toute notification, concernant le fonctionnement du Service Kerden, qui vous est destinée sera envoyée par e-mail à l’adresse communiquée sur votre compte personnel. Les notifications sont réputées vous être parvenues 24 heures après l’envoi d’un e-mail, sauf si l’expéditeur se voit notifier l’invalidité de l’adresse e-mail. Les notifications peuvent également vous parvenir par lettre recommandée avec accusé de réception à l’adresse communiquée sur votre compte personnel. Dans ce cas, les notifications sont réputées vous être parvenues dans un délai de 48 heures après l’envoi du courrier.  
+												</p>
+												<p>
+												Au cas où vous auriez connaissance d’un contenu illicites figurant sur le Site Kerden, tel que notamment décrit à l’article 5 (Obligations des Propriétaires) ci-dessus, ou si vous relevez qu’un Utilisateur ou un Ker-House à un comportement inapproprié (choquant, violent, sexuellement inapproprié, en cas de vol, etc.), vous devez nous notifier ce contenu illicite ou cette mauvaise conduite immédiatement, en nous adressant un email explicatif à l’adresse suivante : ______ 
+												</p>
+												<h4>12.2 Conditions additionnelles</h4>
+												<p>Au fur et à mesure du développement du Site, nous pourrons être amenés à proposer des services et rubriques complémentaires. L’utilisation de ces services pourra être soumise à des conditions additionnelles qui vous seront notifiées lors de votre première utilisation desdits services et rubriques. Ces conditions additionnelles seront incorporées aux présentes Conditions d’utilisation par référence et auront pleine valeur contractuelle.
+												</p>
+
+												<h4>12.3 Assurance </h4>
+												<p>Si le Locataire est un non-professionnel, Kerden recommande au Locataire de s’assurer du fait que la formule de son assurance habitation englobe la responsabilité villégiature correspondant à la responsabilité locative temporaire.</p>
+												<p>
+												Si le Locataire est un professionnel, il déclare avoir souscrit auprès d'une compagnie notoirement solvable une assurance responsabilité civile professionnelle couvrant très largement et explicitement les risques, notamment pour les locations objet du Contrat. Le Locataire s’engage à maintenir cette police d’assurance ou une police d’assurance de même niveau, pendant toute la durée du Contrat.</p>
+												<p>
+												Le Locataire s’engage à produire, à première demande de la Société, les attestations d’assurance correspondantes sous un délai de cinq (5) jours ouvrés à compter de la demande.</p>
+
+												<h4>12.4 Force majeure</h4>
+												<p>
+												Nous ne pouvons être tenus responsables d’aucun manquement à nos obligations au titre des présentes Conditions d’utilisation ayant pour cause des faits échappant à notre contrôle, le fait d’un tiers et/ou résultant d’un cas de force majeure. Les cas de force majeure comprendront notamment, outre les cas reconnus par la jurisprudence, toutes grèves, lock-out, y compris les cas de perturbation d’ordre technique, électromagnétique, défaillance des systèmes et des réseaux, et tous problèmes électriques et techniques externes aux parties et empêchant les communications.
+												</p>
+
+												<h4>12.5 Indépendance</h4>
+												<p>La Société d'une part et le Locataire d’autre part sont des parties indépendantes, chacune agissant en son nom et pour son propre compte. Les présentes Conditions d’utilisation ne créent aucun lien de subordination, de mandat, société en participation, entreprise commune, de relations employeur/employé ou franchiseur/franchisé entre la Société et le Locataire.</p>
+
+												<h4>12.6 Non-validité partielle</h4>
+												<p>
+												Dans l’hypothèse où une ou plusieurs stipulations figurant dans les présentes Conditions d’utilisation étaient considérées comme illégales, inopposables ou inapplicables par une décision de justice, les autres stipulations des Conditions d’utilisation resteront en vigueur, à la condition que l’économie générale du contrat n’en soit pas bouleversée.
+												</p>
+
+												<h4>12.7 Non renonciation</h4>
+												<p>
+												Le fait pour une Partie de ne pas exiger le strict respect d’une quelconque obligation des présentes Conditions d’utilisation, en quelque occasion que ce soit, ne sera pas considéré comme un renoncement à l’un des droits susmentionnés et ne privera pas cette Partie du droit d'exiger le strict respect de cette obligation ou de toute autre obligation des Conditions d’utilisation à tout moment.
+												</p>
+
+												<h4>12.8 Maintien en vigueur</h4>
+												<p>
+												Lors de la résiliation ou de l’expiration des présentes, les articles suivants resteront en vigueur : Propriété intellectuelle ; Indemnisation ; Limitation de responsabilité, Stipulations diverses ; Droit applicable et compétence juridictionnelle.
+												</p>
+
+												<h3>Article 13. Droit applicable et compétence juridictionnelle </h3>
+
+												<p>
+												Les présentes Conditions d’utilisation sont soumises à la loi française. 
+												</p>
+												<p>
+												EN CAS DE LITIGE, LES PARTIES DECIDENT, DANS UN PREMIER TEMPS, DE TENTER DE LE RESOUDRE A L’AMIABLE. 
+												</p>
+												<p>
+												EN CAS D’ECHEC LORS DE LA RECHERCHE D’UNE SOLUTION AMIABLE, L’UTILISATEUR NON PROFESSIONNEL PEUT ADRESSER SA RECLAMATION AU MEDIATEUR DE LA CONSOMMATION COMPETENT EN SE REFERANT AU SITE WEB SUIVANT : http://www.economie.gouv.fr/mediation-conso.
+												</p>
+												<p>
+												EN CAS D’ECHEC DE RESOLUTION A L’AMIABLE, TOUS LES LITIGES SUSCEPTIBLES DE NAITRE ENTRE LES PARTIES, RELATIFS A LA SIGNATURE, L’INTERPRETATION, L'EXECUTION ET LA RESILIATION DES PRESENTES, SERONT SOUMIS A LA JURIDICTION EXCLUSIVE DES TRIBUNAUX DU RESSORT DE LA COUR D’APPEL DE PARIS AUXQUELS LES PARTIES FONT EXPRESSEMENT ATTRIBUTION DE COMPETENCE, MEME EN CAS DE PLURALITE DE DEFENDEURS, EN REFERE, APPEL EN GARANTIE OU PAR REQUETE.
+												</p>
+												<p>
+												LA CLAUSE ATTRIBUTIVE DE JURIDICTION S’APPLIQUE UNIQUEMENT AUX PROFESSIONNELS.
+												</p>
+												<h3>Article 14. Intégralité du Contrat</h3>
+
+												<p>Les présentes Conditions d’utilisation, y compris le préambule, son Annexe et la Charte de protection des données personnelles du Service Kerden, constituent l’intégralité de l’accord conclu entre les Parties.</p>
+
+  						</div>
+  					</div>
+  				</div>
+  			</div>
+  		</div>
+  	</div>
+  </div>
+
+
+@include('footer')
+
+@endsection
+
+
+@section('scripts')
+  <script type="text/javascript" src=" {{ asset('js/zepto.min.js') }} "></script>
+  <script type="text/javascript" src=" {{ asset('js/imagesloaded.pkgd.min.js') }} "></script>
+
+
+
+
+@endsection
+
+
+

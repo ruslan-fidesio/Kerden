@@ -6,8 +6,11 @@
                 <!-- <a href="#" data-toggle="modal" data-target="#aboutSiteModal">Qui sommes-nous ?</a> -->
                 <a href="{{ url('/about') }}">Qui sommes-nous ?</a>
                 <a href="{{ url('/faq') }}">Comment ça marche</a>
-                <a href="#" data-toggle="modal" data-target="#cguModal" onclick="$('#cguModal').stop().animate({scrollTop:$('#annulationAnchor').offset().top},'slow'); return false;">Politique d'annulation</a>
-                <a href="#" data-toggle="modal" data-target="#cguModal">Conditions générales</a>
+                <a href="{{ url('/cgu') }}">Conditions générales</a>
+<!--                 <a href="#" data-toggle="modal" data-target="#cguModal" onclick="$('#cguModal').stop().animate({scrollTop:$('#annulationAnchor').offset().top},'slow'); return false;">Politique d'annulation</a> -->
+                <!-- <a href="#" data-toggle="modal" data-target="#cguModal">Conditions générales</a> -->
+                <a href="#" data-toggle="modal" data-target="#privacy">Charte Vie privée</a>
+                <a href="#" data-toggle="modal" data-target="#mentions">Mentions légales</a>
                 <div class="clearfix"></div>
             </div>
             <div class="col-sm-4 text-center">
@@ -21,7 +24,7 @@
                 <h4>Contact</h4>
                 <p>Kerden.fr</p>
                 <p>25 Bis rue de l’Armorique 75015</p>
-                <p>+33 1 43 35 00 50</p>
+                <p>+33 1 77 10 62 94</p>
                 <a href="mailto:contact@kerden.fr"><div id='contactButton'>contact@kerden.fr</div></a>
             </div>
             <div class="col-xs-12 footer-legal">

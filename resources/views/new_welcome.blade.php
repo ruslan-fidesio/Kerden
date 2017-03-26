@@ -169,7 +169,7 @@
           <div class="icon green">
             <img src="{{asset('images/advantages/coupon.png')}}" alt="réduction partenaires jardins">
           </div>
-          Profitez de 15% de réduction chez nos partenaires
+          Profitez de réductions chez nos partenaires
         </div>
       </div>
       <div class="col-md-3 col-sm-6">
