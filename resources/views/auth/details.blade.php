@@ -269,9 +269,9 @@
 
             <div class="form-group{{ $errors->has('phone') ? ' has-error' : '' }}">
                 @if( $user->phone && $user->phone->phone == 'noPhone')
-                    <label for="Téléphone" class="col-md-4 control-label"><span>Téléphone <small>- désactivé</small></span> <i class="fa fa-question-circle-o question-phone-logo" data-toggle='modal' data-target="#phoneModal"></i></label>
+                    <label for="Téléphone" class="col-md-4 control-label"><span>Téléphone <small>- désactivé</small></span> *</label>
                 @else
-                    <label for="Téléphone" class="col-md-4 control-label"><span>Téléphone</span> <i class="fa fa-question-circle-o question-phone-logo" data-toggle='modal' data-target="#phoneModal"></i></label>
+                    <label for="Téléphone" class="col-md-4 control-label"><span>Téléphone</span> *</label>
                 @endif
 
                 <div class="col-md-6">
